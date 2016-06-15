@@ -15,3 +15,5 @@ tars
 bower_components
 *.idea
 node_modules
+package.json
+user-package.json
