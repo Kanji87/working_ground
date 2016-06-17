@@ -1,25 +1,103 @@
 .partners {
     padding-top: 90px;
     padding-bottom: 80px;
-
     &__list {
         margin-top: 60px;
-        @include cf();
-    }
 
+        @include cf();
+        @include respond-to(phone) {
+            margin-top: 50px;
+            width: 320px;
+        }
+        &--titled {
+            .partners__item {
+                padding-top: 30px;
+            }
+        }
+    }
     &__item {
+        position: relative;
+
         float: left;
+
         margin-bottom: 40px;
         margin-left: 50px;
-
         &:nth-child(3n+1) {
             margin-left: 0;
         }
-    }
 
+        @include respond-to(desktop) {
+            margin-left: 20px;
+        }
+        @include respond-to(tablet) {
+            margin-left: 50px;
+            &:nth-child(3n+1) {
+                margin-left: 50px;
+            }
+            &:nth-child(2n+1) {
+                margin-left: 0;
+            }
+        }
+        @include respond-to(phone) {
+            width: 130px;
+            margin-left: 20px;
+            margin-bottom: 30px;
+            &:nth-child(3n+1) {
+                margin-left: 20px;
+            }
+            &:nth-child(2n+1) {
+                margin-left: 0;
+            }
+        }
+    }
     &__link {
         display: block;
+
         width: 280px;
         height: 162px;
+
+        @include respond-to(phone) {
+            width: 130px;
+            height: 70px;
+        }
+    }
+    &__item-title {
+        font-size: 12px;
+        font-weight: normal;
+        line-height: 20px;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+
+        letter-spacing: .3px;
+
+        color: $black;
+
+        @include respond-to(phone) {
+            font-size: 8px;
+            line-height: 14px;
+
+            top: auto;
+            bottom: 80px;
+
+            width: auto;
+
+            letter-spacing: .42px;
+        }
+    }
+
+    &__item-subtitle {
+        margin-top: 6px;
+        font-size: 10px;
+        line-height: 20px;
+        letter-spacing: .25px;
+
+        @include respond-to(phone) {
+            font-size: 8px;
+            line-height: 14px;
+        }
     }
 }

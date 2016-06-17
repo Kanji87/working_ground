@@ -5,7 +5,7 @@ mixin nav(current, active, name)
             href='' + (active ? ('/' + active + '.html') : '#')
         )= name
 
-mixin header(current)
+mixin header_en(current)
     header.header
         nav.nav
             a.open-btn(href='#')
@@ -13,15 +13,15 @@ mixin header(current)
                 != jadeHelpers.Icon.call(locals, {iconName: 'menu_close_icon', className: 'menu_close_icon'})
                 
             ul.nav-list
-                +nav(current, 'exhibition', 'Посетить выставку')
-                +nav(current, 'program', 'Программа')
-                +nav(current, 'artists', 'Художники')
+                //- +nav(current, 'exhibition', 'Посетить выставку')
+                //- +nav(current, 'program', 'Программа')
+                //- +nav(current, 'artists', 'Художники')
                 //- +nav(current, '', 'Блог')
+                //- li.nav-list__item
+                //-     .nav-list__sepor |
                 li.nav-list__item
-                    .nav-list__sepor |
-                li.nav-list__item
-                    a.nav-list__item-link.nav-list__lang.nav-list__item-link--active(href='/index.html') ru
-                    a.nav-list__item-link.nav-list__lang(href='/en.html') eng
+                    a.nav-list__item-link.nav-list__lang(href='/index.html') ru
+                    a.nav-list__item-link.nav-list__lang.nav-list__item-link--active(href='/en.html') eng
 
             .social-share
                 .social-likes

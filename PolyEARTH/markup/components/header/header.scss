@@ -2,33 +2,34 @@
     @include respond-to(phone) {
         z-index: 995;
 
-        width: auto;
+        width: 100%;
         height: 60px;
-        &.opened .social-share {
-            display: block;
+        &.opened {
+            .social-share {
+                left: 20px;
+            }
+            // .nav {
+            //     left: 0;
+            // }
+            .nav-list {
+                left: 0;
+            }
+            .menu_icon {
+                display: none;
+            }
+            .open-btn .menu_close_icon {
+                display: block;
+            }
         }
     }
     .nav {
         height: 60px;
-        padding: 0 20px;
+        // padding: 0 20px;
 
         text-align: left;
 
-        background-color: $white;
-
         @include respond-to(phone) {
-            position: relative;
-            left: -200px;
-
             width: 160px;
-            height: 100vh;
-
-            transition: all ease .3s;
-
-            background-color: rgba($white, .97);
-            &--opened {
-                left: 0;
-            }
         }
     }
     .nav-list {
@@ -36,9 +37,24 @@
 
         width: 100%;
         margin: 0 auto;
+        padding: 0 20px;
+
+        background-color: $white;
+        // @include respond-to(phone) {
+        //     padding-top: 90px;
+        // }
 
         @include respond-to(phone) {
+            position: relative;
+            left: -200px;
+
+            width: 100%;
+            height: 100vh;
             padding-top: 90px;
+
+            transition: all ease .3s;
+
+            background-color: rgba($white, .97);
         }
         &__item {
             display: inline-block;
@@ -75,6 +91,9 @@
             &:hover {
                 color: $blue;
             }
+            &--active {
+                color: $blue;
+            }
         }
         &__sepor {
             font-size: 12px;
@@ -90,15 +109,18 @@
             &:last-child {
                 margin-left: 15px;
             }
-            &--active {
-                color: $blue;
-            }
         }
     }
     &__poly-link {
         position: absolute;
         top: 17px;
-        right: 20px;
+        right: -50px;
+        &--visible {
+            right: 20px;
+        }
+        // @include respond-to(phone) {
+        //     right: 20px;
+        // }
     }
     .open-btn {
         position: absolute;
@@ -123,5 +145,14 @@
     }
     .social-share {
         display: none;
+
+        @include respond-to(phone) {
+            position: fixed;
+            left: -120px;
+
+            display: block;
+
+            transition: all ease .3s;
+        }
     }
 }

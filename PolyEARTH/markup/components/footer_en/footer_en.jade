@@ -1,14 +1,14 @@
-mixin footer(data)
+mixin footer_en(data)
     footer.footer
         a(href="#" class="top-btn show")
             i(class="fa fa-chevron-up")
         .footer__container.section__container
             .footer__contacts
                 .footer__contacts-col.col-md-6
-                    p.footer__text Для посетителей
+                    p.footer__text Contacts
                     p.footer__text +7 495 730-54-38
                 .footer__contacts-col.col-md-6
-                    p.footer__text Пресса
+                    p.footer__text Media
                     p.footer__text +7 903 290–49–44
                     a.footer__link(href="mailto:press@polymus.ru") press@polymus.ru
 
@@ -23,14 +23,14 @@ mixin footer(data)
                     li.footer__social-item
                         a.footer__social-link.footer__social-link--yt(href="https://www.youtube.com/user/polytechnicum" target='_blank')
 
-                a.footer__copyright-item.footer__link(href="https://polymus.ru/ru/copyrights/" target='_blank') Использование материалов сайта
-                a.footer__copyright-item.footer__link(href="https://polymus.ru/ru/agreement/" target='_blank') Соглашение с пользователем
-                p.footer__copyright-item.footer__text © 2016 Политехнический музей
+                a.footer__copyright-item.footer__link(href="https://polymus.ru/ru/copyrights/" target='_blank') Terms of use
+                a.footer__copyright-item.footer__link(href="https://polymus.ru/ru/agreement/" target='_blank') Privacy policy
+                p.footer__copyright-item.footer__text © 2016 Polytechnic Museum
 
             .footer__subscribe
-                p.footer__subscribe-title.footer__text Хотите получать новости Политеха?
+                p.footer__subscribe-title.footer__text Subscribe to news of the Polytechnic Museum
                 form(action="https://polymus.ru/ru/api/v1/subscription/subscribe_unauth/").footer__subscribe-form
-                    input(type="email" name="" placeholder="Введите ваш e-mail").footer__subscribe-input
+                    input(type="email" name="" placeholder="Your e-mail").footer__subscribe-input
                     input(type="hidden" name="data_type" value="digest")
                     input(type="hidden" name="data_id" value="16")
                     .footer__subscribe-submit

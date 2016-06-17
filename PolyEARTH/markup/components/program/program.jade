@@ -1,0 +1,131 @@
+include ../program_item/program_item
+
+mixin program
+    section.program
+        .section__container
+            h3.section__title Параллельная<br>программа
+            p.program__desc.
+                Ядро параллельной программы состоит из серий встреч-бесед с художниками, учеными и специалистами по новым технологиям. Art-talks (разговоры об искусстве), tech-talks (разговоры о технологиях) и science-talks (разговоры о науке) – это еженедельные встречи с российскими и зарубежными специалистами. Параллельная программа выставки дает возможность не только воспринять новую информацию, но и самим вступить в диалог. Модераторы встреч – со-кураторы параллельной программы проекта «Лаборатория Земля», Наталья Фукс и Алексей Щербина.
+
+            .program__hint
+                p.program__hint-text.
+                    Все события проходят по адресу:
+                p.program__hint-text.text--blue
+                    span «Красный Октябрь», 
+                    span Берсеневский пер, д. 2, стр.1
+
+            .program__schedule
+                .program__schedule-block
+                    .program__schedule-col.program__schedule-col-date
+                        .program__schedule-date 22 июня
+
+                    .program__schedule-col.program__schedule-col-info
+                        +program_item(
+                            '12:00',
+                            'Фабрика Мух — Art-Talk',
+                            'Буи Бьярмар Аталстейнссон (Исландия)',
+                            'Вход свободный*',
+                            'регистрация',
+                            '#'
+                        )
+                        +program_item(
+                            '14:00',
+                            'Миноискатель — Art-Talk',
+                            'Махмуд Хассани',
+                            'Вход свободный*',
+                            'регистрация',
+                            '#'
+                        )
+                        +program_item(
+                            '16:00',
+                            'Шелковый лист — Art-Talk',
+                            'Джулиан Мелькиори (Лондон)',
+                            'Вход свободный*',
+                            'регистрация',
+                            '#'
+                        )
+                        +program_item(
+                            '18:00',
+                            'Точка Доступа — Art-Talk',
+                            'Дмитрий Булатов и Алексей Чебыкин',
+                            'Вход свободный*',
+                            'регистрация',
+                            '#'
+                        )
+                        +program_item(
+                            '18:00',
+                            'Ars Electronica: Инфо-сессия',
+                            'Ханнес Леопольдзедер, Мануэла Нуво',
+                            'Вход свободный*',
+                            'регистрация',
+                            '#'
+                        )
+                .program__schedule-block
+                    .program__schedule-col.program__schedule-col-date
+                        .program__schedule-date 23 июня
+
+                    .program__schedule-col.program__schedule-col-info
+                        +program_item(
+                            '12:00',
+                            'Воздушное путешествие – Art-Talk',
+                            'Урсула Нойгебауэр (Германия)',
+                            'Вход свободный*',
+                            'регистрация',
+                            '#'
+                        )
+                        +program_item(
+                            '14:00',
+                            'Расширяя себя – Art-Talk и видеопоказ',
+                            'Соня Боймель (Австрия)',
+                            'Вход свободный*',
+                            'регистрация',
+                            '#'
+                        )
+                        +program_item(
+                            '16:00',
+                            'Все голоса – Art-Talk',
+                            'Stain (Россия)',
+                            'Вход свободный*',
+                            'регистрация',
+                            '#'
+                        )
+                        +program_item(
+                            '18:00, 20:00',
+                            'Специальная программа анимационного фестиваля Ars Electronica',
+                            '',
+                            'Вход свободный*',
+                            'регистрация',
+                            '#'
+                        )
+
+                        .program__schedule-hint *Вход свободный по билету на выставку
+
+                .program__schedule-block
+                    .program__schedule-col.program__schedule-col-date
+                        .program__schedule-date 30 июня
+
+                    .program__schedule-col.program__schedule-col-info
+                        +program_item(
+                            '20:00',
+                            'Космос как лаборатория – Science-talk',
+                            'Роберт Майснер (Германия/Франция)',
+                            '200 ₽',
+                            'купить',
+                            '#',
+                            true
+                        )
+
+                .program__schedule-block
+                    .program__schedule-col.program__schedule-col-date
+                        .program__schedule-date 8 июля
+
+                    .program__schedule-col.program__schedule-col-info
+                        +program_item(
+                            '23:00',
+                            'Nightline I',
+                            'Electric Indigo (Австрия)',
+                            '500 ₽',
+                            'купить',
+                            '#',
+                            true
+                        )

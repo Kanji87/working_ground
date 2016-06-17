@@ -63,5 +63,13 @@ a {
 
     letter-spacing: .01px;
 
+    color: $text-grey;
+    @include respond-to(phone) {
+        font-size: 32px;
+        line-height: 43px;
+    }
+}
+
+.text--blue {
     color: $blue;
 }

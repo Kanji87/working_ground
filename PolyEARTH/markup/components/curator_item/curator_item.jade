@@ -1,0 +1,10 @@
+mixin curator_item(data, padding)
+    .curator__item
+        .curator__info
+            .curator__person.curator__col
+                img.curator__person-img(src="%=static=%img/content/#{data.img}")
+                p.curator__person-name #{data.name}
+
+            .curator__desc.curator__col(class=(padding ? 'curator__desc--padding' : '')) #{data.desc}
+
+        .curator__lead #{data.lead}

@@ -1,0 +1,32 @@
+include ../curator_item/curator_item
+
+mixin exhibition
+    section.exhibition
+        .exhibition__map
+            script(type='text/javascript', charset='utf-8', async='', src='https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=TdwZx5e0RIDAiBRFxeZWyV3Cg-FbdYvk&width=100%&height=100%&lang=ru_RU&sourceType=constructor&scroll=true')
+
+        .exhibition__about.section__container
+            .exhibition__location
+                span «Красный Октябрь», 
+                span Берсеневский пер, д. 2, стр.1
+            h3.section__title Об Ars Electronica
+            p.exhibition__about-text Ars Electronica — это старейшая в мире, уникальная международная платформа, связывающая науку, технологии и современное общество, основанная в 1979 году.
+            p.exhibition__about-time ежедневно с 10:00 до 21:00
+
+            .exhibition__tickets
+                .exhibition__tickets-col.exhibition__tickets-col--buy
+                    p.exhibition__buy-tickets-title БИЛЕТЫ
+                    p.exhibition__buy-tickets-price 250 рублей (в будни) 
+                    p.exhibition__buy-tickets-price 300 рублей (в выходные)
+                    a.exhibition__buy-tickets-button(href="#") купить билет
+
+                .exhibition__tickets-col.exhibition__tickets-col--info
+                    p.exhibition__tickets-info-text.
+                        Бесплатно: дети до 7 лет, Герои Советского Союза, Герои Российской Федерации, Полные кавалеры ордена Славы, Ветераны ВОВ, блокадники, участники ВОВ, инвалиды войны, ветераны боевых действий, репрессированные, дети-инвалиды, дети, оставшиеся без попечения родителей, дети-сироты, сотрудники российских музеев, члены ИКОМ, попечители Политехнического музея с приглашенными ими лицами (до 5 человек), инвалиды I и II групп.
+
+    section.curator
+        .section__container
+            h3.section__title Кураторы выставки
+            +curator_item(curator_item.nuvo)
+            +curator_item(curator_item.sherbina, true)
+            +curator_item(curator_item.fux, true)

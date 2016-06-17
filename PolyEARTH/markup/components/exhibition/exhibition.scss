@@ -1,0 +1,144 @@
+.exhibition {
+    padding-top: 60px;
+    padding-bottom: 80px;
+
+    @include respond-to(phone) {
+        padding-bottom: 60px;
+    }
+    // .section__title {
+    //     @include respond-to(phone) {
+    //         font-size: 32px;
+    //         line-height: 43px;
+    //         letter-spacing: .01px;
+    //     }
+    // }
+    &__map {
+        width: 100%;
+        height: 493px;
+
+        @include respond-to(phone) {
+            height: 391px;
+        }
+    }
+    &__location {
+        font-size: 16px;
+        line-height: 35px;
+
+        margin-top: 23px;
+        margin-bottom: 60px;
+
+        color: $blue;
+
+        @include respond-to(phone) {
+            margin-bottom: 55px;
+        }
+        span {
+            @include respond-to(phone) {
+                display: block;
+            }
+        }
+    }
+    &__about-text {
+        font-size: 24px;
+        line-height: 35px;
+
+        margin-top: 40px;
+
+        color: $black;
+
+        @include respond-to(phone) {
+            font-size: 20px;
+            line-height: 32px;
+        }
+    }
+    &__about-time {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 35px;
+
+        margin-top: 13px;
+
+        color: $black;
+
+        @include respond-to(phone) {
+            font-size: 14px;
+
+            margin-top: 15px;
+        }
+    }
+    &__tickets {
+        margin-top: 60px;
+
+        @include respond-to(phone) {
+            margin-top: 45px;
+        }
+        @include cf();
+        &-col {
+            float: left;
+
+            @include respond-to(tablet) {
+                float: none;
+            }
+            &--buy {
+                width: 300px;
+                margin-left: 107px;
+
+                @include respond-to(desktop) {
+                    margin-left: 0;
+                }
+            }
+            &--info {
+                width: 480px;
+                margin-left: 107px;
+
+                @include respond-to(desktop) {
+                    margin-left: 95px;
+                }
+                @include respond-to(tablet) {
+                    width: 100%;
+                    margin-top: 40px;
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+    &__buy-tickets-title {
+        font-size: 24px;
+        line-height: 37px;
+
+        @include respond-to(phone) {
+            font-size: 20px;
+            line-height: 30px;
+        }
+    }
+    &__buy-tickets-price {
+        color: $text-grey;
+
+        @extend .exhibition__buy-tickets-title;
+    }
+    &__buy-tickets-button {
+        font-size: 14px;
+        line-height: 60px;
+
+        display: block;
+
+        width: 200px;
+        height: 61px;
+        margin-top: 20px;
+
+        text-align: center;
+
+        color: $blue;
+        border: 1px solid $blue;
+        &:hover {
+            color: $white;
+            background-color: $blue;
+        }
+    }
+    &__tickets-info-text {
+        font-size: 16px;
+        line-height: 24px;
+
+        color: $text-grey;
+    }
+}
