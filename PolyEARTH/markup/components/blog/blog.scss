@@ -1,0 +1,135 @@
+.blog {
+    padding-top: 111px;
+    padding-bottom: 96px;
+
+    @include respond-to(phone) {
+        padding-top: 60px;
+    }
+
+    .section__title {
+        margin-bottom: 49px;
+    }
+
+    &__item {
+        margin-bottom: 78px;
+
+        @include respond-to(phone) {
+            margin-bottom: 58px;
+        }
+
+        &-img {
+            width: 100%;
+        }
+
+        &-date {
+            float: left;
+            font-size: 16px;
+            font-weight: bold;
+            line-height: 26px;
+
+            @include respond-to(tablet) {
+                float: none;
+            }
+
+            @include respond-to(phone) {
+                font-size: 14px;
+                line-height: 18px;
+            }
+        }
+
+        &-body {
+            margin-top: 38px;
+            @include cf();
+        }
+
+        &-content {
+            float: right;
+            width: 850px;
+
+            @include respond-to(desktop) {
+                width: 740px;
+            }
+
+            @include respond-to(tablet) {
+                float: none;
+                width: 100%;
+                margin-top: 30px;
+            }
+
+            @include respond-to(phone) {
+                margin-top: 20px;
+            }
+        }
+
+        &-title {
+            font-size: 24px;
+            line-height: 26px;
+            font-weight: bold;
+            color: $blue;
+
+            @include respond-to(phone) {
+                font-size: 20px;
+                line-height: 24px;
+            }
+        }
+
+        &-lead {
+            font-size: 16px;
+            line-height: 26px;
+            margin-top: 30px;
+
+            @include respond-to(phone) {
+                font-size: 14px;
+                line-height: 18px;
+                margin-top: 20px;
+            }
+        }
+
+        &-read-more {
+            color: $blue;
+            font-size: 16px;
+            line-height: 26px;
+            display: inline-block;
+            margin-top: 30px;
+
+            @include respond-to(phone) {
+                font-size: 14px;
+                line-height: 18px;
+                margin-top: 20px;
+            }
+        }
+    }
+
+    &__img {
+        width: 100%;
+        height: auto;
+    }
+
+    &__pager {
+        margin-left: 190px;
+
+        @include respond-to(desktop) {
+            margin-left: 140px;
+        }
+
+        @include respond-to(tablet) {
+            margin-left: 0;
+        }
+
+        &-link {
+            color: $blue;
+            font-size: 24px;
+            line-height: 26px;
+            margin-right: 30px;
+
+            &--active {
+                color: $black;
+            }
+
+            @include respond-to(phone) {
+                font-size: 20px;
+                line-height: 24px;
+            }
+        }
+    }
+}

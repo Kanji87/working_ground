@@ -23,6 +23,7 @@
     &__location {
         font-size: 16px;
         line-height: 35px;
+        display: inline-block;
 
         margin-top: 23px;
         margin-bottom: 60px;
@@ -130,6 +131,7 @@
 
         color: $blue;
         border: 1px solid $blue;
+        transition: all ease .3s;
         &:hover {
             color: $white;
             background-color: $blue;

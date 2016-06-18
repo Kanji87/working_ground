@@ -2,7 +2,7 @@ mixin program_item(time, title, author, price, button, button_href, price_num)
     .program__schedule-item
         .program__schedule-item-time= time
         .program__schedule-item-name
-            .program__schedule-item-title.text--blue= title
+            a.program__schedule-item-title.text--blue(href="#")= title
             .program__schedule-item-author= author
         .program__schedule-item-price(class= price_num ? 'program__schedule-item-price--num' : '')= price
         a.program__schedule-item-button(href='' + button_href)=  button

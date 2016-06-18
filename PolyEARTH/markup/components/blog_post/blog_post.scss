@@ -1,0 +1,142 @@
+.post {
+    padding-top: 60px;
+    font-weight: 300;
+
+    .post-date {
+        font-size: 16px;
+        line-height: 18px;
+    }
+
+    .blog-title {
+        font-size: 48px;
+        line-height: 62px;
+        margin-bottom: 40px;
+
+        @include respond-to(tablet) {
+            font-size: 42px;
+            line-height: 48px;
+        }
+
+        @include respond-to(phone) {
+            font-size: 28px;
+            line-height: 36px;
+        }
+    }
+
+    .post-container {
+        &>p {
+            font-size: 16px;
+            line-height: 24px;
+            margin-bottom: 30px;
+
+            @include respond-to(phone) {
+                font-size: 14px;
+                line-height: 18px;
+            }
+        }
+
+        blockquote {
+            margin-bottom: 30px;
+            p {
+                font-size: 24px;
+                line-height: 32px;
+
+                @include respond-to(phone) {
+                    font-size: 18px;
+                    line-height: 24px;
+                }
+            }
+        }
+
+        &>img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 30px;
+        }
+
+        &>ul {
+            list-style-type: disc;
+            padding-left: 15px;
+            margin-bottom: 30px;
+
+            li {
+                font-size: 16px;
+                line-height: 18px;
+                margin-bottom: 10px;
+
+                @include respond-to(phone) {
+                    font-size: 14px;
+                    line-height: 18px;
+                }
+            }
+        }
+
+        &__gallery {
+
+            img {
+                width: 100%;
+            }
+
+            li {
+                margin-bottom: 0 ;
+                height: 520px;
+
+                @include respond-to(desktop) {
+                    height: 440px;
+                }
+
+                @include respond-to(tablet) {
+                    height: 320px;
+                }
+
+                @include respond-to(phone) {
+                    height: 190px;
+                }
+            }
+
+            img {
+                width: 100%;
+                height: auto;
+                position: absolute;
+                top: 50%;
+                transform: translate(0, -50%);
+            }
+        }
+
+        .bx-viewport {
+            margin-bottom: 30px;
+            height: 520px;
+
+            @include respond-to(desktop) {
+                height: 440px;
+            }
+
+            @include respond-to(tablet) {
+                height: 320px;
+            }
+
+            @include respond-to(phone) {
+                height: 190px;
+            }
+        }
+        .bx-prev,
+        .bx-next {
+            width: 26px;
+            height: 41px;
+            display: block;
+            background-repeat: no-repeat;
+            background-size: contain;
+
+            @include respond-to(phone) {
+                width: 14px;
+                height: 24px;
+            }
+        }
+        .bx-prev {
+            background-image: url('%=static=%general/arrow_left.svg');
+        }
+        .bx-next {
+            background-image: url('%=static=%general/arrow_right.svg');
+        }
+    }
+}

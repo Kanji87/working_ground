@@ -1,0 +1,30 @@
+mixin blog
+    section.blog
+        .section__container
+            h3.section__title Блог
+            .blog__item
+                .blog__item-img
+                    img(src="http://placehold.it/880x440").blog__img
+                .blog__item-body
+                    .blog__item-date 22 июня
+                    .blog__item-content
+                        a.blog__item-title(href="/post.html") Фабрика Мух — Art-Talk
+                        p.blog__item-lead.
+                            Основная идея проекта – абстрактная худо-жественная интерпретация Квантово-волнового дуализма – принципа, согласно которому любой физический объект может быть описан как с использованием математи-ческого аппарата, основанного на волновых уравнениях, так и с помощью формализма, основанного на представлении об объекте как о частице или как о системе частиц.
+                        a.blog__item-read-more(href="/post.html") Читать далее
+            .blog__item
+                .blog__item-img
+                    img(src="http://placehold.it/880x440").blog__img
+                .blog__item-body
+                    .blog__item-date 22 июня
+                    .blog__item-content
+                        a.blog__item-title(href="/post.html") Фабрика Мух — Art-Talk
+                        p.blog__item-lead.
+                            Основная идея проекта – абстрактная худо-жественная интерпретация Квантово-волнового дуализма – принципа, согласно которому любой физический объект может быть описан как с использованием математи-ческого аппарата, основанного на волновых уравнениях, так и с помощью формализма, основанного на представлении об объекте как о частице или как о системе частиц.
+                        a.blog__item-read-more(href="/post.html") Читать далее
+
+            .blog__pager
+                a.blog__pager-link.blog__pager-link--active(href="#") 1
+                each val in [2, 3, 4, 5]
+                    a.blog__pager-link(href="#")= val
+
