@@ -1,3 +1,24 @@
+mixin nav(current, active, name)
+  li.nav-list__item
+      a(class="nav-list__item-link " + (current == active ? 'nav-list__item-link--active' : '')
+            href='' + (active ? ('/' + active + '.html') : '#')
+        )= name
+
+mixin subnav(current, active, name1, name2)
+  li.nav-list__item
+      a(class="nav-list__item-link " + (current == active ? 'nav-list__item-link--active' : '')
+            href='' + (active ? ('/' + active + '.html') : '#')
+        )= name1
+        br
+        = name2
+
+mixin nav_articles(current, active, name)
+  li.nav-articles__item
+      a(class="nav-articles__link " + (current == active ? 'nav-articles__link--active' : '')
+            href='' + (active ? ('/' + active + '.html') : '#')
+        )= name
+
+
 mixin header
     // Yandex.Metrika counter
     script(type='text/javascript').
@@ -41,15 +62,36 @@ mixin header
             a.open-btn(href='#')
                 != jadeHelpers.Icon.call(locals, {iconName: 'menu_icon', className: 'menu_icon'})
                 != jadeHelpers.Icon.call(locals, {iconName: 'menu_close_icon', className: 'menu_close_icon'})
+            .nav-articles
+              a.nav-articles__open-btn(href="#") Разделы выставки
+              ul.nav-articles__list
+                +nav_articles(current, 'dream', 'мечты и мечтатели')
+                +nav_articles(current, 'era', 'начало космической эры')
+                +nav_articles(current, 'orbit', 'первые люди на орбите')
+                +nav_articles(current, 'cosmonaut', 'человек космический')
+                +nav_articles(current, 'life', 'жизнь на орбите')
+                +nav_articles(current, 'planet', 'внешние планеты')
+                +nav_articles(current, 'future', 'мечты о будущем')
             nav.nav
                 ul.nav-list
+                    li.nav-list__item
+                        a.nav-list__item-link(href='/') Вернуться на главную
+
                     //- li.nav-list__item
                     //-     a.nav-list__item-link(href='#') Посетить выставку
                     //- li.nav-list__item
                     //-     a.nav-list__item-link(href='#') Программа
-                    //- li.nav-list__item
-                    //-     a.nav-list__item-link(href='#') Разделы выставки
+                    li.nav-list__item.nav-list__item--subnav
+                        a.nav-list__item-link(href='#') Разделы выставки
+                        ul.subnav-list
+                          +subnav(current, 'dream', 'мечты', 'и мечтатели')
+                          +subnav(current, 'era', 'начало', 'космической эры')
+                          +subnav(current, 'orbit', 'первые люди на орбите')
+                          +subnav(current, 'cosmonaut', 'человек космический')
+                          +subnav(current, 'life', 'жизнь на орбите')
+                          +subnav(current, 'planet', 'внешние планеты')
+                          +subnav(current, 'future', 'мечты о будущем')
                     li.nav-list__item
-                        a.nav-list__item-link.nav-list__item-link--ru(href='/') Ru
+                        a.nav-list__item-link.nav-list__item-link--active.nav-list__item-link--ru(href='/') Ru
                         span.nav-list__link-seporator |
                         a.nav-list__item-link.nav-list__item-link--en(href='/en.html') En

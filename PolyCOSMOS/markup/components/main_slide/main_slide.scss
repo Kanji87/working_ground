@@ -23,7 +23,8 @@
 .buy-ticket {
     position: absolute;
     z-index: 990;
-    top: 25px;
+    top: 70px;
+    // top: 25px;
     left: 27px;
 
     display: block;
@@ -33,12 +34,12 @@
     border: 1px solid #231f20;
 
     @include respond-to(large) {
-        top: 20px;
+        // top: 20px;
         left: 20px;
     }
-    @include respond-to(desktop) {
-        top: 60px;
-    }
+    // @include respond-to(desktop) {
+    //     top: 60px;
+    // }
     @include respond-to(tablet) {
         left: 17px;
     }
@@ -78,12 +79,12 @@
     left: auto;
 
     @include respond-to(large) {
-        top: 20px;
+        // top: 20px;
         right: 20px;
     }
-    @include respond-to(desktop) {
-        top: 60px;
-    }
+    // @include respond-to(desktop) {
+    //     top: 60px;
+    // }
     @include respond-to(tablet) {
         right: 17px;
     }
