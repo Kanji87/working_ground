@@ -104,5 +104,9 @@
         background-image: url('%=static=%general/buy_ticket_img.png');
         background-size: contain;
         margin-top: 55px;
+
+        &--en {
+            background-image: url('%=static=%general/buy_ticket_img_en.png');
+        }
     }
 }

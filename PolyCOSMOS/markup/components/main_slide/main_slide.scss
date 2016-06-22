@@ -36,16 +36,16 @@
         top: 20px;
         left: 20px;
     }
-    // @include respond-to(desktop) {
-    // top: 60px;
-    // }
+    @include respond-to(desktop) {
+        top: 60px;
+    }
     @include respond-to(tablet) {
         left: 17px;
     }
     @include respond-to(phone) {
         top: 18px;
-        // left: 80px;
-        left: 20px;
+        left: 80px;
+        // left: 20px;
 
         width: 77px;
         height: 49px;
@@ -81,9 +81,9 @@
         top: 20px;
         right: 20px;
     }
-    // @include respond-to(desktop) {
-    //     top: 60px;
-    // }
+    @include respond-to(desktop) {
+        top: 60px;
+    }
     @include respond-to(tablet) {
         right: 17px;
     }
@@ -253,6 +253,8 @@
         bottom: -72px;
     }
     &__title {
+        width: 72px;
+        height: auto;
         @media only screen and ('max-height: 530px') and ('max-width: 320px') {
             width: 50px;
         }

@@ -63,16 +63,23 @@
         width: 900px;
         height: 100%;
 
-        background-image: url('%=static=%/general/02.png');
+        background-image: url('%=static=%general/02.png');
 
         @include respond-to(large) {
             width: 100%;
         }
         @include respond-to(tablet) {
-            background-image: url('%=static=%/general/02_m.png');
+            background-image: url('%=static=%general/02_m.png');
         }
         @include respond-to(phone) {
-            background-image: url('%=static=%/general/02_s.png');
+            background-image: url('%=static=%general/02_s.png');
+        }
+
+        &--en {
+            background-image: url('%=static=%general/02_en.png');
+            @include respond-to(phone) {
+                background-image: url('%=static=%general/02_en_s.png');
+            }
         }
     }
     &__cosmonaut {
@@ -83,7 +90,7 @@
         width: 347px;
         height: 717px;
 
-        background-image: url('%=static=%/general/01.png');
+        background-image: url('%=static=%general/01.png');
 
         @include respond-to(large) {
             top: 111px;
@@ -99,7 +106,7 @@
             width: 236px;
             height: 484px;
 
-            background-image: url('%=static=%/general/01_m.png');
+            background-image: url('%=static=%general/01_m.png');
         }
         @include respond-to(phone) {
             top: 87px;
@@ -108,13 +115,30 @@
             width: 122px;
             height: 253px;
 
-            background-image: url('%=static=%/general/01_s.png');
+            background-image: url('%=static=%general/01_s.png');
         }
         @media only screen and ('max-height: 440px') and ('max-width: 320px') {
             width: 108px;
             height: 225px;
             top: 66px;
             left: 154px;
+        }
+
+        &--en {
+            left: 670px;
+
+            @include respond-to(large) {
+                left: 465px;
+            }
+
+            @include respond-to(tablet) {
+                left: 380px;
+            }
+
+            @include respond-to(phone) {
+                top: 70px;
+                left: 160px;
+            }
         }
     }
     &__exhibition {
@@ -125,7 +149,12 @@
         width: 191px;
         height: 127px;
 
-        background-image: url('%=static=%/general/08.png');
+        background-image: url('%=static=%general/08.png');
+
+        &--en {
+            background-image: url('%=static=%general/08_en.png');
+            transform: rotate(2deg);
+        }
 
         @include respond-to(large) {
             top: 42px;
@@ -160,7 +189,7 @@
         width: 674px;
         height: 300px;
 
-        background-image: url('%=static=%/general/03.png');
+        background-image: url('%=static=%general/03.png');
 
         @include respond-to(large) {
             bottom: 4px;
@@ -187,6 +216,10 @@
             left: 14px;
             bottom: -32px;
         }
+
+        &--en {
+            background-image: url('%=static=%general/03_en.png');
+        }
     }
     &__planet-red-big {
         z-index: 970;
@@ -196,7 +229,7 @@
         width: 605px;
         height: 608px;
 
-        background-image: url('%=static=%/general/key_planet_red_big.png');
+        background-image: url('%=static=%general/key_planet_red_big.png');
 
         @include respond-to(large) {
             top: -156px;
@@ -212,7 +245,7 @@
             width: 411px;
             height: 410px;
 
-            background-image: url('%=static=%/general/key_planet_red_big_s.png');
+            background-image: url('%=static=%general/key_planet_red_big_s.png');
         }
         @include respond-to(phone) {
             top: -86px;
@@ -221,7 +254,7 @@
             width: 209px;
             height: 210px;
 
-            background-image: url('%=static=%/general/key_planet_red_big_s.png');
+            background-image: url('%=static=%general/key_planet_red_big_s.png');
         }
     }
     &__planet-red-medium {
@@ -232,7 +265,7 @@
         width: 276px;
         height: 274px;
 
-        background-image: url('%=static=%/general/key_planet_red_medium.png');
+        background-image: url('%=static=%general/key_planet_red_medium.png');
 
         @include respond-to(large) {
             top: 376px;
@@ -270,7 +303,7 @@
         width: 203px;
         height: 195px;
 
-        background-image: url('%=static=%/general/key_planet_red_small.png');
+        background-image: url('%=static=%general/key_planet_red_small.png');
 
         @include respond-to(large) {
             bottom: -198px;
@@ -307,7 +340,7 @@
         width: 100px;
         height: 100px;
 
-        background-image: url('%=static=%/general/key_planet_yellow_small.png');
+        background-image: url('%=static=%general/key_planet_yellow_small.png');
 
         @include respond-to(large) {
             top: 157px;
@@ -323,7 +356,7 @@
             width: 68px;
             height: 68px;
 
-            background-image: url('%=static=%/general/key_planet_yellow_small_m.png');
+            background-image: url('%=static=%general/key_planet_yellow_small_m.png');
         }
         @include respond-to(phone) {
             top: 90px;
@@ -332,7 +365,7 @@
             width: 45px;
             height: 45px;
 
-            background-image: url('%=static=%/general/key_planet_yellow_small_s.png');
+            background-image: url('%=static=%general/key_planet_yellow_small_s.png');
         }
         @media only screen and ('max-height: 440px') and ('max-width: 320px') {
             right: -3px;
@@ -348,7 +381,7 @@
         width: 177px;
         height: 175px;
 
-        background-image: url('%=static=%/general/key_planet_yellow_medium.png');
+        background-image: url('%=static=%general/key_planet_yellow_medium.png');
 
         @include respond-to(large) {
             top: -24px;
@@ -364,7 +397,7 @@
             width: 136px;
             height: 135px;
 
-            background-image: url('%=static=%/general/key_planet_yellow_medium_m.png');
+            background-image: url('%=static=%general/key_planet_yellow_medium_m.png');
         }
         @include respond-to(phone) {
             top: -31px;
@@ -373,7 +406,7 @@
             width: 72px;
             height: 72px;
 
-            background-image: url('%=static=%/general/key_planet_yellow_medium_s.png');
+            background-image: url('%=static=%general/key_planet_yellow_medium_s.png');
         }
         @media only screen and ('max-height: 440px') and ('max-width: 320px') {
             top: 51px;
@@ -464,6 +497,13 @@
     &:hover {
         background-image: url('%=static=%general/hashtag_hover.png');
     }
+
+    &--en {
+        background-image: url('%=static=%general/hashtag_en.png');
+        &:hover {
+            background-image: url('%=static=%general/hashtag_en_hover.png');
+        }
+    }
 }
 
 .location-text {
@@ -479,7 +519,7 @@
 
     // transition: background-image ease .3s;
 
-    background-image: url('%=static=%/general/location.png');
+    background-image: url('%=static=%general/location.png');
     background-repeat: no-repeat;
     background-size: contain;
 
@@ -497,7 +537,7 @@
         width: 138px;
         height: 75px;
 
-        background-image: url('%=static=%/general/location_m.png');
+        background-image: url('%=static=%general/location_m.png');
     }
     @include respond-to(phone) {
         z-index: 990;
@@ -509,16 +549,16 @@
 
         transform: rotate(-358deg);
 
-        background-image: url('%=static=%/general/location_s.png');
+        background-image: url('%=static=%general/location_s.png');
     }
     &:hover {
-        background-image: url('%=static=%/general/location_hover.png');
+        background-image: url('%=static=%general/location_hover.png');
 
         @include respond-to(tablet) {
-            background-image: url('%=static=%/general/location_m_hover.png');
+            background-image: url('%=static=%general/location_m_hover.png');
         }
         @include respond-to(phone) {
-            background-image: url('%=static=%/general/location_s_hover.png');
+            background-image: url('%=static=%general/location_s_hover.png');
         }
     }
 
@@ -531,6 +571,14 @@
     }
     @media only screen and ('max-height: 440px') and ('max-width: 320px') {
         left: 111px;
+    }
+
+    &--en {
+        background-image: url('%=static=%general/location_en.png');
+
+        &:hover {
+            background-image: url('%=static=%general/location_en_hover.png');
+        }
     }
 }
 
