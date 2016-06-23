@@ -1,0 +1,114 @@
+.program__schedule-item {
+    margin-bottom: 32px;
+    &:last-child {
+        margin-bottom: 0;
+    }
+    @include cf();
+
+    &-time,
+    &-name,
+    &-price,
+    &-button {
+        float: left;
+    }
+
+    &-time,
+    &-title {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    &-author {
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    &-time {
+        width: 41px;
+
+        @include respond-to(phone) {
+            width: 100%;
+            float: none;
+        }
+    }
+
+    &-name {
+        margin-left: 55px;
+        width: 285px;
+
+        // @include respond-to(desktop) {
+        //     margin-left: 40px;
+        //     width: 390px;
+        // }
+
+        @include respond-to(tablet) {
+            margin-left: 35px;
+            width: 280px;
+        }
+
+        @include respond-to(phone) {
+            width: 100%;
+            float: none;
+            margin-left: 0;
+            margin-top: 6px;
+        }
+    }
+
+    &-title {
+        font-weight: 700;
+        color: $gold;
+    }
+
+    &-price,
+    &-button {
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    &-price  {
+        margin-left: 70px;
+        width: 100px;
+
+        @include respond-to(tablet) {
+            margin-left: 25px;
+        }
+
+        @include respond-to(phone) {
+            margin-top: 13px;
+            margin-left: 0;
+        }
+
+        &--num {
+            font-size: 16px;
+        }
+    }
+
+    &-button {
+        // margin-left: 90px;
+        width: 141px;
+        height: 48px;
+        color: $gold;
+        border: 1px solid $gold;
+        line-height: 48px;
+        text-align: center;
+        transition: all ease .3s;
+        float: right;
+
+        &:hover {
+            color: #000;
+            background-color: $gold;
+        }
+
+        @include respond-to(phone) {
+            margin-top: 13px;
+        }
+
+        // @include respond-to(desktop) {
+        //     margin-left: 70px;
+        // }
+
+        // @include respond-to(desktop) {
+        //     margin-left: 30px;
+        // }
+    }
+}

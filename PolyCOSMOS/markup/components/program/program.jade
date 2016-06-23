@@ -1,0 +1,201 @@
+include ../program_item/program_item
+
+mixin program
+    section.program
+        .section__container
+            h3.section__title Программа
+            p.program__desc.
+                СССР стал первой страной, еще в начале 60-х годов начавшей посылать удачные научные беспилотные экспедиции к внешним планетам. Десятки аппаратов, от «Лунохода» до «Веги», отличающиеся неожиданным дизайном и совершенной инженерно-конструкторской начинкой, удачно выполнили свои задания. Луна, соседние Марс и Венера, газовые гиганты, граница Солнечной системы — мы все дальше и дальше отодвигаем пределы познанного. 
+
+            //- .program__hint
+            //-     p.program__hint-text.
+            //-         Все события проходят по адресу:
+            //-     a.program__hint-text.text--blue(href="https://yandex.ru/maps/?text=%D0%91%D0%B5%D1%80%D1%81%D0%B5%D0%BD%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B9+%D0%BF%D0%B5%D1%80%2C+%D0%B4.+2%2C+%D1%81%D1%82%D1%80.1" target="_blank")
+            //-         span «Красный Октябрь», 
+            //-         span Берсеневский пер, д. 2, стр.1
+
+            .program__schedule
+                .program__schedule-block
+                    .program__schedule-col.program__schedule-col-date
+                        .program__schedule-date 30 июня
+
+                    .program__schedule-col.program__schedule-col-info
+                        +program_item(
+                            '20:00',
+                            'Путешествие из Калуги на Луну – лекция',
+                            'Владимир Сурдин',
+                            'бесплатно по регистрации',
+                            'регистрация',
+                            '#'
+                        )
+                .program__schedule-block
+                    .program__schedule-col.program__schedule-col-date
+                        .program__schedule-date 2 июля
+
+                    .program__schedule-col.program__schedule-col-info
+                        +program_item(
+                            '13:00-14:00 и 15:00-16:00',
+                            'Ракеты – детский мастер-класс',
+                            'Мария Романова ',
+                            '300 ₽',
+                            'купить',
+                            '#'
+                        )
+                .program__schedule-block
+                    .program__schedule-col.program__schedule-col-date
+                        .program__schedule-date 3 июля
+
+                    .program__schedule-col.program__schedule-col-info
+                        +program_item(
+                            '14:00-15:00 и 16:00-17:00',
+                            'Спектры звезд – детский мастер-класс',
+                            'Мария Романова',
+                            '300 ₽',
+                            'купить',
+                            '#'
+                        )
+                .program__schedule-block
+                    .program__schedule-col.program__schedule-col-date
+                        .program__schedule-date 7 июля
+
+                    .program__schedule-col.program__schedule-col-info
+                        +program_item(
+                            '20:00',
+                            'Полет человека в космос как вызов для космической медицины – лекция',
+                            'Руперт Герцер',
+                            'бесплатно по регистрации',
+                            'регистрация',
+                            '#'
+                        )
+                .program__schedule-block
+                    .program__schedule-col.program__schedule-col-date
+                        .program__schedule-date 9 июля
+
+                    .program__schedule-col.program__schedule-col-info
+                        +program_item(
+                            '14:00-15:00 и 16:00-17:00',
+                            'Спектры звезд – детский мастер-класс',
+                            'Мария Романова',
+                            '300 ₽',
+                            'купить',
+                            '#'
+                        )
+                .program__schedule-block
+                    .program__schedule-col.program__schedule-col-date
+                        .program__schedule-date 10 июля
+
+                    .program__schedule-col.program__schedule-col-info
+                        +program_item(
+                            '14:00-15:00 и 16:00-17:00',
+                            'Вакуумный взрыв – детский мастер-класс',
+                            'Мария Романова',
+                            '300 ₽',
+                            'купить',
+                            '#'
+                        )
+                .program__schedule-block
+                    .program__schedule-col.program__schedule-col-date
+                        .program__schedule-date 16 июля
+
+                    .program__schedule-col.program__schedule-col-info
+                        +program_item(
+                            '14:00-15:00 и 16:00-17:00',
+                            'Вакуумный взрыв – детский мастер-класс',
+                            'Мария Романова',
+                            '300 ₽',
+                            'купить',
+                            '#'
+                        )
+                .program__schedule-block
+                    .program__schedule-col.program__schedule-col-date
+                        .program__schedule-date 17 июля
+
+                    .program__schedule-col.program__schedule-col-info
+                        +program_item(
+                            '13:00-14:00  и 15:00-16:00',
+                            'Ракеты – детский мастер-класс',
+                            'Мария Романова',
+                            '300 ₽',
+                            'купить',
+                            '#'
+                        )
+                .program__schedule-block
+                    .program__schedule-col.program__schedule-col-date
+                        .program__schedule-date 21 июля
+
+                    .program__schedule-col.program__schedule-col-info
+                        +program_item(
+                            '20:00',
+                            'Дискуссия о частной космонавтике – дискуссия',
+                            'Ольга Вад',
+                            'бесплатно по регистрации',
+                            'регистрация',
+                            '#'
+                        )
+                .program__schedule-block
+                    .program__schedule-col.program__schedule-col-date
+                        .program__schedule-date 23 июля
+
+                    .program__schedule-col.program__schedule-col-info
+                        +program_item(
+                            '14:00-15:00 и 16:00-17:00',
+                            'Вакуумный взрыв – детский мастер-класс',
+                            'Мария Романова',
+                            '300 ₽',
+                            'купить',
+                            '#'
+                        )
+                .program__schedule-block
+                    .program__schedule-col.program__schedule-col-date
+                        .program__schedule-date 24 июля
+
+                    .program__schedule-col.program__schedule-col-info
+                        +program_item(
+                            '13:00-14:00  и 15:00-16:00',
+                            'Ракеты – детский мастер-класс',
+                            'Мария Романова',
+                            '300 ₽',
+                            'купить',
+                            '#'
+                        )
+                .program__schedule-block
+                    .program__schedule-col.program__schedule-col-date
+                        .program__schedule-date 28 июля
+
+                    .program__schedule-col.program__schedule-col-info
+                        +program_item(
+                            '20:00',
+                            'Марс-500 и другие изоляционные эксперименты – лекция',
+                            'Александр Суворов',
+                            'бесплатно по регистрации',
+                            'регистрация',
+                            '#'
+                        )
+                .program__schedule-block
+                    .program__schedule-col.program__schedule-col-date
+                        .program__schedule-date 30 июля
+
+                    .program__schedule-col.program__schedule-col-info
+                        +program_item(
+                            '13:00-14:00  и 15:00-16:00',
+                            'Ракеты – детский мастер-класс',
+                            'Мария Романова',
+                            '300 ₽',
+                            'купить',
+                            '#'
+                        )
+                .program__schedule-block
+                    .program__schedule-col.program__schedule-col-date
+                        .program__schedule-date 31 июля
+
+                    .program__schedule-col.program__schedule-col-info
+                        +program_item(
+                            '14:00-15:00 и 16:00-17:00',
+                            'Вакуумный взрыв – детский мастер-класс',
+                            'Мария Романова',
+                            '300 ₽',
+                            'купить',
+                            '#'
+                        )
+
+                        //- .program__schedule-hint *Вход свободный по билету на выставку

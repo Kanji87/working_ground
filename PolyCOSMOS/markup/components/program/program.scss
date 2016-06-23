@@ -1,0 +1,169 @@
+.program {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    color: $white;
+
+    .section__container {
+        background-color: $black;
+        padding: 50px 40px 100px;
+
+        @include respond-to(tablet) {
+            width: 100%;
+        }
+
+        @include respond-to(phone) {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
+
+    .section__title {
+        color: $white;
+        font-family: $activist;
+        font-size: 48px;
+        letter-spacing: 2px;
+        margin: 0;
+        line-height: 59px;
+
+        @include respond-to(phone) {
+            font-size: 36px;
+            line-height: 36px;
+            letter-spacing: 1.5px;
+        }
+    }
+
+    @include respond-to(phone) {
+        padding-top: 87px;
+    }
+
+    @include respond-to(phone) {
+        padding-top: 87px;
+        padding-bottom: 46px;
+    }
+
+    &__desc {
+        margin-top: 42px;
+        font-family: $formular;
+        font-size: 20px;
+        line-height: 28px;
+        letter-spacing: .93px;
+
+        @include respond-to(phone) {
+            margin-top: 48px;
+            font-size: 18px;
+            line-height: 28px;
+        }
+    }
+
+    &__hint {
+        margin-top: 37px;
+        padding-left: 80px;
+
+        @include respond-to(desktop) {
+            padding-left: 0;
+        }
+
+        @include respond-to(phone) {
+            margin-top: 34px;
+
+            span {
+                display: block;
+            }
+        }
+    }
+
+    &__hint-text {
+        font-size: 16px;
+        line-height: 35px;
+
+        @include respond-to(phone) {
+            font-size: 14px;
+            line-height: 28px;
+        }
+    }
+
+    &__schedule {
+        // padding-left: 80px;
+        margin-top: 50px;
+
+        @include respond-to(desktop) {
+            padding-left: 0;
+        }
+
+        @include respond-to(phone) {
+            margin-top: 50px;
+        }
+    }
+
+    &__schedule-block {
+        @include cf();
+        padding-top: 40px;
+        padding-bottom: 30px;
+        border-top: 1px solid #979797;
+
+        &:last-child {
+            border-bottom: 1px solid #979797;
+        }
+
+        @include respond-to(tablet) {
+            padding-top: 20px;
+        }
+
+        @include respond-to(phone) {
+            &:last-child {
+                border-bottom: 0;
+            }
+        }
+    }
+
+    &__schedule-col {
+        float: left;
+    }
+
+    &__schedule-col-date {
+        @include respond-to(tablet) {
+            float: none;
+            margin-bottom: 15px;
+        }
+    }
+
+    &__schedule-col-info {
+        margin-left: 45px;
+        width: 760px;
+
+        // @include respond-to(desktop) {
+        //     margin-left: 30px;
+        //     width: 775px;
+        // }
+
+        @include respond-to(tablet) {
+            margin-left: 0;
+            width: 100%;
+        }
+    }
+
+    &__schedule-date {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+        width: 75px;
+    }
+
+    &__schedule-hint {
+        font-size: 12px;
+        line-height: 24px;
+        margin-left: 96px;
+
+        @include respond-to(desktop) {
+            margin-left: 81px;
+        }
+
+        @include respond-to(tablet) {
+            margin-left: 76px;
+        }
+
+        @include respond-to(phone) {
+            margin-left: 0;
+        }
+    }
+}
