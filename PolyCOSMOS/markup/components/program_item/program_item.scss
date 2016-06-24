@@ -24,7 +24,7 @@
     }
 
     &-time {
-        width: 41px;
+        width: 105px;
 
         @include respond-to(phone) {
             width: 100%;
@@ -57,6 +57,7 @@
     &-title {
         font-weight: 700;
         color: $gold;
+        pointer-events: none;
     }
 
     &-price,
@@ -66,7 +67,7 @@
     }
 
     &-price  {
-        margin-left: 70px;
+        margin-left: 40px;
         width: 100px;
 
         @include respond-to(tablet) {
@@ -93,6 +94,7 @@
         text-align: center;
         transition: all ease .3s;
         float: right;
+        pointer-events: none;
 
         &:hover {
             color: #000;
