@@ -57,7 +57,7 @@
 
     &__hint {
         margin-top: 37px;
-        padding-left: 80px;
+        // padding-left: 80px;
 
         @include respond-to(desktop) {
             padding-left: 0;
@@ -80,6 +80,10 @@
             font-size: 14px;
             line-height: 28px;
         }
+    }
+
+    &__hint-link {
+        color: $gold;
     }
 
     &__schedule {
@@ -112,6 +116,13 @@
         @include respond-to(phone) {
             &:last-child {
                 border-bottom: 0;
+            }
+        }
+
+        &--unactive {
+            .program__schedule-item-title,
+            .program__schedule-item-button {
+                pointer-events: none;
             }
         }
     }
@@ -152,14 +163,10 @@
     &__schedule-hint {
         font-size: 12px;
         line-height: 24px;
-        margin-left: 96px;
-
-        @include respond-to(desktop) {
-            margin-left: 81px;
-        }
+        margin-left: 160px;
 
         @include respond-to(tablet) {
-            margin-left: 76px;
+            margin-left: 140px;
         }
 
         @include respond-to(phone) {

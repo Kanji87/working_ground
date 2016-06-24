@@ -1,8 +1,8 @@
-mixin program_item(time, title, author, price, button, button_href, price_num)
+mixin program_item(time, title, author, price, button, title_href, button_href, price_num)
     .program__schedule-item
         .program__schedule-item-time= time
         .program__schedule-item-name
-            a.program__schedule-item-title(href="#")= title
+            a.program__schedule-item-title(href='' + title_href)= title
             .program__schedule-item-author= author
         .program__schedule-item-price(class= price_num ? 'program__schedule-item-price--num' : '')= price
         a.program__schedule-item-button(href='' + button_href)=  button

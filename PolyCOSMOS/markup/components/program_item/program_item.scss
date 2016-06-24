@@ -57,7 +57,7 @@
     &-title {
         font-weight: 700;
         color: $gold;
-        pointer-events: none;
+        // pointer-events: none;
     }
 
     &-price,
@@ -94,7 +94,7 @@
         text-align: center;
         transition: all ease .3s;
         float: right;
-        pointer-events: none;
+        // pointer-events: none;
 
         &:hover {
             color: #000;

@@ -5,14 +5,17 @@ mixin program
         .section__container
             h3.section__title Программа
             p.program__desc.
-                СССР стал первой страной, еще в начале 60-х годов начавшей посылать удачные научные беспилотные экспедиции к внешним планетам. Десятки аппаратов, от «Лунохода» до «Веги», отличающиеся неожиданным дизайном и совершенной инженерно-конструкторской начинкой, удачно выполнили свои задания. Луна, соседние Марс и Венера, газовые гиганты, граница Солнечной системы — мы все дальше и дальше отодвигаем пределы познанного. 
+                Образовательная программа выставки «Космос: рождение новой эры» посвящена различным вопросам, напрямую связанным с освоением космоса. Речь зайдет не только о событиях прошлого в исторической перспективе, но и о блоке актуальных социально-культурных вопросов, связанных с  темой освоения космического пространства. Экономическая целесообразность колонизации Марса, частная космонавтика, космическая политика и приоритеты России в исследованиях космоса – обо всем этом можно будет узнать в Лектории выставки. 
+                <br>
+                <br>
+                Специальная программа предусмотрена и для детей. Она состоит из практических мастер-классов по физике, химии и конструированию, а также из цикла лекций на тему «Как стать космонавтом?». 
 
-            //- .program__hint
-            //-     p.program__hint-text.
-            //-         Все события проходят по адресу:
-            //-     a.program__hint-text.text--blue(href="https://yandex.ru/maps/?text=%D0%91%D0%B5%D1%80%D1%81%D0%B5%D0%BD%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B9+%D0%BF%D0%B5%D1%80%2C+%D0%B4.+2%2C+%D1%81%D1%82%D1%80.1" target="_blank")
-            //-         span «Красный Октябрь», 
-            //-         span Берсеневский пер, д. 2, стр.1
+            .program__hint
+                p.program__hint-text.
+                    Все события проходят по адресу:
+                a.program__hint-text.program__hint-link(href="https://yandex.ru/maps/213/moscow/?z=16&ll=37.63388987576287%2C55.82907095714267&l=map&origin=jsapi_2_1_41&from=api-maps&um=constructor%3Ai7c-kjo3V8NIdNSnl_TI2bsPlb89bhkv" target="_blank")
+                    span ВДНХ, 
+                    span павильон №1 &laquo;Центральный&raquo;
 
             .program__schedule
                 .program__schedule-block
@@ -26,7 +29,8 @@ mixin program
                             'Владимир Сурдин',
                             'бесплатно по регистрации',
                             'регистрация',
-                            '#'
+                            'https://polymus.ru/ru/education/lectures/schedule/puteshestvie-iz-kalugi-na-lunu/',
+                            'https://polytech.timepad.ru/event/345194/'
                         )
                 .program__schedule-block
                     .program__schedule-col.program__schedule-col-date
@@ -34,12 +38,14 @@ mixin program
 
                     .program__schedule-col.program__schedule-col-info
                         +program_item(
-                            '13:00-14:00 и 15:00-16:00',
-                            'Ракеты – детский мастер-класс',
-                            'Мария Романова ',
+                            '14:00-15:00 и 16:00-17:00',
+                            'Спектры звезд – детский мастер-класс',
+                            //- 'Мария Романова',
+                            '',
                             '300 ₽',
                             'купить',
-                            '#'
+                            'https://polymus.ru/ru/education/workshops/spektry-zvezd/',
+                            'https://polymus.ru/ru/education/workshops/spektry-zvezd/'
                         )
                 .program__schedule-block
                     .program__schedule-col.program__schedule-col-date
@@ -48,11 +54,13 @@ mixin program
                     .program__schedule-col.program__schedule-col-info
                         +program_item(
                             '14:00-15:00 и 16:00-17:00',
-                            'Спектры звезд – детский мастер-класс',
-                            'Мария Романова',
+                            'Вакуумный взрыв – детский мастер-класс',
+                            //- 'Мария Романова',
+                            '',
                             '300 ₽',
                             'купить',
-                            '#'
+                            'https://polymus.ru/education/workshops/vakuumnyy-vzryv/',
+                            'https://polymus.ru/education/workshops/vakuumnyy-vzryv/'
                         )
                 .program__schedule-block
                     .program__schedule-col.program__schedule-col-date
@@ -61,12 +69,15 @@ mixin program
                     .program__schedule-col.program__schedule-col-info
                         +program_item(
                             '20:00',
-                            'Полет человека в космос как вызов для космической медицины – лекция',
+                            'Полет человека в космос как вызов для космической медицины – лекция*',
                             'Руперт Герцер',
                             'бесплатно по регистрации',
                             'регистрация',
-                            '#'
+                            'https://polymus.ru/education/lectures/schedule/polet-cheloveka-v-kosmos-kak-vyzov-dlya-',
+                            'https://polytech.timepad.ru/event/345803/'
                         )
+
+                        .program__schedule-hint *Лекция пройдет с синхронным переводом.
                 .program__schedule-block
                     .program__schedule-col.program__schedule-col-date
                         .program__schedule-date 9 июля
@@ -75,10 +86,12 @@ mixin program
                         +program_item(
                             '14:00-15:00 и 16:00-17:00',
                             'Спектры звезд – детский мастер-класс',
-                            'Мария Романова',
+                            //- 'Мария Романова',
+                            '',
                             '300 ₽',
                             'купить',
-                            '#'
+                            'https://polymus.ru/education/workshops/146737-spektry-zvezd/',
+                            'https://polymus.ru/education/workshops/146737-spektry-zvezd/'
                         )
                 .program__schedule-block
                     .program__schedule-col.program__schedule-col-date
@@ -88,10 +101,12 @@ mixin program
                         +program_item(
                             '14:00-15:00 и 16:00-17:00',
                             'Вакуумный взрыв – детский мастер-класс',
-                            'Мария Романова',
+                            //- 'Мария Романова',
+                            '',
                             '300 ₽',
                             'купить',
-                            '#'
+                            'https://polymus.ru/education/workshops/146739-vakuumnyy-vzryv/',
+                            'https://polymus.ru/education/workshops/146739-vakuumnyy-vzryv/'
                         )
                 .program__schedule-block
                     .program__schedule-col.program__schedule-col-date
@@ -101,10 +116,12 @@ mixin program
                         +program_item(
                             '14:00-15:00 и 16:00-17:00',
                             'Вакуумный взрыв – детский мастер-класс',
-                            'Мария Романова',
+                            //- 'Мария Романова',
+                            '',
                             '300 ₽',
                             'купить',
-                            '#'
+                            'https://polymus.ru/education/workshops/146740-vakuumnyy-vzryv/',
+                            'https://polymus.ru/education/workshops/146740-vakuumnyy-vzryv/'
                         )
                 .program__schedule-block
                     .program__schedule-col.program__schedule-col-date
@@ -114,12 +131,14 @@ mixin program
                         +program_item(
                             '13:00-14:00  и 15:00-16:00',
                             'Ракеты – детский мастер-класс',
-                            'Мария Романова',
+                            //- 'Мария Романова',
+                            '',
                             '300 ₽',
                             'купить',
-                            '#'
+                            'https://polymus.ru/education/workshops/rakety/',
+                            'https://polymus.ru/education/workshops/rakety/'
                         )
-                .program__schedule-block
+                .program__schedule-block.program__schedule-block--unactive
                     .program__schedule-col.program__schedule-col-date
                         .program__schedule-date 21 июля
 
@@ -140,10 +159,12 @@ mixin program
                         +program_item(
                             '14:00-15:00 и 16:00-17:00',
                             'Вакуумный взрыв – детский мастер-класс',
-                            'Мария Романова',
+                            //- 'Мария Романова',
+                            '',
                             '300 ₽',
                             'купить',
-                            '#'
+                            'https://polymus.ru/education/workshops/146741-vakuumnyy-vzryv/',
+                            'https://polymus.ru/education/workshops/146741-vakuumnyy-vzryv/'
                         )
                 .program__schedule-block
                     .program__schedule-col.program__schedule-col-date
@@ -153,10 +174,12 @@ mixin program
                         +program_item(
                             '13:00-14:00  и 15:00-16:00',
                             'Ракеты – детский мастер-класс',
-                            'Мария Романова',
+                            //- 'Мария Романова',
+                            '',
                             '300 ₽',
                             'купить',
-                            '#'
+                            'https://polymus.ru/education/workshops/146744-rakety/',
+                            'https://polymus.ru/education/workshops/146744-rakety/'
                         )
                 .program__schedule-block
                     .program__schedule-col.program__schedule-col-date
@@ -169,7 +192,8 @@ mixin program
                             'Александр Суворов',
                             'бесплатно по регистрации',
                             'регистрация',
-                            '#'
+                            'https://polymus.ru/education/lectures/schedule/mars-500-i-drugie-izolyatsionnye-eksperimenty/',
+                            'https://polytech.timepad.ru/event/345512/'
                         )
                 .program__schedule-block
                     .program__schedule-col.program__schedule-col-date
@@ -179,10 +203,12 @@ mixin program
                         +program_item(
                             '13:00-14:00  и 15:00-16:00',
                             'Ракеты – детский мастер-класс',
-                            'Мария Романова',
+                            //- 'Мария Романова',
+                            '',
                             '300 ₽',
                             'купить',
-                            '#'
+                            'https://polymus.ru/education/workshops/146745-rakety/',
+                            'https://polymus.ru/education/workshops/146745-rakety/'
                         )
                 .program__schedule-block
                     .program__schedule-col.program__schedule-col-date
@@ -192,10 +218,12 @@ mixin program
                         +program_item(
                             '14:00-15:00 и 16:00-17:00',
                             'Вакуумный взрыв – детский мастер-класс',
-                            'Мария Романова',
+                            //- 'Мария Романова',
+                            '',
                             '300 ₽',
                             'купить',
-                            '#'
+                            'https://polymus.ru/education/workshops/146742-vakuumnyy-vzryv/',
+                            'https://polymus.ru/education/workshops/146742-vakuumnyy-vzryv/'
                         )
 
                         //- .program__schedule-hint *Вход свободный по билету на выставку
