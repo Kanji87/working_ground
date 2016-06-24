@@ -62,16 +62,16 @@ mixin header(current, current_subnav, current_articles)
             a.open-btn(href='#')
                 != jadeHelpers.Icon.call(locals, {iconName: 'menu_icon', className: 'menu_icon'})
                 != jadeHelpers.Icon.call(locals, {iconName: 'menu_close_icon', className: 'menu_close_icon'})
-            //- .nav-articles
-            //-   a.nav-articles__open-btn(href="#") Разделы выставки
-            //-   ul.nav-articles__list
-            //-     +nav_articles(current_articles, 'dream', 'мечты и мечтатели')
-            //-     +nav_articles(current_articles, 'era', 'начало космической эры')
-            //-     +nav_articles(current_articles, 'orbit', 'первые люди на орбите')
-            //-     +nav_articles(current_articles, 'cosmonaut', 'человек космический')
-            //-     +nav_articles(current_articles, 'life', 'жизнь на орбите')
-            //-     +nav_articles(current_articles, 'planet', 'внешние планеты')
-            //-     +nav_articles(current_articles, 'future', 'мечты о будущем')
+            .nav-articles
+              a.nav-articles__open-btn(href="#") Разделы выставки
+              ul.nav-articles__list
+                +nav_articles(current_articles, 'dream', 'мечты и мечтатели')
+                +nav_articles(current_articles, 'era', 'начало космической эры')
+                +nav_articles(current_articles, 'orbit', 'первые люди на орбите')
+                +nav_articles(current_articles, 'cosmonaut', 'человек космический')
+                +nav_articles(current_articles, 'life', 'жизнь на орбите')
+                +nav_articles(current_articles, 'planet', 'внешние планеты')
+                +nav_articles(current_articles, 'future', 'мечты о будущем')
             nav.nav
                 ul.nav-list
                     li.nav-list__item
@@ -79,22 +79,22 @@ mixin header(current, current_subnav, current_articles)
 
                     +nav(current, 'program', 'Программа')
 
-                    //- li.nav-list__item
-                    //-     a.nav-list__item-link(href='#') Посетить выставку
-                    //- li.nav-list__item
-                    //-     a.nav-list__item-link(href='#') Программа
+                    li.nav-list__item
+                        a.nav-list__item-link(href='#') Посетить выставку
+                    li.nav-list__item
+                        a.nav-list__item-link(href='#') Программа
 
 
-                    //- li.nav-list__item.nav-list__item--subnav
-                    //-     a.nav-list__item-link.js-open-subnav(href='#') Разделы выставки
-                    //-     ul.subnav-list
-                    //-       +subnav(current_subnav, 'dream', 'мечты', 'и мечтатели')
-                    //-       +subnav(current_subnav, 'era', 'начало', 'космической эры')
-                    //-       +subnav(current_subnav, 'orbit', 'первые люди', 'на орбите')
-                    //-       +subnav(current_subnav, 'cosmonaut', 'человек', 'космический')
-                    //-       +subnav(current_subnav, 'life', 'жизнь', 'на орбите')
-                    //-       +subnav(current_subnav, 'planet', 'внешние', 'планеты')
-                    //-       +subnav(current_subnav, 'future', 'мечты', 'о будущем')
+                    li.nav-list__item.nav-list__item--subnav
+                        a.nav-list__item-link.js-open-subnav(href='#') Разделы выставки
+                        ul.subnav-list
+                          +subnav(current_subnav, 'dream', 'мечты', 'и мечтатели')
+                          +subnav(current_subnav, 'era', 'начало', 'космической эры')
+                          +subnav(current_subnav, 'orbit', 'первые люди', 'на орбите')
+                          +subnav(current_subnav, 'cosmonaut', 'человек', 'космический')
+                          +subnav(current_subnav, 'life', 'жизнь', 'на орбите')
+                          +subnav(current_subnav, 'planet', 'внешние', 'планеты')
+                          +subnav(current_subnav, 'future', 'мечты', 'о будущем')
                     li.nav-list__item
                         a.nav-list__item-link.nav-list__item-link--active.nav-list__item-link--ru(href='/') Ru
                         span.nav-list__link-seporator |
