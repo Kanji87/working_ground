@@ -1,0 +1,73 @@
+mixin sidemenu
+    .side-menu
+                ul.side-menu__main
+                    li.side-menu__main-item
+                        a.side-menu__main-button.side-menu__main-button--burger.js-open-side-menu(href="#")
+                    li.side-menu__main-item
+                        a.side-menu__main-button.side-menu__main-button--search.js-open-side-menu(href="#")
+                    li.side-menu__main-item
+                        a.side-menu__main-button.side-menu__main-button--user.js-open-side-menu(href="#")
+                    li.side-menu__main-item
+                        a.side-menu__main-button.side-menu__main-button--bookmark.js-open-side-menu(href="#")
+
+                ul.side-menu__advanced
+                    li.side-menu__advanced-item
+                    li.side-menu__advanced-item
+                    li.side-menu__advanced-item
+
+                .side-menu__wrapper
+                    .side-menu__content
+                        a.side-menu__main-button.side-menu__main-button--close.js-close-side-menu(href="#")
+                        ul.side-menu__list
+                            li.side-menu__list-item
+                                a.side-menu__list-link.js-side-menu-open-content(href="#") Настройки
+                                .side-menu__list-item-content
+                                    a.side-menu__list-item-content-link(href="#") Редактировать данные
+                                    form.side-menu__list-form(action="#")
+                                        .side-menu__list-form-block
+                                            label.side-menu__list-form-label(for="name").side-menu__list-form-label--required Имя Фамилия
+                                            input#name.side-menu__list-form-input(type="text")
+                                            
+                                        .side-menu__list-form-block
+                                            label.side-menu__list-form-label(for="email").side-menu__list-form-label--required Электронная почта
+                                            input#email.side-menu__list-form-input(type="text")
+                                            
+                                        .side-menu__list-form-block
+                                            label.side-menu__list-form-label(for="company").side-menu__list-form-label--required Компания
+                                            input#company.side-menu__list-form-input(type="text")
+                                            
+                                        .side-menu__list-form-block
+                                            label.side-menu__list-form-label(for="state").side-menu__list-form-label--required  Должность
+                                            input#state.side-menu__list-form-input(type="text")
+                                            
+                                        .side-menu__list-form-block
+                                            label.side-menu__list-form-label(for="pass").side-menu__list-form-label--required  Пароль
+                                            a.side-menu__list-item-content-link.side-menu__list-form-changepass(href="#") Сменить
+                                            input#pass.side-menu__list-form-input(type="text")
+                                            
+                                        .side-menu__list-form-block
+                                            label.side-menu__list-form-label(for="phone").side-menu__list-form-label--required  Телефон (с кодом города)
+                                            input#phone.side-menu__list-form-input(type="text")
+                                            
+                                        .side-menu__list-form-block
+                                            label.side-menu__list-form-label(for="adress").side-menu__list-form-label--required  Адрес доставки
+                                            textarea#adress.side-menu__list-form-textarea
+
+                                        .side-menu__list-form-block
+                                            label.side-menu__list-form-label(for="zip").side-menu__list-form-label--required  Почтовый индекс
+                                            input#zip.side-menu__list-form-input(type="text")
+
+                                        p.side-menu__list-form-sign
+                                        
+                                        .side-menu__list-form-block
+                                            .side-menu__list-form-checkbox
+                                                input#agree(type="checkbox" name="agree").side-menu__list-form-checkbox-input
+                                                label.side-menu__list-form-checkbox-label(for="agree")
+
+                                            p.side-menu__list-form-checkbox-text.
+                                                Я ознакомлен с <a href='#'>правилами поведения</a> и <a href='#'>политикой по защите персональных данных</a> на hbr-russia.ru
+
+                                        input(type="submit", value="сохранить изменения").side-menu__list-form-submit
+
+                            li.side-menu__list-item
+                                a.side-menu__list-link(href="#") Выход

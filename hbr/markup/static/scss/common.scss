@@ -84,6 +84,162 @@ img {
             background-size: 22px 22px;
         }
     }
+
+    &__list-item {
+        padding: 20px 0;
+
+        &:not(:first-child) {
+            border-top: 1px solid #d9d9d9;
+        }
+    }
+
+    &__list-link {
+        font-family: 'roboto';
+        font-size: 16px;
+        line-height: 30px;
+        color: #000;
+        text-transform: uppercase;
+        text-decoration: none;
+        display: block;
+    }
+
+    &__list-item-content {
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: all ease .3s;
+
+        &--opened {
+            opacity: 1;
+            padding-top: 10px;
+            padding-bottom: 20px;
+            max-height: inherit;
+        }
+
+        &-link {
+            font-family: 'roboto';
+            color: #c82502;
+            text-decoration: none;
+            font-size: 13px;
+            line-height: 16px;
+        }
+    }
+
+    &__list-form {
+        margin-top: 20px;
+
+        &-block {
+            @include cf();
+
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        &-label {
+            font-size: 12px;
+            line-height: 13px;
+            font-family: 'notoserif';
+            display: block;
+            margin-bottom: 10px;
+
+            &--required:after {
+                content: ' *';
+                font-family: 'notoserif';
+                font-size: 12px;
+                line-height: 13px;
+                color: #c82502;
+            }
+        }
+
+        &-input {
+            font-size: 13px;
+            line-height: 17px;
+            padding: 10px 15px;
+            margin: 0;
+            width: 100%;
+            box-sizing: border-box;
+            display: block;
+            border: 1px solid #d9d9d9;
+            font-family: 'notoserif';
+            outline: none;
+        }
+
+        &-textarea {
+            font-size: 13px;
+            line-height: 17px;
+            padding: 10px 15px;
+            height: 85px;
+            resize: none;
+            margin: 0;
+            width: 100%;
+            box-sizing: border-box;
+            display: block;
+            border: 1px solid #d9d9d9;
+            font-family: 'notoserif';
+            outline: none;
+        }
+
+        &-changepass {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        &-submit {
+            font-size: 16px;
+            color: #fff;
+            text-transform: uppercase;
+            font-family: 'roboto';
+            text-transform: uppercase;
+            text-align: center;
+            height: 50px;
+            width: 100%;
+            background-color: #000;
+            line-height: 50px;
+            padding: 0;
+            margin: 0;
+            border: 0;
+            outline: none;
+        }
+
+        &-checkbox-input {
+            display: none;
+        }
+
+        &-checkbox-label {
+            float: left;
+        }
+
+        &-checkbox-text {
+            float: left;
+            width: 85%;
+            margin-left: 15px;
+            font-size: 12px;
+            line-height: 15px;
+            font-family: 'roboto';
+
+            a {
+                color: #c82502;
+                text-decoration: none;
+            }
+        }
+
+        input[type='checkbox'] + label {
+            display: block;
+            width: 18px;
+            height: 18px;
+            position: relative;
+            border: 1px solid #d9d9d9;
+            background-color: #fff;
+        }
+
+        input[type='checkbox']:checked + label {
+            background-image: url('%=static=%general/checked_icon.svg');
+            background-size: 75%;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    }
 }
 
 .section-main {
@@ -92,7 +248,7 @@ img {
 }
 
 .side-menu__content {
-    padding: 50px 20px;
+    padding: 50px 30px;
 
     transition: opacity ease .3s;
 
@@ -125,7 +281,7 @@ a {
 
 .page-content {
     @include cf();
-    padding-top: 35px;
+    // padding-top: 35px;
     margin-top: 30px;
     min-height: 100px;
     border-top: 1px solid #d9d9d9;
