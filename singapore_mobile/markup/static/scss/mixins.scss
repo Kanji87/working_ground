@@ -30,3 +30,13 @@
 }
 
 // You can add your own mixins here:
+
+
+@mixin respond-to($media) {
+    @if $media == phone {
+        @media only screen and (max-width: $phone) { @content; }
+    }
+    @else if $media == fablet {
+        @media only screen and (max-width: $fablet) { @content; }
+    }
+}

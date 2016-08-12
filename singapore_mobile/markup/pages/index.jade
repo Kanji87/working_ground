@@ -2,23 +2,33 @@ doctype html
 html(class="no-js", lang="ru")
 
     include ../components/head/head
-    include ../components/example/example
+    include ../components/header/header
+    include ../components/index_block/index_block
     include ../components/footer/footer
 
     head
         +head(head.defaults)
-    body.page
+    body
         |%=symbols=%
 
-        section.page__wrapper
+        section.l-grid
+            +header()
 
-            //- Include your components here
-            +example()
+            .l-page.c-index-slider-grid.js-index-slider
+                .c-index-slider
+                    .c-index-slider__pager
+                        a.c-index-block__prev(href="#")
+                        a.c-index-block__next(href="#")
 
-            .page__buffer
+                    +index_block('бизнеса',
+                                'Крупнейший деловой и торговый международный центр, один из главных портов Азии Сингапур уже стал лучшим городом для ведения и развития бизнеса, по мнению миллионов людей со всего мира.',
+                                'Подробнее',
+                                'work')
 
-        .page__footer
-            +footer()
+                    +index_block('отдыха',
+                                'Мегаполис с разнообразной культурой и религией ежегодно принимает миллионы туристов, и никто не уезжает из этого города разочарованным. Вас ждут новые открытия и впечатления!',
+                                'Подробнее',
+                                'play')
 
         script(src='%=static=%js/separate-js/svg4everybody.min.js')
         script svg4everybody();

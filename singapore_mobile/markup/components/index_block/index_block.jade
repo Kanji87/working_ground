@@ -1,0 +1,14 @@
+mixin index_block(title, desc, buttonSign, blockType)
+    div(class='c-index-block' + (blockType ? ' c-index-block--' + blockType : ''))
+        if title
+            h1.l-index-block__header
+                p.c-page__title.c-page__title--small Сингапур для
+                p.c-page__title.c-page__title--large= title
+
+        .c-index-block__desc
+            p.c-index-block__desc-text= desc
+
+            if buttonSign
+                a.c-index-block__more(href="#")
+                    i.icon.icon__down-bordered
+                    p.c-icon-sign= buttonSign

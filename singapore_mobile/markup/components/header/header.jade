@@ -1,0 +1,63 @@
+mixin main-menu__item(title, desc, active)
+    li(class='c-main-menu__item' + (active ? ' c-main-menu__item--active' : ''))
+        a.c-main-menu__link(href='#')
+            p.c-main-menu__item-title= title
+            p.c-main-menu__item-desc= desc
+
+mixin header()
+    header.header
+        a.header__menu-link.js-open-menu(href="#")
+        h1.header__page-title Твой <span>Сингапур</span>
+        a.header__important-link.js-open-important(href="#")
+
+        .l-grid__main-menu.js-main-menu
+            .c-main-menu
+                .c-main-menu__col
+                    ul.c-main-menu__list.c-main-menu__work-list
+                        li.c-main-menu__head.c-main-menu__head--active
+                            p.c-main-menu__head--small-text Сингапур для
+                            p.c-main-menu__head--large-text Бизнеса
+                        +main-menu__item('Деловые площадки',
+                                        'Умные деловые пространства')
+
+                        +main-menu__item('Уникальные площадки',
+                                        'Уникальные места для проведения мероприятий',
+                                        'active')
+
+                        +main-menu__item('Туры',
+                                        'Деловые, образовательные, гастрономические и другие')
+                                        
+                        +main-menu__item('Деловой-туризм',
+                                        'События и инвестиции')
+                                        
+                        +main-menu__item('Истории успеха',
+                                        'Центр крупнейших деловых событий разных форматов')
+                                        
+                        +main-menu__item('Календарь',
+                                        'Деловые события в Сингапуре')
+                                
+                .c-main-menu__col
+                    ul.c-main-menu__list.c-main-menu__play-list
+                        li.c-main-menu__head
+                            p.c-main-menu__head--small-text Сингапур для
+                            p.c-main-menu__head--large-text Отдыха
+                                        
+                        +main-menu__item('Достопримечательности',
+                                        'Смотришь и восхищаешься')
+                                        
+                        +main-menu__item('Гостиницы',
+                                        'На любой вкус и достаток')
+                                        
+                        +main-menu__item('Кухня',
+                                        'Смешение культур и вкусов',
+                                        'active')
+                                        
+                        +main-menu__item('Маршруты',
+                                        'Город для интересных прогулок')
+                                        
+                        +main-menu__item('Покупки',
+                                        'Торговый рай')
+                                        
+                        +main-menu__item('Календарь',
+                                        'Фестивали и островные вечеринки «на полную катушку»')
+                                

@@ -1,0 +1,161 @@
+.header {
+    position: fixed;
+    z-index: 900;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 79px;
+
+    border-bottom: 1px solid #cfcfcf;
+    background-color: $bg-light-grey;
+    &__page-title {
+        line-height: 80px;
+
+        text-align: center;
+        letter-spacing: -1px;
+        span {
+            color: $red;
+        }
+    }
+    &__menu-link,
+    &__important-link {
+        position: absolute;
+        top: 0;
+
+        display: block;
+    }
+    &__menu-link {
+        top: 25px;
+        left: 30px;
+
+        @include bg($icon_menu);
+        &:active {
+            @include bg($icon_menu_active);
+        }
+        &--active {
+            @include bg($icon_close_menu);
+            &:active {
+                @include bg($icon_close_menu_active);
+            }
+        }
+    }
+    &__important-link {
+        top: 16px;
+        right: 18px;
+
+        @include bg($icon_important);
+        &:active {
+            @include bg($icon_important_active);
+        }
+    }
+}
+
+.l-grid__main-menu {
+    position: fixed;
+    top: 80px;
+    left: 0;
+
+    display: none;
+    overflow: hidden;
+
+    width: 100vw;
+    height: calc(100% - 80px);
+
+    background-color: $bg-dark-grey;
+    &--opened {
+        display: block;
+    }
+}
+
+.c-main-menu {
+    overflow: auto;
+
+    width: 100%;
+    height: 100%;
+
+    @include cf();
+    &__col {
+        float: left;
+
+        width: 50%;
+        min-height: 100vh;
+    }
+    &__list {
+        @include nl();
+    }
+    &__work-list {
+        .c-main-menu__head--active,
+        .c-main-menu__item--active {
+            background-color: $blue;
+        }
+    }
+    &__play-list {
+        .c-main-menu__head--active,
+        .c-main-menu__item--active {
+            background-color: $pink;
+        }
+    }
+    &__head {
+        display: block;
+
+        box-sizing: border-box;
+        padding: 10px 0 20px;
+
+        color: $font-black;
+        border-bottom: 1px solid #c6c6c6;
+        background-color: $bg-light-grey;
+        &--active {
+            color: $white;
+        }
+        &--small-text,
+        &--large-text {
+            text-align: center;
+        }
+        &--small-text {
+            text-align: center;
+        }
+        &--large-text {
+            font-size: 2.375rem;
+            font-weight: 600;
+
+            text-transform: uppercase;
+        }
+    }
+    &__item {
+        display: block;
+
+        box-sizing: border-box;
+        height: 140px;
+        padding: 30px 20px;
+
+        background-color: $bg-dark-grey;
+
+        @include respond-to(fablet) {
+            height: 100px;
+            padding: 15px;
+        }
+        @include respond-to(phone) {
+            height: 90px;
+            padding: 10px;
+        }
+        &-title,
+        &-desc {
+            color: $white;
+        }
+        &-title {
+            font-size: 1.375rem;
+
+            word-wrap: break-word;
+        }
+        &-desc {
+            font-size: 1rem;
+
+            margin-top: 15px;
+
+            @include respond-to(fablet) {
+                margin-top: 5px;
+            }
+        }
+    }
+}
