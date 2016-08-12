@@ -8,12 +8,14 @@ $(function () {
         nextButton = $('.c-index-block__next');
 
     secondSlide.css('left', $('.c-index-block').width());
-    slider.width(slideWidth * 2).height('100%');
+    slider.width(slideWidth * 2).css('height', '100%');
+    // slide.css('height', 'calc(100% - 80px)');
 
     firstSlide.addClass('js-index-slider-end');
     prevButton.addClass( prevButton.attr('class') + '--inactive' );
 
-    $('.c-index-block__next').on('click', function () {
+    $('.c-index-block__next').on('click', function (e) {
+        e.preventDefault();
         if ( !secondSlide.hasClass('js-index-slider-end') ) {
             slide.each(function () {
                 var thisPos = $(this).position().left;
@@ -31,7 +33,8 @@ $(function () {
         }
     });
 
-    $('.c-index-block__prev').on('click', function () {
+    $('.c-index-block__prev').on('click', function (e) {
+        e.preventDefault();
         if ( !firstSlide.hasClass('js-index-slider-end') ) {
             slide.each(function () {
                 var thisPos = $(this).position().left;

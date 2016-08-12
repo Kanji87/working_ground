@@ -1,7 +1,7 @@
 .c-index-block {
     position: absolute;
-    left: 0;
     top: 0;
+    left: 0;
 
     box-sizing: border-box;
     width: 100%;
@@ -11,26 +11,30 @@
     background-size: cover;
     &--work {
         background-image: url('%=static=%general/index_bg_work.jpg');
-
         .c-index-block__desc {
             background-color: rgba($blue, .7);
         }
     }
     &--play {
         background-image: url('%=static=%general/index_bg_play.jpg');
-
         .c-index-block__desc {
             background-color: rgba($pink, .7);
         }
     }
-
     &__desc {
         position: absolute;
-        bottom: 80px;
+        bottom: 0;
         left: 0;
 
         box-sizing: border-box;
         padding: 36px 115px 240px;
+
+        @include respond-to(fablet) {
+            padding: 30px 70px 120px;
+        }
+        @include respond-to(phone) {
+            padding: 20px 50px 90px;
+        }
         &-text {
             font-size: 1.5rem;
             font-weight: normal;
@@ -39,16 +43,7 @@
 
             color: $white;
         }
-
-        @include respond-to(fablet) {
-            padding: 30px 70px 120px;
-        }
-
-        @include respond-to(phone) {
-            padding: 20px 50px 90px;
-        }
     }
-
     &__more {
         position: absolute;
         bottom: 5%;
@@ -61,49 +56,43 @@
         transform: translateX(-50%);
         text-align: center;
     }
-
     &__prev,
     &__next {
         position: absolute;
         top: 0;
     }
-
     &__prev {
-        display: block;
         left: 32px;
+
+        display: block;
+
         @include bg($slide_arrow_left_active);
-
-        &--inactive {
-            @include bg($slide_arrow_left);
-        }
-
         @include respond-to(fablet) {
             left: 22px;
         }
-
         @include respond-to(phone) {
             left: 10px;
         }
-    }
-
-    &__next {
-        display: block;
-        right: 32px;
-        @include bg($slide_arrow_right_active);
-
         &--inactive {
-            @include bg($slide_arrow_right);
+            @include bg($slide_arrow_left);
         }
+    }
+    &__next {
+        right: 32px;
 
+        display: block;
+
+        @include bg($slide_arrow_right_active);
         @include respond-to(fablet) {
             right: 22px;
         }
-
         @include respond-to(phone) {
             right: 10px;
         }
+        &--inactive {
+            @include bg($slide_arrow_right);
+        }
     }
-
 }
 
 .l-index-block__header {
@@ -128,14 +117,16 @@
 
 .c-index-slider-grid {
     position: relative;
+
     overflow: hidden;
 }
 
 .c-index-slider__pager {
     position: absolute;
-    width: 100%;
-    left: 0;
-    bottom: 38%;
-    height: 37px;
     z-index: 10;
+    bottom: 30%;
+    left: 0;
+
+    width: 100%;
+    height: 37px;
 }

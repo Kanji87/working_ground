@@ -1,0 +1,11 @@
+mixin article_item(title, desc, iconType, imageFor)
+    .c-article-item
+        a.c-article-item__link(href="#")
+            img.c-article-item__img(src="%=static=%img/content/" + imageFor + ".jpg", alt="")
+            .c-article-item__content
+                h3.c-article-title= title
+                .c-article-sepor
+                p.c-article-desc!= desc
+                .c-article-item__more
+                    i(class='icon' + (iconType=='more' ? ' icon__right-bordered' : iconType=='calendar' ? ' icon__calendar' : ''))
+                    p.c-icon-sign Подробнее

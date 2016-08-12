@@ -1,0 +1,10 @@
+mixin article_slider(...items)
+    .l-article-slider
+        .c-article-slider.js-article-slider
+            each item in items
+                != item
+        .c-article-slider__nav
+            a.c-article-slider__prev(href="#")
+            a.c-article-slider__next(href="#")
+            .c-article-slider__counter
+        p.c-article-slider__caption

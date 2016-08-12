@@ -1,42 +1,64 @@
-mixin article_item(title, desc, iconType, imageFor)
-    .c-article-item
-        a.c-article-item__link(href="#")
-            img.c-article-item__img(src="%=static=%img/content/" + imageFor + ".jpg", alt="")
-            .c-article-item__content
-                h3.c-article-item__title= title
-                .c-article-item__sepor
-                p.c-article-item__desc!= desc
-                .c-article-item__more
-                    i(class='icon' + (iconType=='more' ? ' icon__right-bordered' : iconType=='calendar' ? ' icon__calendar' : ''))
-                    p.c-icon-sign Подробнее
+include ../article_item/article_item
 
 mixin article_list(type)
-    +article_item('Деловые площадки',
-                'Умные деловые<br>пространства',
-                'more',
-                'business_area')
+    if type == 'work'
+        +article_item('Деловые площадки',
+                    'Умные деловые<br>пространства',
+                    'more',
+                    'business_area')
 
-    +article_item('Уникальные площадки',
-                'Уникальные места для проведения мероприятий',
-                'more',
-                'unique_area')
+        +article_item('Уникальные площадки',
+                    'Уникальные места для проведения мероприятий',
+                    'more',
+                    'unique_area')
 
-    +article_item('Туры',
-                'Деловые, образовательные, гастрономические и другие',
-                'more',
-                'tour')
+        +article_item('Туры',
+                    'Деловые, образовательные, гастрономические и другие',
+                    'more',
+                    'tour')
 
-    +article_item('Деловой туризм',
-                'События<br>и инвестиции',
-                'more',
-                'business_tourism')
+        +article_item('Деловой туризм',
+                    'Программы и привилегии для бизнес-туристов',
+                    'more',
+                    'business_tourism')
 
-    +article_item('Истории успеха',
-                'Центр крупнейших деловых событий разных форматов',
-                'more',
-                'success_story')
+        +article_item('Истории успеха',
+                    'Личный опыт проведения деловых мероприятий',
+                    'more',
+                    'success_story')
 
-    +article_item('Календарь',
-                'Деловые события<br>в Сингапуре',
-                'calendar',
-                'business_calendar')
+        +article_item('Календарь',
+                    'Деловые события<br>в Сингапуре',
+                    'calendar',
+                    'business_calendar')
+
+    else if type == 'play'
+        +article_item('Интересные места',
+                    'Смотришь<br>и восхищаешься',
+                    'more',
+                    'interesting_place')
+
+        +article_item('Гостиницы',
+                    'Для бизнеса<br> и отдыха',
+                    'more',
+                    'hotel')
+
+        +article_item('Кухня',
+                    'Смешение культур<br>и вкусов',
+                    'more',
+                    'kitchen')
+
+        +article_item('Маршруты',
+                    'Город для интересных<br>прогулок',
+                    'more',
+                    'route')
+
+        +article_item('Покупки',
+                    'Шопинг<br>без границ',
+                    'more',
+                    'shop')
+
+        +article_item('Календарь',
+                    'Фестивали и островные вечеринки «на полную катушку»',
+                    'calendar',
+                    'play_calendar')
