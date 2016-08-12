@@ -10,13 +10,19 @@
     border-bottom: 1px solid #cfcfcf;
     background-color: $bg-light-grey;
     &__page-title {
-        line-height: 80px;
+        display: block;
+        height: 100%;
 
         text-align: center;
         letter-spacing: -1px;
         span {
             color: $red;
         }
+    }
+    &__logo {
+        display: inline-block;
+        margin-top: 10px;
+        height: 75%;
     }
     &__menu-link,
     &__important-link {
