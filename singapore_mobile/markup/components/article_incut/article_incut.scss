@@ -1,0 +1,23 @@
+.c-article-incut {
+    margin-top: 85px;
+    background-color: $bg-light-grey;
+    border-top: 1px solid #cfcfcf;
+    border-bottom: 1px solid #cfcfcf;
+    padding: 10px 10px 100px;
+
+    &__image {
+        display: block;
+        width: 100%;
+        height: 307px;
+        background-size: cover;
+        position: relative;
+    }
+
+    &__icon {
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}

@@ -1,6 +1,6 @@
-mixin article_item(title, desc, iconType, imageFor)
+mixin article_item(title, desc, iconType, imageFor, link)
     .c-article-item
-        a.c-article-item__link(href="#")
+        a.c-article-item__link(href= link)
             img.c-article-item__img(src="%=static=%img/content/" + imageFor + ".jpg", alt="")
             .c-article-item__content
                 h3.c-article-title= title

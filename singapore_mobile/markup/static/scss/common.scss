@@ -36,6 +36,10 @@ ol {
     padding: 0;
 }
 
+strong {
+    font-weight: bold;
+}
+
 .l-grid {
     box-sizing: border-box;
     width: 100%;
@@ -83,6 +87,28 @@ ol {
         background-image: url('%=static=%general/icon_calendar.png');
 
         @extend .icon__down-bordered;
+
+        &:hover {
+            background-image: url('%=static=%general/icon_calendar.png');
+        }
+    }
+    &__read-more {
+        background-image: url('%=static=%general/icon_read_more.png');
+
+        @extend .icon__down-bordered;
+
+        &:hover {
+            background-image: url('%=static=%general/icon_read_more.png');
+        }
+    }
+    &__play {
+        background-image: url('%=static=%general/icon_play.png');
+
+        @extend .icon__down-bordered;
+
+        &:hover {
+            background-image: url('%=static=%general/icon_play.png');
+        }
     }
 }
 

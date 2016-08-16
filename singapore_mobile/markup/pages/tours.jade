@@ -1,0 +1,162 @@
+doctype html
+html(class="no-js", lang="ru")
+
+    include ../components/head/head
+    include ../components/header/header
+    include ../components/article_teaser/article_teaser
+    include ../components/article_paragraph/article_paragraph
+    include ../components/article_slider/article_slider
+    include ../components/article_list/article_list
+    include ../components/article_image/article_image
+    include ../components/article_video/article_video
+    include ../components/article_incut/article_incut
+    include ../components/article_item/article_item
+    include ../components/footer/footer
+
+    head
+        +head(head.defaults)
+    body
+        |%=symbols=%
+
+        section.l-grid
+            +header('tour')
+
+            article.l-article
+                +article_teaser('Туры',
+                                'Деловые, образовательные, гастрономические и другие',
+                                'tour',
+                                'Туры в Сингапуре')
+
+                +article_paragraph('Сингапур — уникальный город с природной и культурной точек зрения. Изучать его можно неделями, месяцами и даже годами. Он предлагает много интересного как тем, кто увлекается наукой, искусством и современной архитектурой, или тем, кому близка восточная философия и эстетика, так и тем, для кого Азия — это, прежде всего, бизнес или гастрономический опыт.')
+
+                .c-article-section
+                    h5.c-article-section__title Познавательные туры
+                    .c-article-section__content-grid
+                        .c-article-section__content
+
+                            +article_paragraph('Программа Village Singapura™ предназначена для тех, кто хочет лучше узнать историю и культуру составляющих современный Сингапур наций, а также для любителей активного и познавательного отдыха.')
+
+                            +article_paragraph('Интерактивный тур позволит путешественнику попасть в прошлое города – в 1890 год – и получить опыт жизни в старинных домах китайского квартала, а также форта Каннинг. Участники смогут познакомиться с историческими зданиями, в том числе увидеть прекрасный Hall of the Nine Dragons, построенный в 1928 году.')
+
+                            +article_paragraph('В ходе программы гости не просто прикоснутся к истории Сингапура, но и посетят различные мастер-классы. На них они научатся готовить традиционные китайские и малайские блюда, вырезать фигуры из бумаги, а также исполнять индийские танцы. Помимо развлечений, программа предлагает активности, направленные на сплочение команды.')
+
+                            +article_slider(
+                                '<img class="c-article-slider__img" src="%=static=%img/content/tours-01.jpg" data-caption="">',
+                                '<img class="c-article-slider__img" src="%=static=%img/content/tours-02.jpg" data-caption="">')
+
+                    a.c-article-section__read-more.js-show-text(href="#") Читать дальше
+
+                .c-article-section
+                    h5.c-article-section__title Велосипедные туры по Сингапуру
+                    .c-article-section__content-grid
+                        .c-article-section__content
+
+                            +article_paragraph('Сингапур — очень чистый и просторный город дисциплинированных пешеходов и водителей, поэтому осваивать его на велосипеде — сплошное удовольствие. И, кстати, климат в Сингапуре для этого тоже подходящий: так как находится город очень близко к экватору, тут круглый год одинаково тепло.')
+
+                            +article_paragraph('Сингапурскую компанию Let’s Go Bike основал энтузиаст велосипедных прогулок по мегаполисам Даниэль. Он уверен, что велосипедисту любой крупный азиатский город открывается совершенно с новой стороны. Вернувшись в Сингапур из Бангкока и хорошо изучив этот вопрос, он разработал несколько маршрутов и стал возить по ним туристов.')
+
+                            +article_image('letsgobike.jpg')
+
+                            +article_paragraph('Let’s Go Bike предлагает несколько тематических туров. Один из самых популярных маршрутов называется «Исторический Сингапур» и занимает полдня. Участники успевают увидеть улочки Китайского квартала и жилой район Тионг-Бару, который славится своими зданиями, архитектура которых напоминает стиль баухаус, а в последние годы — и модными кофейнями, галереями и бутиками (квартал облюбовала творческая молодежь). Кроме того, маршрут пролегает по берегу реки Сингапур, через квартал Кампонг Глэм, Музейный квартал Марина-Бэй, бульвар Раффлс. На велосипеде за полдня вы успеете посмотреть значительную часть Сингапура – такого разнообразного и впечатляющего города.')
+
+                            +article_paragraph('Еще одна любопытная экскурсия, которую предлагает Let’s Go Bike, — ночной тур по кварталу Марина-Бэй. Оживленные набережные с ресторанными террасами, колесо обозрения Singapore Flyer и великолепные Сады у залива, подсвеченные неоном и гирляндами, с велосипеда кажутся виртуальной реальностью или сказкой.')
+
+                    a.c-article-section__read-more.js-show-text(href="#") Читать дальше
+
+                .c-article-section
+                    h5.c-article-section__title Образовательные туры
+                    .c-article-section__content-grid
+                        .c-article-section__content
+
+                            +article_paragraph('<strong>BCA Gallery</strong>')
+
+                            +article_paragraph('Галерея BCA (Building and Construction Authority) — это интерактивное погружение в историю строительства зданий в Сингапуре. Вероятно, нигде к планированию городской среды не подходят так вдумчиво и тщательно, как в Сингапуре: здания здесь строят, с одной стороны, по канонам фен-шуй, а с другой – с применением самых современных строительных технологий и, конечно, стараясь эстетически вписать их в окружающее пространство и уже существующий городской ландшафт.')
+
+                            +article_paragraph('Галерея предлагает туры с гидами (минимальное количество участников – 10), которые расскажут о развитии города и помогут проникнуться ответственным отношением сингапурцев к строительству, благодаря которому город и превратился в одно из современных чудес света.')
+
+                            +article_slider(
+                                '<img class="c-article-slider__img" src="%=static=%img/content/tours-05.jpg" data-caption="">',
+                                '<img class="c-article-slider__img" src="%=static=%img/content/tours-06.jpg" data-caption="">',
+                                '<img class="c-article-slider__img" src="%=static=%img/content/tours-07.jpg" data-caption="">')
+
+                            +article_paragraph('<strong>Haw Par Villa</strong>')
+
+                            +article_paragraph('*Найдите свой тао в Хау Пар Вилле')
+
+                            +article_paragraph('Хау Пар Вилла — тематический парк, посвященный китайским мифам и легендам. Второе его название – «Сад тигрового бальзама». Парк — одна из редких исторических достопримечательностей ультрасовременного Сингапура. Построен он был в 1937 году миллиардером Оу Бун Хо, создателем тигрового бальзама. Экскурсия по парку под названием Cultured Leopard, Rising Tiger непременно станет увлекательным приключением в сложном мире китайской философии, ее тысячелетних легенд, неоднозначных персонажей, богов, героев и духов. Все это демонстрируется здесь при помощи диорам и красочных статуй, о смысле и значении которых расскажет гид.')
+
+                            +article_paragraph('Тур Cultured Leopard, Rising Tiger — часть программы The Original Singapore Walks, которая не раз завоевывала призы различных конкурсов как лучшая экскурсионная программа Сингапура.')
+
+                            +article_slider(
+                                '<img class="c-article-slider__img" src="%=static=%img/content/gastronom-01.jpg" data-caption="">',
+                                '<img class="c-article-slider__img" src="%=static=%img/content/gastronom-02.jpg" data-caption="">',
+                                '<img class="c-article-slider__img" src="%=static=%img/content/gastronom-03.jpg" data-caption="">')
+
+                    a.c-article-section__read-more.js-show-text(href="#") Читать дальше
+
+                .c-article-section
+                    h5.c-article-section__title Гастрономические туры
+                    .c-article-section__content-grid
+                        .c-article-section__content
+
+                            +article_paragraph('<strong>Ужин среди дикой природы</strong>')
+
+                            +article_paragraph('Ночное сафари — одно из самых популярных в Сингапуре развлечений. Действительно, где еще вам представится возможность увидеть животных в их естественной среде обитания? Здесь можно понаблюдать за фауной из специального укрытия или небольшого вагончика, курсирующего по парку.')
+
+                            +article_paragraph('В парке также разбит палаточный лагерь, место в котором можно забронировать на несколько часов, если вы хотите прикоснуться к миру дикой природы, при этом находясь в полной безопасности. Пока гости палаточного лагеря дегустируют различные деликатесы, вокруг них в джунглях просыпается жизнь.')
+
+                            +article_slider(
+                                '<img class="c-article-slider__img" src="%=static=%img/content/tours-08.jpg">',
+                                '<img class="c-article-slider__img" src="%=static=%img/content/unique-site-10.jpg">'
+                            )
+
+                            +article_paragraph('<strong>Мастер-класс по миксологии в Long Bar отеля Raffles</strong>')
+
+                            +article_paragraph('Long Bar — место, где был придуман коктейль «Сингапурский слинг». Здесь его можно не только попробовать, но и научиться готовить под руководством профессиональных барменов (группа для данного тура – не менее 10 человек). Вас научат грамотно смешивать джин, ликер бенедиктин и куатро, а также угостят настоящими сингапурскими сате — миниатюрными сочными шашлычками на тонких шпажках, которые полагается макать в арахисовый соус — это идеальная закуска к «Сингапурскому слингу». В качестве сувенира на память о мастер-классе подарят бокал с эмблемой 100-летия коктейля: сложно поверить, но «Сингапурскому слингу» уже больше века.')
+
+                            +article_slider(
+                                '<img class="c-article-slider__img" src="%=static=%img/content/tours-10.jpg">',
+                                '<img class="c-article-slider__img" src="%=static=%img/content/tours-11.jpg">',
+                                '<img class="c-article-slider__img" src="%=static=%img/content/tours-12.jpg">'
+                            )
+
+                            +article_paragraph('<strong>Тур по пивоварне Tiger</strong>')
+
+                            +article_paragraph('Все, кто бывал в Юго-Восточной Азии, пробуют местное пиво Tiger, легкое и освежающее, отлично подходящее к азиатской еде. Вы сможете посетить пивоварню, где готовят самое знаменитое в стране пиво. Попасть туда можно в составе экскурсии, в ходе которой туристам подробно расскажут, как происходит процесс приготовления пива из четырех ингредиентов (солода, хмеля, воды и дрожжей), а также предложат напиток в традиционном пабе Tiger Tavern — этому бренду уже больше 80 лет. В магазине Tiger Den можно приобрести разнообразную сувенирную продукцию.')
+
+                            +article_slider(
+                                '<img class="c-article-slider__img" src="%=static=%img/content/tours-13.jpg">',
+                                '<img class="c-article-slider__img" src="%=static=%img/content/tours-14.jpg">'
+                            )
+
+                    a.c-article-section__read-more.js-show-text(href="#") Читать дальше
+
+                +article_item(
+                    'Деловые площадки',
+                    'Умные деловые<br>пространства',
+                    'more',
+                    'business_area',
+                    'business-area.html')
+
+                +article_item(
+                    'Деловой туризм',
+                    'Программы и привилегии для бизнес-туристов',
+                    'more',
+                    'business_tourism',
+                    'business-tourism.html')
+
+                +article_item(
+                    'Календарь',
+                    'Деловые события<br>в Сингапуре',
+                    'calendar',
+                    'business_calendar',
+                    '#')
+
+            +footer()
+
+        script(src='%=static=%js/separate-js/svg4everybody.min.js')
+        script svg4everybody();
+
+        //- Main scripts. You can replace it, but I recommend you to leave it here
+        script(src='http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js')
+        script(src='%=static=%js/main%=hash=%%=min=%.js')

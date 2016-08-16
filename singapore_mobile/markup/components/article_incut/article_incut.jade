@@ -1,0 +1,11 @@
+mixin article_incut(img, link, list, ...items)
+    .c-article-incut
+        a.c-article-incut__image(style='background-image: url("%=static=%img/content/' + img + '")', href= link)
+            .c-article-incut__icon
+                i.icon.icon__read-more
+                p.c-icon-sign Узнать больше
+        if list
+            ul.c-article-list
+                each item in items
+                    li.c-article-list__item
+                        p.c-article-list__item-text!= item

@@ -1,6 +1,6 @@
 head: {
     defaults: {
-        title: 'ТвойСингапур',
+        title: 'Сингапур  для бизнеса и отдыха',
         useSocialMetaTags: true
     }
 }

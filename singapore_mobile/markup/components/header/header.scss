@@ -8,7 +8,16 @@
     height: 79px;
 
     border-bottom: 1px solid #cfcfcf;
-    background-color: $bg-light-grey;
+
+    &__bg {
+        background-color: rgba($bg-light-grey, .95);
+        position: absolute;
+        z-index: 900;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
     &__page-title {
         display: block;
         height: 100%;
@@ -23,11 +32,14 @@
         display: inline-block;
         margin-top: 10px;
         height: 75%;
+        position: relative;
+        z-index: 900;
     }
     &__menu-link,
     &__important-link {
         position: absolute;
         top: 0;
+        z-index: 900;
 
         display: block;
     }
@@ -54,23 +66,99 @@
         &:active {
             @include bg($icon_important_active);
         }
+
+        &--active {
+            @include bg($icon_important_close);
+        }
     }
 }
 
-.l-grid__main-menu {
+.l-grid__popup {
     position: fixed;
-    top: 80px;
     left: 0;
+    top: -150vh;
+    transition: all ease .5s;
 
-    display: none;
     overflow: hidden;
 
     width: 100vw;
     height: calc(100% - 80px);
+    z-index: 800;
+}
 
+.l-grid__main-menu {
     background-color: $bg-dark-grey;
     &--opened {
-        display: block;
+        // display: block;
+        top: 80px;
+    }
+}
+
+.l-grid__important {
+    // top: 80px;
+    // display: none;
+    background-color: $white;
+    overflow-y: visible;
+    &--opened {
+        // display: block;
+        top: 80px;
+    }
+
+    .c-index-block {
+        position: relative;
+
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            background-image: url('%=static=%general/important_bg.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 50%;
+        }
+
+        &__desc {
+
+            @include respond-to(iphone_five) {
+                padding: 20px 20px 90px;
+            }
+
+            &:after {
+                content: '';
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-image: url('%=static=%general/important_blur_bg.jpg');
+                background-size: cover;
+                background-repeat: no-repeat;
+                z-index: 1;
+            }
+
+            &:before {
+                content: '';
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: rgba($red, .7);
+                z-index: 2;
+            }
+        }
+
+        &__desc-text {
+            position: relative;
+            z-index: 5;
+        }
+
+        &__more {
+            z-index: 5;
+        }
     }
 }
 
@@ -163,5 +251,52 @@
                 margin-top: 5px;
             }
         }
+    }
+}
+
+.l-grid__important-list {
+    display: none;
+}
+
+.c-important-img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 40px;
+}
+
+.c-important-item {
+    @include cf();
+    padding: 50px 35px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    &:not(:first-child) {
+        border-top: 1px solid #cfcfcf;
+    }
+
+    @include respond-to(fablet) {
+        padding: 50px 20px;
+    }
+
+    &__img {
+        width: 33%;
+    }
+
+    &__content {
+        margin-left: 7%;
+        width: 60%;
+    }
+
+    &__title {
+        font-weight: bold;
+        font-size: 1.5rem;
+    }
+
+    &__desc {
+        font-weight: normal;
+        font-size: 1.125rem;
+        line-height: 1.2;
+        margin-top: 20px;
     }
 }

@@ -1,0 +1,5 @@
+mixin article_image(file, caption)
+    figure.c-article-figure
+        img.c-article-figure__image(src='%=static=%img/content/' + file)
+        if caption
+            figcaption.c-article-figure__caption!= caption

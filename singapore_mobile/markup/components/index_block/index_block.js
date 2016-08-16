@@ -7,7 +7,7 @@ $(function () {
         prevButton = $('.c-index-block__prev'),
         nextButton = $('.c-index-block__next');
 
-    secondSlide.css('left', $('.c-index-block').width());
+    secondSlide.css('left', slide.width());
     slider.width(slideWidth * 2).css('height', '100%');
     // slide.css('height', 'calc(100% - 80px)');
 

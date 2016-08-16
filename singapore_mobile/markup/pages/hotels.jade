@@ -1,0 +1,334 @@
+doctype html
+html(class="no-js", lang="ru")
+
+    include ../components/head/head
+    include ../components/header/header
+    include ../components/article_teaser/article_teaser
+    include ../components/article_paragraph/article_paragraph
+    include ../components/article_slider/article_slider
+    include ../components/article_list/article_list
+    include ../components/article_image/article_image
+    include ../components/article_video/article_video
+    include ../components/article_incut/article_incut
+    include ../components/article_item/article_item
+    include ../components/footer/footer
+
+    head
+        +head(head.defaults)
+    body
+        |%=symbols=%
+
+        section.l-grid
+            +header('hotel')
+
+            article.l-article
+                +article_teaser('Гостиницы',
+                                'Для бизнеса<br> и отдыха',
+                                'hotel',
+                                'Лучшие гостиницы острова')
+
+                +article_paragraph('Для тех, кто планирует свое путешествие в Сингапур впервые и хочет сделать поездку максимально комфортной и незабываемой, очень важно определиться с жильем. Представляем 10 лучших отелей Сингапура по версии портала TripAdvisor на 1 июня 2016 года.')
+
+                .c-article-section
+                    h5.c-article-section__title 1. Примечательный отель AMOY
+                    .c-article-section__content-grid
+                        .c-article-section__content
+
+                            +article_paragraph('«Невероятно тихий номер, суперудобная кровать, отличный сервис, вкусные и сытные завтраки, просто сумасшедший сьют», – по мнению пользователей TripAdvisor, 4-звездочный <a href="http://www.stayfareast.com/en/hotels/amoy" target="_blank">Amoy by Far East Hospitality</a> – лучший из 306 перечисленных на сайте отелей Сингапура. Гостиница расположена в самом центре мегаполиса, в нескольких шагах от основных достопримечательностей города и между двумя станциями метро: Chinatown и Raffles Place. Неподалеку от отеля находятся китайский центр культурного наследия Chinatown Heritage Center, индийский храм Sri Mariamman, даосский храм Thian Hock Keng Temple и буддийский храм, посвященный священному зубу Будды. С 2013 года Amoy входит в число самых примечательных объектов в центре Сингапура.')
+
+                            +article_slider(
+                                '<img class="c-article-slider__img" src="%=static=%img/content/hotels-01.jpg">',
+                                '<img class="c-article-slider__img" src="%=static=%img/content/hotels-02.jpg">',
+                                '<img class="c-article-slider__img" src="%=static=%img/content/hotels-03.jpg">')
+
+                            +article_paragraph('Современная обстановка гостиницы, где всего 37 номеров, призвана обеспечить максимальный комфорт постояльцам. Уют в небольших светлых номерах достигается за счет правильной планировки (для каждого номера, кстати, своей) и безупречного дизайна. Из услуг – бесплатный WiFi, трансфер из аэропорта Чанги, химчистка и ресторан.')
+
+                            +article_incut(
+                                'hotels-vrez-2.jpg',
+                                'http://www.stayfareast.com/en/hotels/amoy',
+                                'true',
+                                'Amoy by Far East Hospitality',
+                                '27 минут на такси от аэропорта Changi,',
+                                '2 минуты (75 метров) от станции метро Telok Ayer MRT Station',
+                                '76 Telok Ayer Street')
+
+                    a.c-article-section__read-more.js-show-text(href="#") Читать дальше
+
+                .c-article-section
+                    h5.c-article-section__title 2. Исторический отель Raffles
+                    .c-article-section__content-grid
+                        .c-article-section__content
+
+                            +article_paragraph('Самый известный отель Сингапура был открыт в 1887 году компанией Sarkies Brothers, которая в то время занималась строительством всех роскошных гостиниц региона, и был назван в честь отца-основателя города сэра Стэмфорда Раффлза. Расположенный рядом с торговой улицы Orchard Road и выставочным центром Suntec, отель <a href="http://www.raffles.com/singapore/" target="_blank">Raffles Singapore</a> выделяется на фоне футуристических построек современного Сингапура.')
+
+                            +article_slider(
+                                '<img class="c-article-slider__img" src="%=static=%img/content/hotels-04.jpg">',
+                                '<img class="c-article-slider__img" src="%=static=%img/content/hotels-06.jpg">',
+                                '<img class="c-article-slider__img" src="%=static=%img/content/hotels-07.jpg">')
+
+                            +article_paragraph('Историческое здание гостиницы в течение многих лет достраивалось и изменялось. Вход в здание отеля украшен белыми мраморными колоннами. Тиковые веранды, тропический сад, собственный музей и театр в викторианском стиле сразу погружают постояльцем в колониальную историю острова.')
+
+                            +article_paragraph('Все 103 номера отеля Raffles относятся к категории люкс. В гостинице традиционно останавливаются члены королевской семьи Великобритании и Северной Ирландии. В разное время здесь жили Сомерсет Моэм, Редьярд Киплинг, Майкл Джексон, Джордж Буш, Карл Лагерфельд и Кристиан Лубутен.')
+
+                            +article_paragraph('Кухни в 14 ресторанах и барах предлагают широкий спектр блюд на любой вкус: от классических французских до австралийских, но для тех, кто торопится, есть и шведский стол.')
+
+                            +article_paragraph('Отель Raffles также известен тем, что именно здесь, в баре Long Bar, в 1915 году впервые смешали розовый сингапурский слинг – коктейль на базе джина, бренди и сока лайма.')
+
+                            +article_incut(
+                                'hotels-vrez-8.jpg',
+                                'http://www.raffles.com/singapore/',
+                                'true',
+                                'Raffles Hotel Singapore',
+                                '20 минут на такси от аэропорта Changi,',
+                                '2 минуты от метро «City Hall».',
+                                '1 Beach Road, Singapore 189673, Singapore',
+                                'Tel: +65 6337 1886')
+
+                    a.c-article-section__read-more.js-show-text(href="#") Читать дальше
+
+                .c-article-section
+                    h5.c-article-section__title 3. Модный отель Quincy
+                    .c-article-section__content-grid
+                        .c-article-section__content
+
+                            +article_paragraph('<a href="http://www.quincy.com.sg/" target="_blank">Quincy, еще одна гостиница из коллекции корпорации Far East Hospitality, находится недалеко от главной торговой улицы Сингапура Orchard road, всего в нескольких минутах езды от набережной. Вероятно, именно поэтому из окон отеля открывается впечатляющий вид на город. Quincy располагает номерами-студиями, выполненными в минималистичном дизайне, с кроватями размера размера king-size. К услугам постояльцев круглосуточный фитнес-центр, сауна и стеклянный бассейн с видом на город. В ресторанах отеля Quincy представлена интернациональная кухня, легкие закуски и напитки.')
+
+                            +article_slider(
+                                '<img class="c-article-slider__img" src="%=static=%img/content/hotels-08.jpg">',
+                                '<img class="c-article-slider__img" src="%=static=%img/content/hotels-09.jpg">',
+                                '<img class="c-article-slider__img" src="%=static=%img/content/hotels-11.jpg">')
+
+                            +article_incut(
+                                'hotels-vrez-9.jpg',
+                                'http://www.quincy.com.sg/',
+                                'true',
+                                'Quincy by Far East Hospitality',
+                                '23 минуты на такси от аэропорта Changi,',
+                                '2 минуты от метро «City Hall».',
+                                '1 Beach Road, Singapore 189673, Singapore',
+                                'Tel: +65 6337 1886')
+
+                    a.c-article-section__read-more.js-show-text(href="#") Читать дальше
+
+                .c-article-section
+                    h5.c-article-section__title 4. Изысканный отель Naumi
+                    .c-article-section__content-grid
+                        .c-article-section__content
+
+                            +article_paragraph('Отель <a href="http://www.naumihotel.com/" target="_blank">Naumi</a> – прекрасное место для деловых путешественников, любящих стильный дизайн современных гигантских гостиниц, но камерный, штучный комфорт. Небольшой и роскошный бутик-отель на 73 номера исполнен тихого обаяния. Он построен в 2007 г. и украшен произведениями искусства, которые позволяют создать в нем особую артистическую, вдохновляющую атмосферу. Несмотря на тишину, царящую внутри отеля, находятся он в самом центре мегаполиса: в двух шагах от делового района, Suntec Convention Centre, трека «Формула 1», рядом с Marina Bay, знаменитыми музеями (Singapore Art Museum and the National Museum of Singapore) и множеством магазинов и ресторанов.')
+
+                            +article_slider(
+                                '<img class="c-article-slider__img" src="%=static=%img/content/hotels-12.jpg">',
+                                '<img class="c-article-slider__img" src="%=static=%img/content/hotels-13.jpg">',
+                                '<img class="c-article-slider__img" src="%=static=%img/content/hotels-15.jpg">')
+
+                            +article_paragraph('В лаундж-баре представлен весьма широкий выбор коньяков и виски. К напиткам в качестве закуски подают тапас. А если вам хочется насладиться настоящим индийский обедом, в лобби отеля находится <a href="http://www.naumihotel.com/amenity.php" target="_blank">Table by Rang Mahal</a> – один из наиболее интересных индийских ресторанов в этом районе.')
+
+                            +article_incut(
+                                'hotels-vrez-5.jpg',
+                                'http://www.naumihotel.com/',
+                                'true',
+                                'Naumi+65 6403 6000',
+                                '41 Seah Street',
+                                '2 минуты от метро «City Hall».',
+                                'пять минут ходьбы до станции метро City Hall')
+
+                    a.c-article-section__read-more.js-show-text(href="#") Читать дальше
+
+                .c-article-section
+                    h5.c-article-section__title 5. Роскошный отель Capella
+                    .c-article-section__content-grid
+                        .c-article-section__content
+
+                            +article_paragraph('Один из самых роскошных отелей города – <a href="http://www.capellahotels.com/singapore/accommodation/singapore-luxury-manors/" target="_blank">Capella Singapore</a>, здание которого в форме соединенных запятых признано архитектурным наследием в 2000 году. Комплекс расположен на острове Сентоза, стоит на зеленом холме и окружен тропическими лесами, но при этом находится недалеко от делового центра города (10 мин. езды). В отеле 112 номеров, в основном это просторные апартаменты, номера люкс и виллы.')
+
+                            +article_slider(
+                                '<img class="c-article-slider__img" src="%=static=%img/content/hotels-16.jpg">',
+                                '<img class="c-article-slider__img" src="%=static=%img/content/hotels-18.jpg">',
+                                '<img class="c-article-slider__img" src="%=static=%img/content/hotels-19.jpg">')
+
+                            +article_paragraph('Персональные ассистенты, обслуживающие номера, готовы 24 часа в сутки выполнять любой каприз гостей. В отеле представлены два ресторана: китайский Cassia и The Knolls со средиземноморской и интернациональной кухней.')
+
+                            +article_paragraph('Также в Capella находится известный спа-центр, фитнес-центр, три бассейна на открытом воздухе, библиотека и танцевальный зал на 400 гостей. Отличное место для вечеринок и званых ужинов. Среди дополнительных опций гостям предлагается широкий спектр развлечений и интересных занятий – от кулинарных мастер-классов до прогулок на яхте.')
+
+                            +article_incut(
+                                'hotels-vrez-3.jpg',
+                                'http://www.capellahotels.com/singapore/',
+                                'true',
+                                'Capella Singapore',
+                                'Tel: +65 6377 8888',
+                                '25 минут на такси от аэропорта Changi.',
+                                '1 The Knolls, Sentosa Island, Singapore 098297')
+
+                    a.c-article-section__read-more.js-show-text(href="#") Читать дальше
+
+                .c-article-section
+                    h5.c-article-section__title 6. Люксовый отель Four Seasons
+                    .c-article-section__content-grid
+                        .c-article-section__content
+
+                            +article_paragraph('Отель <a href="http://www.fourseasons.com/ru/singapore/" target="_blank">Four Seasons Singapore</a> расположен на бульваре Orchard и является своего рода оазисом спокойствия в шумном мегаполисе. Недалеко от гостиницы находятся Сингапурский ботанический сад, входящий в список всемирного наследия ЮНЕСКО, торговая Orchard Road, а также крупнейшие бизнес-центры Сингапура. Всего в 15 минутах езды от отеля располагаются остров Сентоза и парк аттракционов Universal Studios Singapore.')
+
+                            +article_slider(
+                                '<img class="c-article-slider__img" src="%=static=%img/content/hotels-20.jpg">',
+                                '<img class="c-article-slider__img" src="%=static=%img/content/hotels-21.jpg">',
+                                '<img class="c-article-slider__img" src="%=static=%img/content/hotels-22.jpg">')
+
+                            +article_paragraph('Среди уникальных преимуществ отеля стоит отметить наличие семейного бассейна на крыше. Также в отеле есть свои фитнес- и спа-центры, теннисные корты, конференц-залы, прачечная. В коллекции отеля Four Seasons свыше 1500 произведений азиатского искусства, многие из них украшают номера.')
+
+                            +article_paragraph('Особая гордость Four Seasons Singapore – китайский ресторан <a href="http://www.fourseasons.com/singapore/dining/restaurants/jiang_nan_chun/" target="_blank">Jiang-Nan Chun</a>, в нем можно попробовать блюда китайской кухни: от фирменной пекинской утки до димсамов (китайские пельмени) ручной лепки. В баре One-Ninety by Javier de la Muelas для вас смешают особые фирменные коктейли. А в ресторане One-Ninety: Wood-fired Steaks and Seafood, шеф-повар которого известный кулинар Джованни Спечале, можно отведать сочные стейки и блюда из только что выловленных морепродуктов, а также блюда местной и интернациональной кухни.')
+
+                            +article_incut(
+                                'hotels-vrez-4.jpg',
+                                'http://www.fourseasons.com/ru/singapore/',
+                                'true',
+                                'Four Seasons Singapore',
+                                'Tel: +65 6734 1110',
+                                '25 минут на такси от аэропорта Changi.')
+
+                    a.c-article-section__read-more.js-show-text(href="#") Читать дальше
+
+                .c-article-section
+                    h5.c-article-section__title 7. Панорамный отель Pan Pacific
+                    .c-article-section__content-grid
+                        .c-article-section__content
+
+                            +article_paragraph('Расположенный на въезде в центральный деловой район Сингапура отель <a href="https://www.panpacific.com/en/hotels-resorts/singapore/marina.html" target="_blank">Pan Pacific Singapore</a> уникален тем, что соединен с крупным конференц-центром Sunteс, а также с торговым центром Marina Square.')
+
+                            +article_slider(
+                                '<img class="c-article-slider__img" src="%=static=%img/content/hotels-23.jpg">',
+                                '<img class="c-article-slider__img" src="%=static=%img/content/hotels-24.jpg">',
+                                '<img class="c-article-slider__img" src="%=static=%img/content/hotels-29.jpg">')
+
+                            +article_paragraph('Гостям этого отеля доступны открытый бассейн, 8 ресторанов и баров, фитнес-центр, два теннисных корта, спа-центр St. Gregory.')
+
+                            +article_paragraph('Из ресторанов отдельно следует выделить японский Keyaki, ресторан кантонской кухни Hai Tien Lo и индийский Rang Mahal. В кафе Pacific Marketplace можно попробовать вкуснейшие круассаны и пирожные.')
+
+                            +article_incut(
+                                'hotels-vrez-7.jpg',
+                                'https://www.panpacific.com/en/hotels-resorts/singapore/marina.html',
+                                'true',
+                                'Pan Pacific Singapore',
+                                'Tel: +65 6336 8111',
+                                '5 минут пешком от метро Promenade,',
+                                '20 минут на такси от аэропорта Changi.')
+
+                    a.c-article-section__read-more.js-show-text(href="#") Читать дальше
+
+                .c-article-section
+                    h5.c-article-section__title 8. Шик от Ritz Carlton
+                    .c-article-section__content-grid
+                        .c-article-section__content
+
+                            +article_paragraph('Отель <a href="http://www.ritzcarlton.com/en/hotels/singapore" target="_blank">Ritz-Carlton Milenia Singapore</a> находится всего в пяти минутах ходьбы от торгового центра Marina Square. До известных достопримечательностей, таких как Музей искусства и науки, парка Сады у Залива и театра Эспланады можно дойти за 10 минут. Таким образом, поселившись в отеле, вы буквально ощутите мощный пульс мегаполиса.')
+
+                            +article_paragraph('Здание Ritz-Carlton окружено красивым ландшафным садом. Отель украшен произведениями современного искусства. В нем свыше 600 номеров, есть конференц-залы, открытый и закрытый бассейны и теннисный корт. Номера оснащены всей самой современной техникой и интернетом, а из панорамных окон просторных номеров открывается вид на город или залив Marina Bay.')
+
+                            +article_slider(
+                                '<img class="c-article-slider__img" src="%=static=%img/content/hotels-30.jpg">',
+                                '<img class="c-article-slider__img" src="%=static=%img/content/hotels-32.jpg">',
+                                '<img class="c-article-slider__img" src="%=static=%img/content/hotels-33.jpg">')
+
+                            +article_paragraph('Здание Ritz-Carlton окружено красивым ландшафным садом. Отель украшен произведениями современного искусства. В нем свыше 600 номеров, есть конференц-залы, спа-центр, открытый и закрытый бассейны, а также теннисный корт. Номера оснащены самой современной техникой и интернетом, а из панорамных окон просторных номеров открывается вид на город или залив Marina Bay.')
+
+                            +article_paragraph('Уникальная особенность Ritz-Carlton Milenia Singapore – в каждом номере есть великолепная ванная комната с огромным окном. Вы можете лежать в шикарной ванне с пеной и любоваться закатом.')
+
+                            +article_paragraph('А изысканный ресторан Summer Pavilion способен удивить роскошной, разнообразной и сложной кантонской кухней даже самых опытных путешественников. Лаундж-кафе Chihuly предлагает легкие закуски, коктейли, капуччино и чай, которые можно отведать в окружении фантастических стеклянных скульптур знаменитого художника Дейла Чихули.')
+
+                            +article_incut(
+                                'hotels-vrez-10.jpg',
+                                'http://www.ritzcarlton.com/en/hotels/singapore',
+                                'true',
+                                'Ritz-Carlton Milenia Singapore',
+                                'Tel: +65 6337 8888',
+                                '20 минут на такси от аэропорта Changi.')
+
+                    a.c-article-section__read-more.js-show-text(href="#") Читать дальше
+
+                .c-article-section
+                    h5.c-article-section__title 9. Комфортный отель Shangri-La
+                    .c-article-section__content-grid
+                        .c-article-section__content
+
+                            +article_paragraph('Отель <a href="http://www.shangri-la.com/singapore/shangrila" target="_blank">Shangri-La Hotel Singapore</a> не похож ни на один другой. Это настоящий оазис в самом центре бурлящего мегаполиса. После посещения несметного количества магазинов на центральной улице Orchard Road, от очаровательных придорожных антикварных лавочек до гламурных дизайнерских бутиков, просторные ландшафтные сады отеля умиротворят и успокоят взор.')
+
+                            +article_paragraph('Если это не поможет, гости могут направиться в первый в Сингапуре спа-салон "ЦИ" или плавательный бассейн под открытым небом.')
+
+                            +article_slider(
+                                '<img class="c-article-slider__img" src="%=static=%img/content/hotels-34.jpg">',
+                                '<img class="c-article-slider__img" src="%=static=%img/content/hotels-35.jpg">',
+                                '<img class="c-article-slider__img" src="%=static=%img/content/hotels-36.jpg">')
+
+                            +article_paragraph('Создать особый вечер поможет широкий выбор ресторанов отеля: это и итальянский The Waterfall, и японский Nadaman, и Shang Palace с кантонской кухней и даже ресторан интернациональных блюд The Line.')
+
+                            +article_paragraph('После ужина стоит посетить один из трех баров и лаунж-зон отеля – Rose Veranda, Lobby Court и Line Shop.')
+
+                            +article_incut(
+                                'hotels-vrez-1.jpg',
+                                'http://www.shangri-la.com/singapore/shangrila/',
+                                'true',
+                                'Shangri-La Singapore',
+                                'Tel: (65) 6737 3644',
+                                '22 Orange Grove Road',
+                                '10 минут ходьбы до станции метро Orchard Road')
+
+                    a.c-article-section__read-more.js-show-text(href="#") Читать дальше
+
+                .c-article-section
+                    h5.c-article-section__title 10. Бутик-отель Wangz
+                    .c-article-section__content-grid
+                        .c-article-section__content
+
+                            +article_paragraph('Бутик-отель <a href="http://www.wangzhotel.com/" target="_blank">Wangz</a> располагается в своеобразном круглом здании поблизости от метро Outram Park и исторического китайского квартала Chinatown, а также популярного ночного клуба Zouk. На крыше гостиницы работает новый ресторан и бар The Rabbit Stash. За гастрономическую часть здесь отвечает известный шеф-повар Мэттью Мок. Гостям предлагают современную кухню, отмеченную сингапурским влиянием, а также тапасы и другие закуски. Еще одна важная отличительная черта этого заведения – потрясающий вид на прекрасный мегаполис.')
+
+                            +article_paragraph('Если это не поможет, гости могут направиться в первый в Сингапуре спа-салон "ЦИ" или плавательный бассейн под открытым небом.')
+
+                            +article_slider(
+                                '<img class="c-article-slider__img" src="%=static=%img/content/hotels-37.jpg">',
+                                '<img class="c-article-slider__img" src="%=static=%img/content/hotels-38.jpg">',
+                                '<img class="c-article-slider__img" src="%=static=%img/content/hotels-39.jpg">')
+
+                            +article_paragraph('Отель Wangz стилистически оформлен в смеси классики и модерна.')
+
+                            +article_paragraph('Как и во всех лучших гостиницах Сингапура, номера Wangz оснащены Интернетом, элегантными ванными комнатами, причем в данном случае – с панорамными окнами. Гости отеля могут воспользоваться услугами фитнес-центра, химчистки и ряда ресторанов, в которых можно отведать блюда западной кухни, местную кухню и др.')
+
+                            +article_incut(
+                                'hotels-vrez-6.jpg',
+                                'http://www.wangzhotel.com/',
+                                'true',
+                                'Wangz Hotel',
+                                'Tel: +65 6595 1388',
+                                '25 минут на такси от аэропорта Changi,',
+                                '5 минут пешком от метро Outram Park.')
+
+                            +article_paragraph('Гости отеля также могут воспользоваться бесплатным трансфером до ближайшей станции метро или до финансового района города и многочисленных магазинов района Orchard Road.')
+
+                    a.c-article-section__read-more.js-show-text(href="#") Читать дальше
+
+                +article_item('Маршруты',
+                    'Город для интересных<br>прогулок',
+                    'more',
+                    'route',
+                    'routes.html')
+
+                +article_item('Покупки',
+                    'Шопинг<br>без границ',
+                    'more',
+                    'shop',
+                    'purchases.html')
+
+                +article_item(
+                    'Календарь',
+                    'Деловые события<br>в Сингапуре',
+                    'calendar',
+                    'business_calendar',
+                    '#')
+
+            +footer()
+
+        script(src='%=static=%js/separate-js/svg4everybody.min.js')
+        script svg4everybody();
+
+        //- Main scripts. You can replace it, but I recommend you to leave it here
+        script(src='http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js')
+        script(src='%=static=%js/main%=hash=%%=min=%.js')

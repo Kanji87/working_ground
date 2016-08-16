@@ -1,0 +1,54 @@
+.c-article-list {
+    @include nl();
+    margin-top: 75px;
+    padding: 0 30px;
+
+    &__item {
+        position: relative;
+        padding-left: 40px;
+        &:not(:first-child) {
+            margin-top: 40px;
+        }
+
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 10px;
+            left: 0;
+            width: 10px;
+            height: 10px;
+            background-color: $red;
+        }
+    }
+
+    &__item-text {
+        font-size: 1.625rem;
+        color: $font-real-black;
+        font-weight: normal;
+
+        a {
+            color: $red;
+            text-decoration: underline;
+        }
+    }
+
+    &--numeric {
+        margin-top: 40px;
+        counter-reset: my-badass-counter;
+
+        .c-article-list__item {
+            &:not(:first-child) {
+                margin-top: 10px;
+            }
+
+            &:before {
+                content: counter(my-badass-counter)".";
+                counter-increment: my-badass-counter;
+                background-color: #fff;
+                font-size: 1.625rem;
+                top: 0;
+            }
+        }
+    }
+}

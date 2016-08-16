@@ -1,0 +1,15 @@
+.c-article-figure {
+    margin-top: 80px;
+
+    &__image {
+        width: 100%;
+        height: auto;
+    }
+
+    &__caption {
+        font-size: 1.125rem;
+        text-align: center;
+        color: $font-black;
+        margin-top: 20px;
+    }
+}

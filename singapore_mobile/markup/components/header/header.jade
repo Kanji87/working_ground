@@ -1,18 +1,29 @@
-mixin main-menu__item(title, desc, active)
-    li(class='c-main-menu__item' + (active ? ' c-main-menu__item--active' : ''))
-        a.c-main-menu__link(href='#')
+include ../index_block/index_block
+include ../footer/footer
+
+mixin main-menu__item(title, desc, link, current, active)
+    li(class='c-main-menu__item' + (current == active ? ' c-main-menu__item--active' : ''))
+        a.c-main-menu__link(href= link)
             p.c-main-menu__item-title= title
             p.c-main-menu__item-desc= desc
 
-mixin header()
+mixin important-item(title, desc, icon)
+    .c-important-item
+        img.c-important-item__img(src='%=static=%img/general/image_' + icon + '.png')
+        .c-important-item__content
+            p.c-important-item__title= title
+            p.c-important-item__desc!= desc
+
+mixin header(active)
     header.header
+        .header__bg
         a.header__menu-link.js-open-menu(href="#")
         a.header__page-title(href="/")
             //- | Твой <span>Сингапур</span>
             img(src="%=static=%img/general/singapore_logo.svg", alt="").header__logo
         a.header__important-link.js-open-important(href="#")
 
-        .l-grid__main-menu.js-main-menu
+        .l-grid__main-menu.l-grid__popup.js-main-menu
             .c-main-menu
                 .c-main-menu__col
                     ul.c-main-menu__list.c-main-menu__work-list
@@ -20,23 +31,40 @@ mixin header()
                             p.c-main-menu__head--small-text Сингапур для
                             p.c-main-menu__head--large-text Бизнеса
                         +main-menu__item('Деловые площадки',
-                                        'Умные деловые пространства')
+                                        'Умные деловые пространства',
+                                        'business-area.html',
+                                        'business_area',
+                                        active)
 
                         +main-menu__item('Уникальные площадки',
                                         'Уникальные места для проведения мероприятий',
-                                        'active')
+                                        'unique-site.html',
+                                        'unique_site',
+                                        active)
 
                         +main-menu__item('Туры',
-                                        'Деловые, образовательные, гастрономические и другие')
+                                        'Деловые, образовательные, гастрономические и другие',
+                                        'tours.html',
+                                        'tour',
+                                        active)
                                         
-                        +main-menu__item('Деловой-туризм',
-                                        'Программы и привилегии для бизнес-туристов')
+                        +main-menu__item('Деловой туризм',
+                                        'Программы и привилегии для бизнес-туристов',
+                                        'business-tourism.html',
+                                        'business_tourism',
+                                        active)
                                         
                         +main-menu__item('Истории успеха',
-                                        'Личный опыт проведения деловых мероприятий')
+                                        'Личный опыт проведения деловых мероприятий',
+                                        'success-story.html',
+                                        'success_story',
+                                        active)
                                         
                         +main-menu__item('Календарь',
-                                        'Деловые события в Сингапуре')
+                                        'Деловые события в Сингапуре',
+                                        '#',
+                                        'business_calendar',
+                                        active)
                                 
                 .c-main-menu__col
                     ul.c-main-menu__list.c-main-menu__play-list
@@ -45,21 +73,82 @@ mixin header()
                             p.c-main-menu__head--large-text Отдыха
                                         
                         +main-menu__item('Интересные места',
-                                        'Смотришь и восхищаешься')
+                                        'Смотришь и восхищаешься',
+                                        'interesting-places.html',
+                                        'interesting_place',
+                                        active)
                                         
                         +main-menu__item('Гостиницы',
-                                        'Для бизнеса и отдыха')
+                                        'Для бизнеса и отдыха',
+                                        'hotels.html',
+                                        'hotel',
+                                        active)
                                         
                         +main-menu__item('Кухня',
                                         'Смешение культур и вкусов',
-                                        'active')
+                                        'kitchen.html',
+                                        'kitchen',
+                                        active)
                                         
                         +main-menu__item('Маршруты',
-                                        'Город для интересных прогулок')
+                                        'Город для интересных прогулок',
+                                        'routes.html',
+                                        'route',
+                                        active)
                                         
                         +main-menu__item('Покупки',
-                                        'Шопинг без границ')
+                                        'Шопинг без границ',
+                                        'purchases.html',
+                                        'purchases',
+                                        active)
                                         
                         +main-menu__item('Календарь',
-                                        'Фестивали и островные вечеринки «на полную катушку»')
+                                        'Фестивали и островные вечеринки «на полную катушку»',
+                                        '/business-area.html',
+                                        '6',
+                                        active)
+
+        .l-grid__important.l-grid__popup.js-main-important
+            +index_block(
+                '',
+                'Сингапур – город-государство, в котором очень удачно смешалось всё. Здесь работают таланты со всего мира, активно растет бизнес, развиваются новейшие технологии. И благодаря этому он буквально за несколько десятилетий превратился в самый успешный деловой и культурный центр в мире. В Сингапуре здорово отдыхать, в Сингапуре здорово работать.',
+                'Важно знать',
+                '',
+                '#')
+
+            .l-grid__important-list.js-important-list
+
+                +important-item(
+                    'Сингапурские доллары',
+                    'Официальная валюта - сингапурский доллар, который выпускается купюрами достоинством по <strong>$2, $5, $10, $50, $100, $500</strong> и <strong>$1000</strong>. Монеты бывают <strong>5, 10, 20</strong> и <strong>50</strong> центов и <strong>$1.</strong>',
+                    'money')
+
+                +important-item(
+                    'Знание языка',
+                    'В Сингапуре несколько официальных языков: <strong>английский, китайский, малайский, тамильский</strong>. Большинство жителей свободно говорит по-английски, на улицах вы сможете услышать сингапурский вариант английского, который называется <strong>«синглиш»</strong>.',
+                    'language')
+
+                +important-item(
+                    'Кратковременный дождь',
+                    'Сингапур располагается около экватора, поэтому климат там теплый и влажный круглый год. Средняя температура днем около <strong>26-30°C</strong>. <strong>Будьте готовы к кратковременным дождям</strong>.',
+                    'rain_cloud')
+
+                +important-item(
+                    'Чаевые за услуги',
+                    'В ресторанах и гостиницах плата за обслуживание в размере <strong>10% обычно включается в счет</strong>, но вы можете дополнительно отблагодарить сотрудников чаевыми за хороший сервис.',
+                    'wallet')
+
+                +important-item(
+                    'Питьевая вода',
+                    'В этом городе можно смело пить воду прямо из-под крана, поскольку вода в Сингапуре <strong>соответствует высоким стандартам</strong> Всемирной организации здравоохранения.',
+                    'water_drops')
+
+                +important-item(
+                    'Места для курения',
+                    'В Сингапуре нельзя курить в общественных местах на улицах и в помещениях, например, торговых центрах и кафе. Есть <strong>специальные места для курения</strong> в некоторых развлекательных заведениях, в открытых кафе или просто на улице.',
+                    'no_smoking')
+
+                img.c-important-img(src='%=static=%img/general/important_bottom_img.jpg')
+
+                +footer()
                                 

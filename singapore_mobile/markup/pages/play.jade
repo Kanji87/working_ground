@@ -3,7 +3,7 @@ html(class="no-js", lang="ru")
 
     include ../components/head/head
     include ../components/header/header
-    include ../components/article_list/article_list
+    include ../components/article_catalog/article_catalog
     include ../components/footer/footer
 
     head
@@ -14,7 +14,7 @@ html(class="no-js", lang="ru")
         section.l-grid
             +header()
 
-            +article_list('play')
+            +article_catalog('play')
 
         script(src='%=static=%js/separate-js/svg4everybody.min.js')
         script svg4everybody();

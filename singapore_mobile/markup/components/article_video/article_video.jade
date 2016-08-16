@@ -1,0 +1,9 @@
+mixin article_video(video, cover)
+    .c-article-video.js-play-video
+        .c-article-video__cover(style='background-image: url(%=static=%img/content/' + cover + ')')
+            p.c-article-video__title Открой для себя сердце<br>Сингапура
+            .c-article-video__play-icon
+                i.icon.icon__play
+                p.c-icon-sign Смотреть видео
+        video.c-article-video__player
+            source(src="%=static=%img/content/" + video + ".mp4" type="video/mp4")

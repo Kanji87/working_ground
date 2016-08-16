@@ -1,0 +1,74 @@
+include ../article_item/article_item
+
+mixin article_catalog(type)
+    if type == 'work'
+        +article_item('Деловые площадки',
+                    'Умные деловые<br>пространства',
+                    'more',
+                    'business_area',
+                    'business-area.html')
+
+        +article_item('Уникальные площадки',
+                    'Уникальные места для проведения мероприятий',
+                    'more',
+                    'unique_area',
+                    'unique-site.html')
+
+        +article_item('Туры',
+                    'Деловые, образовательные, гастрономические и другие',
+                    'more',
+                    'tour',
+                    'tours.html')
+
+        +article_item('Деловой туризм',
+                    'Программы и привилегии для бизнес-туристов',
+                    'more',
+                    'business_tourism',
+                    'business-tourism.html')
+
+        +article_item('Истории успеха',
+                    'Личный опыт проведения деловых мероприятий',
+                    'more',
+                    'success_story',
+                    'success-story.html')
+
+        +article_item('Календарь',
+                    'Деловые события<br>в Сингапуре',
+                    'calendar',
+                    'business_calendar')
+
+    else if type == 'play'
+        +article_item('Интересные места',
+                    'Смотришь<br>и восхищаешься',
+                    'more',
+                    'interesting_place',
+                    'interesting-places.html')
+
+        +article_item('Гостиницы',
+                    'Для бизнеса<br> и отдыха',
+                    'more',
+                    'hotel',
+                    'hotels.html')
+
+        +article_item('Кухня',
+                    'Смешение культур<br>и вкусов',
+                    'more',
+                    'kitchen',
+                    'kitchen.html')
+
+        +article_item('Маршруты',
+                    'Город для интересных<br>прогулок',
+                    'more',
+                    'route',
+                    'routes.html')
+
+        +article_item('Покупки',
+                    'Шопинг<br>без границ',
+                    'more',
+                    'shop',
+                    'purchases.html')
+
+        +article_item('Календарь',
+                    'Фестивали и островные вечеринки «на полную катушку»',
+                    'calendar',
+                    'play_calendar')

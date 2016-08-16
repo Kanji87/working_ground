@@ -42,6 +42,10 @@
             text-align: center;
 
             color: $white;
+
+            @include respond-to(iphone_four) {
+                font-size: 1.2rem;
+            }
         }
     }
     &__more {
@@ -99,6 +103,14 @@
     padding-top: 56px;
 
     text-align: center;
+
+    @include respond-to(iphone_five) {
+        padding-top: 30px;
+    }
+
+    @include respond-to(iphone_four) {
+        padding-top: 20px;
+    }
 }
 
 .c-page__title {
@@ -106,12 +118,20 @@
     &--small {
         font-size: 1.875rem;
         font-weight: normal;
+
+        @include respond-to(iphone_four) {
+            font-size: 1.5rem;
+        }
     }
     &--large {
         font-size: 5.625rem;
         font-weight: 600;
 
         text-transform: uppercase;
+
+        @include respond-to(iphone_four) {
+            font-size: 4rem;
+        }
     }
 }
 

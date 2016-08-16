@@ -1,0 +1,280 @@
+doctype html
+html(class="no-js", lang="ru")
+
+    include ../components/head/head
+    include ../components/header/header
+    include ../components/article_teaser/article_teaser
+    include ../components/article_paragraph/article_paragraph
+    include ../components/article_slider/article_slider
+    include ../components/article_list/article_list
+    include ../components/article_image/article_image
+    include ../components/article_video/article_video
+    include ../components/article_incut/article_incut
+    include ../components/article_item/article_item
+    include ../components/footer/footer
+
+    head
+        +head(head.defaults)
+    body
+        |%=symbols=%
+
+        section.l-grid
+            +header('purchases')
+
+            article.l-article
+                +article_teaser('Покупки',
+                                'Шопинг<br>без границ',
+                                'shop',
+                                'Покупки')
+
+                +article_paragraph('Сингапур – одна из самых лучших в мире стран для шопинга. Географическое и экономическое положение города-государства делает его очень привлекательным для покупателей со всего мира. Находясь в самом центре Азиатско-Тихоокеанского региона, Сингапур оказывается местом, где по разумным ценам можно купить не только потребительские товары, но и предметы роскоши. Ну а этнические районы мегаполиса предлагают многочисленные экзотические товары, антиквариат и сувениры, которые напомнят о посещении этого города и привнесут в быт европейца легкий аромат Азии.')
+
+                .c-article-section
+                    h5.c-article-section__title Рай для шопоголиков
+                    .c-article-section__content-grid
+                        .c-article-section__content
+
+                            +article_paragraph('В Сингапуре говорят, что покупки в магазинах – это национальный вид спорта. И, похоже, что это действительно так. «Спортивные площадки» города оборудованы по последнему слову «техники» для «профессиональных» спортсменов-шопоголиков: гигантские мегамоллы, ультрасовременные магазины, бутики известных международных и местных брендов, небольшие лавки с авторской продукцией, сувенирные лавки, рынки и т. п. Путешественники, побывавшие в Сингапуре, с удовольствием вспоминают магазины этого мегаполиса. Привлекает не только огромный выбор товаров, но и невысокие цены.')
+
+                            +article_paragraph('Great Singapore Sale – великая сингапурская распродажа. Длится распродажа довольно долго – до двух месяцев, обычно в июне-июле. В этот период можно совершить покупки со скидкой до 70 %, а иногда и до 90 %.')
+
+                            +article_paragraph('Не только местные жители заранее готовятся к этому периоду, но и путешественники планируют поездки в город-государство так, чтобы совместить отдых с выгодными покупками. Кстати, некоторые торговые центры делают особые спецпредложения и скидки только для иностранных туристов.')
+
+                            +article_paragraph('Тем, кто собирается посетить эту грандиозную сингапурскую распродажу следует знать, что магазины распродают свои товары в разное время. И если у шопоголика есть желание скупить содержимое всех магазинов города, ему для этого понадобятся все два месяца распродажи.')
+
+                            +article_image(
+                                'purchases-01.jpg',
+                                'Великая сингапурская распродажа')
+
+                    a.c-article-section__read-more.js-show-text(href="#") Читать дальше
+
+                .c-article-section
+                    h5.c-article-section__title Orchard Road
+                    .c-article-section__content-grid
+                        .c-article-section__content
+
+                            +article_paragraph('Когда-то, более 150 лет тому назад на небольшой улице под названием <a href="http://www.orchardroad.org/" target="_blank">Orchard Road</a> располагались фермы, производящие мускатный орех. С тех пор это место превратилось не только в центр города, но и в главную торговую улицу Сингапура. Казалось бы, еще недавно, в 1958 году, тут был открыт первый магазин. А в 1970-е годы появились несколько кинотеатров. Сегодня же эта улица полна дорогих отелей, шикарных ресторанов, увеселительных заведений и прежде всего магазинов, предлагающих на продажу все, что душе угодно.')
+
+                            +article_paragraph('Orchard Road – поистине главная торговая улица города-государства. При этом она считается и самой известной торговой улицей всей Азии. Здесь можно посетить представительства модельных домов, различные специализированные магазины, роскошные бутики. Торговая артерия Сингапура составляет 2,2 километра, поэтому потребуются немалые усилия, чтобы пройти по всем магазинам улицы за один день. Для многих это покажется просто невозможным.')
+
+                            +article_paragraph('Крупные торговые центры на Орчард-роуд:')
+
+                            +article_list(
+                                '<a href="http://www.ionorchard.com/" target="_blank">ION Orchard</a>. Огромный и шикарный мегамолл, где представлена продукция ведущих мировых брендов. В более чем 300 магазинах можно найти вещи от Giorgio Armani, Givenchy, Prada, Versace, Louis Vuitton, Dior, Dolce&Gabbana, Cartier, Moschino и других всемирно известных производителей.',
+                                '<a href="http://www.paragon.com.sg/" target="_blank">Paragon Shopping Centre</a>.Здесь торгуют прежде всего предметами роскоши и дорогой одеждой. Флагман центра – огромный магазин бренда Gucci. Также тут расположены бутики марок Salvatore Ferragamo, Prada, BVLGARI, Burberry, Canali, Dunhill, Ermenegildo Zegna, Etro, Jimmy Choo, Armani Exchange, Banana Republic, BCBG Maxazria, CK Calvin Klein, Diesel Tod’s, Miu Miu, DKNY/DKNY Jeans, Evisu, G-Star, Guess, Miss Sixty, Raoul и многих других.',
+                                '<a href="http://www.ngeeanncity.com.sg/" target="_blank">Ngee Ann City</a>. На семи уровнях торгового центра находится более 130 магазинов. Тут можно посетить бутики Chanel, Chloe, Christian Dior, Fendi, Armani Exchange, Dunhill, Burberry, Celine, Louis Vuitton, Marc by Marc Jacobs, Massimo Dutti, Versace и другие. Пожалуй, наиболее известным этот центр делает находящийся в нем японский мегамаркет Takashimaya, занимающий площадь в 35 000 кв. м. Кроме того, в Ngee Ann City располагается большой книжный супермаркет Kinokuniya.')
+
+                            +article_paragraph('Помимо вышеуказанных торговых центров главной торговой улицы Сингапура, здесь находятся:')
+
+                            +article_list(
+                                '<a href="http://www.fraserscentrepointmalls.com/" target="_blank">Centerpoint</a>. В торговом центре расположен универмаг известной азиатской сети Robinsons.',
+                                '<a href="http://www.wismaonline.com/" target="_blank">Wisma Atria</a>',
+                                '<a href="http://www.313somerset.com.sg/" target="_blank">313@somerset</a>',
+                                '<a href="https://www.tangs.com/" target="_blank">TANGS</a>')
+
+                            +article_paragraph('Совершать покупки без перерыва сложно даже для опытных покупателей. На Orchard Road и в ее окрестностях можно найти массу ресторанов и развлекательных заведений на любой вкус и бюджет. Кроме того, Orchard Road еще является хорошим местом для прогулки. Улица расположена в тени тропических деревьев, скрывающих пешеходов от палящего солнца.')
+
+                            +article_slider(
+                                '<img class="c-article-slider__img" src="%=static=%img/content/purchases-03.jpg" data-caption="Торговый центр Orchard ION. Метро Orchard, 437 Орчард-роуд, Singapore 238878">',
+                                '<img class="c-article-slider__img" src="%=static=%img/content/purchases-04.jpg" data-caption="Торговый центр Wisma Atria">',
+                                '<img class="c-article-slider__img" src="%=static=%img/content/purchases-05.jpg" data-caption="Вид на Орчард-роуд и торговый центр Paragon">')
+
+                    a.c-article-section__read-more.js-show-text(href="#") Читать дальше
+
+                .c-article-section
+                    h5.c-article-section__title Marina Bay
+                    .c-article-section__content-grid
+                        .c-article-section__content
+
+                            +article_paragraph('Marina Bay – это уникальный конгломерат, состоящий из гигантского гостиничного комплекса, ресторанов, кафе, различных увеселительных заведений, аттракционов и, конечно, магазинов. Всякому путешественнику известно, что тут можно снять роскошные номера или поплавать в огромном бассейне с потрясающим видом на город. Но кроме этого, находящийся здесь комплекс <a href="http://www.marinabaysands.com/shopping.html" target="_blank">Marina Bay Sands®</a> поразит любого гостя обилием универмагов и дизайнерских магазинов. В торговом центре вы найдете, пожалуй, самую большую в Азии коллекцию роскошных бутиков: Ralph Lauren, Salvatore Ferragamo, Yves Saint Laurent, FURLA, Hermes, Herve Leger, Hide Yamamoto, BALLY, Harley-Davidson, Gucci, BVLGARI, Birkenstock, HUGO BOSS, Burberry, Cartier, CHANEL, Dior, Emporio Armani, FENDI, Ferrari Store, Jimmy Choo, LA PERLA и многие другие.')
+
+                            +article_paragraph('Но самый необычный магазин торгового комплекса - уникальный бутик-остров Louis Vuitton, построенный в радикальных модернистских традициях архитектором Питером Марино и расположенный в центре залива. Он выглядит как гигантский кристалл: дневной свет проникает сквозь роскошный стеклянный фасад здания и приятно освещает все пространство. Внутри магазина можно увидеть не только товары знаменитой марки, но и уникальный интерьер в морском стиле, украшенный солидной коллекцией произведений современного искусства.')
+
+                            +article_paragraph('Особый интерес заслуживают и местные марки, также представленные в торговом комплексе Marina Bay Sands®. Например, бренды Ong Shunmugam и Ashley Isham, последний из которых очень популярен среди голливудских звезд. В частности, Анджелина Джоли часто выбирает одежду этой марки. Последнее время все большее количество модников проявляют интерес к молодому местному бренду Raoul, выпускающему одежду как для женщин, так и для мужчин.')
+
+                            +article_paragraph('Для тех, кто устал от походов по магазинам, Marina Bay Sands® предлагает множество ресторанов как с азиатской, так и с европейской кухней. В молле также можно покататься на 600-метровом катке или на китайской деревянной лодке «сампан». Откуда лодка? Посреди торгового комплекса протекает река, которая начинается с 22-метрового водопада.')
+
+                            +article_slider(
+                                '<img class="c-article-slider__img" src="%=static=%img/content/purchases-07.jpg" data-caption="Marina Bay Sands. Часы работы: с 10:30 до 23:00. Пятница, суббота и канун праздников – 10:30 – 23:30">',
+                                '<img class="c-article-slider__img" src="%=static=%img/content/purchases-08.jpg" data-caption="Магазин Louis Vuitton">')
+
+                    a.c-article-section__read-more.js-show-text(href="#") Читать дальше
+
+                .c-article-section
+                    h5.c-article-section__title Raffles City Shopping Centre
+                    .c-article-section__content-grid
+                        .c-article-section__content
+
+                            +article_paragraph('Еще один знаковый для Сингапура торговый центр – это <a href="http://m.rafflescity.com.sg/tourist-privileges/" target="_blank">Торговый центр «Раффлз-Сити»</a>. Находится он прямо напротив знаменитого и популярного среди знаменитостей отеля Raffles.')
+
+                            +article_paragraph('Весь первый этаж центра – это универмаг Robinsons, известный своим широким выбором одежды, косметики, обуви, аксессуаров разных брендов.')
+
+                            +article_paragraph('Кстати, именно Robinsons был в Сингапуре самым первым универмагом. А начинался он как обычный семейный магазин с ограниченным ассортиментом товаров.')
+
+                            +article_paragraph('Остальные этажи Raffles City Shopping Centre полны магазинов мировых брендов. Тут есть Docker’s® Store, FURLA, Godiva, GUESS?, ALDO, Coach, Levi’s® Store, Timberland, Tommy Hilfiger и многие другие.')
+
+                            +article_paragraph('Важно отметить, что туристам в этом торговом центре предлагаются особые привилегии как в магазинах, так и в ресторанах, о которых можно узнать на стойке информации на первом уровне мола.')
+
+                            +article_paragraph('Специальные акции и предложения для туристов существуют не только в Raffles City Shopping Centre, но и в некоторых других магазинах, поэтому стоит уточнять информацию о скидках во всех магазинах. Как правило, это можно сделать также на стойке консьержа.')
+
+                            +article_image(
+                                'purchases-10.jpg',
+                                'Торговый центр Raffles City Shopping Centre. Рядом cо входом в торговый центр – метро City Hall')
+
+                    a.c-article-section__read-more.js-show-text(href="#") Читать дальше
+
+                .c-article-section
+                    h5.c-article-section__title Vivo City Shopping Centre
+                    .c-article-section__content-grid
+                        .c-article-section__content
+
+                            +article_paragraph('<a href="http://www.vivocity.com.sg/" target="_blank">Торговый центр «Виво-Сити»</a> – крупнейший торговый пассаж Сингапура. Если у путешественника нет достаточного времени на посещение нескольких торговых центров, то это именно тот торговый центр, куда следует отправиться. В магазинах представлены как известные мировые, так и местные бренды.')
+
+                            +article_paragraph('Из дополнительных особенностей этого мегамолла стоит упомянуть расположенный на крыше здания Sky Park с большим бассейном.')
+
+                    a.c-article-section__read-more.js-show-text(href="#") Читать дальше
+
+                .c-article-section
+                    h5.c-article-section__title Citylink Mall
+                    .c-article-section__content-grid
+                        .c-article-section__content
+
+                            +article_paragraph('Множество местных марок представлены на торговых улицах и в крупных торговых центрах города. Однако есть одно место, где в основном сосредоточены магазины местных и азиатских брендов. Подземный торговый центр <a href="http://citylink.com.sg/" target="-blank">Citylink Mall</a> – это торговая галерея из небольших магазинов и ресторанов. Это место прекрасно подходит для тех, кто ищет оригинальные и современные вещи от местных дизайнеров.')
+
+                    a.c-article-section__read-more.js-show-text(href="#") Читать дальше
+
+                .c-article-section
+                    h5.c-article-section__title Местные бренды
+                    .c-article-section__content-grid
+                        .c-article-section__content
+
+                            +article_image(
+                                'purchases-14.jpg',
+                                'Магазин местных дизайнеров')
+
+                            +article_paragraph('В Сингапуре работает множество талантливых местных дизайнеров, заслуживающих, пожалуй, не меньшего внимания, чем всемирно известные бренды.')
+
+                            +article_paragraph('Прежде всего стоит посетить магазин женской одежды <a href="http://www.ingoodcompany.asia/" target="_blank">In Good Company</a>, созданный дизайнерами Свеном и Кейн Тан, также интересна марка мужской одежды и обуви <a href="http://edetal.sg/">Ed Et Al</a> дизайнера Эдвина Нео.')
+
+                            +article_paragraph('Уже упомянутая здесь марка <a href="http://singapore.dev.cafedigital.ru/purchases.html" target="_blank">Raoul</a> считается восходящей звездой сингапурского дизайна одежды и пользуется большим успехом у мужчин и женщин.')
+
+                            +article_paragraph('Для любительниц необычных решений во внешнем облике подходит созданный Эндрю Ло и Кенни Лим бренд Depression. Асимметричные платья этой марки способны удивить даже бывалых модниц.')
+
+                            +article_paragraph('Изящные ювелирные изделия от известного местного ювелира Кэролайн Кен можно приобрести в <a href="http://www.carriekrocks.com/" target="_blank">Carrie K</a>. Самые лучшие сингапурские портные работают у <a href="http://kevinseah.com/" target="_blank">Kevin Seah</a>. <a href="http://www.ethan-k.com/" target="_blank">Ethan K</a> и <a href="http://www.kwanpen.com/" target="_blank">Kwanpen</a> предлагают шикарные сумки. А <a href="http://iwearsaturday.com/" target="_blank">Saturday</a> торгует повседневной минималистической одеждой, разработанной дизайнерами Ником Вонгом и Дэниелом Ло. И, конечно же, стоит обратить внимание на самый популярный и известный сингапурский бренд доступной обуви и аксессуаров - <a href="http://www.charleskeith.com/sg/?shipto=sg" target="_blank">Charles & Keith</a>. Это один из самых известных сингапурских брендов, и его можно найти практически в любом торговом центре, как, впрочем, и во множестве других стран от Шри-Ланки до ЮАР.')
+
+                            +article_paragraph('Кроме того, местные бренды можно приобрести, например, в следующих магазинах:')
+
+                            +article_list(
+                                '<a href="http://shop.nanaandbird.com/" target="_blank">NANA & BIRD</a> 1M Yong Siak Street',
+                                '<a href="http://www.kwanpen.com/" target="_blank">KWANPEN</a> #2 Bayfront Avenue 2 Orchard Turn')
+
+                    a.c-article-section__read-more.js-show-text(href="#") Читать дальше
+
+                .c-article-section
+                    h5.c-article-section__title Сувениры и подарки
+                    .c-article-section__content-grid
+                        .c-article-section__content
+
+                            +article_image(
+                                'purchases-15.jpg',
+                                'Сингапурские сувениры')
+
+                            +article_paragraph('Если речь идет о покупке сувениров и подарков, стоит упомянуть и массу местных магазинчиков с сувенирами и дизайнерской продукцией. Больше всего их можно найти в Singapore Visitor Centre Orchard. Скажем, Design studio FARM продает там весьма любопытные сувениры и необычные мелочи.')
+
+                            +article_paragraph('Можно также посетить Museum Shop на первом этаже музея Red Dot Design Museum. В большом торговом центре TANGS туристам предложат шикарно упакованные подарки, например уникальные керамические изделия. Какие-то предметы на память можно купить и в магазинах музеев Сингапура: ArtScience Museum, National Museum of Singapore и SingaporeArt Museum.')
+
+                            +article_paragraph('Кроме того, можно зайти и в некоторые магазины, торгующие не только сувенирами, но и различными необычными предметами, изящной штучной и художественной продукцией, керамикой, украшениями, аксессуарами для интерьера:')
+
+                            +article_paragraph('Еще несколько магазинов:')
+
+                            +article_list(
+                                '<a href="http://www.supermama.sg/" target="_blank">SUPERMAMA (керамика, аксессуары)</a> 265 Beach Road',
+                                '<a href="http://www.facebook.com/inhabitsingapore" target="_blank">INHABIT (одежда и аксессуары)</a> #02-16 Mandarin Gallery, 333A Орчард-роуд',
+                                '<a href="http://www.thegeneralco.sg/" target="_blank">THE GENERAL COMPANY (от кожаных аксессуаров до керамики)</a> 150A Tyrwhitt Road',
+                                '<a href="http://www.visitpact.com/" target="_blank">PACT (мебель и аксессуары для дома)</a> #02-14 Orchard Central 181 Орчард-роуд')
+
+                            +article_paragraph('Еще несколько магазинов:')
+
+                            +article_paragraph('SUPERMAMA (керамика, аксессуары)<br>265 Beach Road<br><a href="http://www.supermama.sg/" target="_blank">www.supermama.sg</a>')
+
+                            +article_paragraph('INHABIT (одежда и аксессуары)<br>#02-16 Mandarin Gallery, 333A Орчард-роуд<br><a href="http://www.facebook.com/inhabitsingapore" target="_blank">www.facebook.com/inhabitsingapore</a>')
+
+                            +article_paragraph('THE GENERAL COMPANY (от кожаных аксессуаров до керамики)<br>150A Tyrwhitt Road<br><a href="http://www.thegeneralco.sg/" target="_blank">www.thegeneralco.sg</a>')
+
+                            +article_paragraph('PACT (мебель и аксессуары для дома)<br>#02-14 Orchard Central<br>181 Орчард-роуд<br><a href="http://www.visitpact.com/" target="_blank">www.visitpact.com</a>')
+
+                            +article_paragraph('THE REDUNDANT SHOP (дизайнерские минималистические изделия)<br>#01-71 Millennia Walk<br>9 Raffles Boulevard<br><a href="http://www.theredundantshop.com/">http://www.theredundantshop.com/</a>')
+
+                    a.c-article-section__read-more.js-show-text(href="#") Читать дальше
+
+                .c-article-section
+                    h5.c-article-section__title Этнические магазины и рынки
+                    .c-article-section__content-grid
+                        .c-article-section__content
+
+                            +article_paragraph('Атрибуты национальной одежды, предметы интерьера, украшения и характерные сувениры лучше всего приобретать во время прогулок по этническим кварталам города – китайскому, индийскому, малайскому и перанаканскому. Все эти районы полны колоритных магазинов и лавок.')
+
+                            +article_paragraph('Однако настоящему ценителю необычных вещей стоит посетить еще и многочисленные базары или блошиные рынки Сингапура.')
+
+                            +article_paragraph('<a href="http://www.fleawhere.com/" target="_blank">Fleawhere</a>. Самый крупный организатор блошиных рынков города.')
+
+                            +article_paragraph('<a href="http://citylink.com.sg/" target="_blank">China Square Central Weekend Flea Market</a>. Самый старый из блошиных рынков Сингапура. Тут можно найти множество действительно старых и даже старинных вещей. Открыт каждое воскресенье с 11 до 18 часов.')
+
+                            +article_paragraph('<a href="http://www.museum.red-dot.sg/maad" target="_blank">MAAD</a>. Рынок произведений современных художников, дизайнеров, ремесленников. Открыт каждую первую или вторую пятницу с 17:00 до 00:00.')
+
+                            +article_paragraph('<a href="http://www.public-garden.com/" target="_blank">Public Garden</a>. Продажа продукции независимых местных производителей. Ежемесячно проводится в различных исторических местах города.')
+
+                            +article_paragraph('<a href="http://www.zoukclub.com/" target="_blank">Zouk Flea & Easy</a>. Клубный рынок винтажных товаров 40–50 лет давности. От одежды до музыкальных записей и пластинок. Точное время и место проведения – на сайте.')
+
+                            +article_slider(
+                                '<img class="c-article-slider__img" src="%=static=%img/content/purchases-11.jpg" data-caption="Этнический магазин в районе Кампонг Глам">',
+                                '<img class="c-article-slider__img" src="%=static=%img/content/purchases-12.jpg" data-caption="Шопинг в районе Маленькая Индия">',
+                                '<img class="c-article-slider__img" src="%=static=%img/content/purchases-13.jpg" data-caption="Магазин ковров">')
+
+                    a.c-article-section__read-more.js-show-text(href="#") Читать дальше
+
+                .c-article-section
+                    h5.c-article-section__title TAX-FREE В СИНГАПУРЕ
+                    .c-article-section__content-grid
+                        .c-article-section__content
+
+                            +article_paragraph('В этой стране налоги невысоки, поэтому и сумма возврата составляет лишь 5–6 %(сумма зависит от стоимости сервисного обслуживания). Однако для тех, кто везет домой большое количество покупок или покупает предметы роскоши, сумма возврата может оказаться вполне ощутимой.')
+
+                            +article_paragraph('Electronic Tourist Refund Ticket, дающий возможность вернуть налог, можно получить в магазине, поддерживающем программу Tax Free, при совершении покупки на сумму не менее 100 SGD.')
+
+                            +article_image('purchases-16.jpg')
+
+                            +article_paragraph('Получить свои деньги можно в аэропорту еще до регистрации в отделении GST Refund. Регистрация электронная. Нужно просто ввести в аппарат паспортные данные и отсканировать чеки eTRS. После этого турист получает чек с подтверждением об оформлении беспошлинного вывоза. Все это нужно сделать до того, как пассажир сдаст багаж, так как вещи могут потребоваться для физического осмотра. Деньги можно получить после прохождения паспортного контроля в офисе с надписью GST Refund, предъявив квитанцию-уведомление. Средства выдадут наличными или переведут на банковскую карту. В этом случае еще в аппарате достаточно лишь выбрать возврат средств на карту.')
+
+                    a.c-article-section__read-more.js-show-text(href="#") Читать дальше
+
+                +article_video(
+                    'purchases',
+                    'video-purchases.jpg')
+
+                
+                +article_item('Интересные места',
+                    'Смотришь<br>и восхищаешься',
+                    'more',
+                    'interesting_place',
+                    'interesting-places.html')
+
+                +article_item('Гостиницы',
+                    'Для бизнеса<br> и отдыха',
+                    'more',
+                    'hotel',
+                    'hotels.html')
+
+                +article_item('Календарь',
+                    'Фестивали и островные вечеринки «на полную катушку»',
+                    'calendar',
+                    'play_calendar')
+
+            +footer()
+
+        script(src='%=static=%js/separate-js/svg4everybody.min.js')
+        script svg4everybody();
+
+        //- Main scripts. You can replace it, but I recommend you to leave it here
+        script(src='http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js')
+        script(src='%=static=%js/main%=hash=%%=min=%.js')

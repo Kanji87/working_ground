@@ -1,0 +1,5 @@
+mixin article_num_list(...items)
+    ul.c-article-list.c-article-list--numeric
+        each item in items
+            li.c-article-list__item
+                p.c-article-list__item-text!= item

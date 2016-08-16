@@ -1,4 +1,4 @@
-mixin index_block(title, desc, buttonSign, blockType)
+mixin index_block(title, desc, buttonSign, blockType, link)
     div(class='c-index-block' + (blockType ? ' c-index-block--' + blockType : ''))
         if title
             h1.l-index-block__header
@@ -9,6 +9,6 @@ mixin index_block(title, desc, buttonSign, blockType)
             p.c-index-block__desc-text= desc
 
             if buttonSign
-                a.c-index-block__more(href="#")
+                a.c-index-block__more(href= link)
                     i.icon.icon__down-bordered
                     p.c-icon-sign= buttonSign

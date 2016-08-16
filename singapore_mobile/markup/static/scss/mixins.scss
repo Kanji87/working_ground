@@ -39,4 +39,10 @@
     @else if $media == fablet {
         @media only screen and (max-width: $fablet) { @content; }
     }
+    @else if $media == iphone_four {
+        @media only screen and (max-width: $phone) and (max-height: 375px) { @content; }
+    }
+    @else if $media == iphone_five {
+        @media only screen and (max-width: $phone) and (max-height: 460px) { @content; }
+    }
 }

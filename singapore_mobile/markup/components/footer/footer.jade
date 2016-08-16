@@ -1,2 +1,40 @@
 mixin footer(data)
     footer.footer
+        ul.footer__social-list
+            li.footer__social-item
+                a.footer__social-link.footer__social-link--vk(href="#")
+            li.footer__social-item
+                a.footer__social-link.footer__social-link--fb(href="#")
+            li.footer__social-item
+                a.footer__social-link.footer__social-link--in(href="#")
+            li.footer__social-item
+                a.footer__social-link.footer__social-link--tw(href="#")
+
+        .l-footer__about-grid
+            .footer__about
+                a.footer__show-more.js-show-about О проекте
+                .footer__about-content
+                    .footer__about-text-block
+                        p.footer__about-text.footer__about-text--grey Партнёр рекламного проекта:
+                        p.footer__about-text Singapore Tourism Board
+                        p.footer__about-text.footer__about-text--grey &copy; 2016
+
+                    .footer__about-text-block
+                        p.footer__about-text.footer__about-text--grey Отдел рекламы и спецпроектов:
+                        p.footer__about-text Виктория Чернышкина, Алеся Агаподченко, Павел Бекишев
+                        p.footer__about-text.footer__about-text--grey АО &laquo;Бизнес Ньюс Медиа&raquo; &copy; 2016
+
+                    .footer__about-text-block
+                        p.footer__about-text
+                            span.footer__about-text--grey Разработка:&nbsp;
+                            span Café Digital
+
+        ul.footer__logo-list
+            li.footer__logo-item.footer__logo-item--sing
+                a.footer__logo-link(href="#")
+                    img.footer__logo-img(src="%=static=%img/general/singapore_footer_logo.svg", alt="")
+                    p.footer__logo-sign Партнёр<br>спецпроекта
+            li.footer__logo-item.footer__logo-item--ved
+                a.footer__logo-link(href="#")
+                    img.footer__logo-img(src="%=static=%img/general/vedomosti_footer_logo.svg", alt="")
+                    p.footer__logo-sign Информационный<br>партнёр
