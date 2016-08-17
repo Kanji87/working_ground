@@ -19,7 +19,7 @@ html(class="no-js", lang="ru")
         |%=symbols=%
 
         section.l-grid
-            +header('purchases')
+            +header('purchases', 'play')
 
             article.l-article
                 +article_teaser('Покупки',
@@ -268,7 +268,8 @@ html(class="no-js", lang="ru")
                 +article_item('Календарь',
                     'Фестивали и островные вечеринки «на полную катушку»',
                     'calendar',
-                    'play_calendar')
+                    'play_calendar',
+                    'calendar-play.html')
 
             +footer()
 

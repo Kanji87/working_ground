@@ -1,0 +1,32 @@
+doctype html
+html(class="no-js", lang="ru")
+
+    include ../components/head/head
+    include ../components/header/header
+    include ../components/article_teaser/article_teaser
+    include ../components/calendar/calendar
+    include ../components/footer/footer
+
+    head
+        +head(head.defaults)
+    body
+        |%=symbols=%
+
+        section.l-grid
+            +header('business_calendar', 'work')
+
+            +article_teaser('Календарь',
+                            'Деловые события<br>в Сингапуре',
+                            'business_calendar',
+                            '')
+
+            +calendar('work')
+
+            +footer()
+
+        script(src='%=static=%js/separate-js/svg4everybody.min.js')
+        script svg4everybody();
+
+        //- Main scripts. You can replace it, but I recommend you to leave it here
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.5/jquery.bxslider.min.js')
+        script(src='%=static=%js/main%=hash=%%=min=%.js')

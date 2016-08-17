@@ -4,5 +4,5 @@ mixin article_teaser(title, desc, imageFor, subtitle)
             h3.c-article-title= title
             .c-article-sepor
             p.c-article-desc!= desc
-
-    h4.c-article-subtitle!= subtitle
+    if subtitle
+        h4.c-article-subtitle!= subtitle

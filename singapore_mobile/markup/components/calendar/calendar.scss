@@ -1,0 +1,164 @@
+.c-calendar {
+    position: relative;
+    min-height: 100px;
+
+    &__header-grid {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 10px;
+        height: 97px;
+        box-sizing: border-box;
+    }
+
+    &__header {
+        height: 100%;
+    }
+
+    &--work {
+        .c-calendar__header {
+            background-color: $blue;
+        }
+    }
+
+    &--play {
+        .c-calendar__header {
+            background-color: $pink;
+        }
+    }
+
+    &__item {
+        position: relative;
+    }
+
+    &__title {
+        height: 97px;
+        text-align: center;
+        padding-top: 25px;
+        box-sizing: border-box;
+
+        @include respond-to(fablet) {
+            padding-top: 33px;
+        }
+
+        &-year {
+            color: $white;
+            font-size: 1rem;
+            // font-weight: 300;
+            line-height: 1;
+        }
+
+        &-month {
+            color: $white;
+            font-size: 2rem;
+            font-weight: normal;
+            text-transform: capitalize;
+            line-height: 1;
+        }
+    }
+
+    &__cell {
+        @include cf();
+        border-top: 1px solid #cfcfcf;
+        padding: 10px;
+    }
+
+    &__cell-date {
+        width: 195px;
+        height: 195px;
+        float: left;
+        border: 1px solid #cfcfcf;
+        background-color: $bg-light-grey;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+
+        @include respond-to(fablet) {
+            width: 120px;
+            height: 150px;
+        }
+
+        @include respond-to(phone) {
+            width: 100px;
+            height: 120px;
+        }
+    }
+
+    &__cell-num {
+        color: $font-black;
+        font-size: 2.625rem;
+        line-height: 1;
+        font-weight: bold;
+    }
+
+    &__cell-month {
+        color: $font-black;
+        font-size: 1.375rem;
+        line-height: 1;
+    }
+
+    &__cell-desc {
+        float: right;
+        width: 70%;
+        padding-top: 25px;
+        box-sizing: border-box;
+
+        @include respond-to(fablet) {
+            float: left;
+            padding-top: 0;
+            width: 60%;
+            margin-left: 30px;
+        }
+
+        @include respond-to(phone) {
+            float: left;
+            margin-left: 20px;
+            width: 55%;
+        }
+    }
+
+    &__nav {
+        position: absolute;
+        z-index: 10;
+        top: 30px;
+    }
+
+    &__prev{
+        left: 50px;
+    }
+
+    &__next {
+        right: 50px;
+    }
+
+    .bx-next {
+        display: block;
+        @include bg($slide_arrow_right_active);
+    }
+
+    .bx-prev {
+        display: block;
+        @include bg($slide_arrow_left_active);
+    }
+
+    &__date-block {
+        width: 100%;
+        &:last-child {
+            position: relative;
+            margin-top: 18px;
+            &:before {
+                content: '';
+                position: absolute;
+                width: 10px;
+                height: 5px;
+                background-color: $font-black;
+                top: -10px;
+                left: 50%;
+                margin-left: -5px;
+            }
+        }
+    }
+}

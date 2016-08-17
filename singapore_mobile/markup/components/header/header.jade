@@ -14,11 +14,11 @@ mixin important-item(title, desc, icon)
             p.c-important-item__title= title
             p.c-important-item__desc!= desc
 
-mixin header(active)
+mixin header(active, type)
     header.header
         .header__bg
         a.header__menu-link.js-open-menu(href="#")
-        a.header__page-title(href="/")
+        a.header__page-title(href="/mobile")
             //- | Твой <span>Сингапур</span>
             img(src="%=static=%img/general/singapore_logo.svg", alt="").header__logo
         a.header__important-link.js-open-important(href="#")
@@ -27,7 +27,7 @@ mixin header(active)
             .c-main-menu
                 .c-main-menu__col
                     ul.c-main-menu__list.c-main-menu__work-list
-                        li.c-main-menu__head.c-main-menu__head--active
+                        li(class='c-main-menu__head' + (type=='work' ? ' c-main-menu__head--active' : ''))
                             p.c-main-menu__head--small-text Сингапур для
                             p.c-main-menu__head--large-text Бизнеса
                         +main-menu__item('Деловые площадки',
@@ -62,13 +62,13 @@ mixin header(active)
                                         
                         +main-menu__item('Календарь',
                                         'Деловые события в Сингапуре',
-                                        '#',
+                                        'calendar-work.html',
                                         'business_calendar',
                                         active)
                                 
                 .c-main-menu__col
                     ul.c-main-menu__list.c-main-menu__play-list
-                        li.c-main-menu__head
+                        li(class='c-main-menu__head' + (type=='play' ? ' c-main-menu__head--active' : ''))
                             p.c-main-menu__head--small-text Сингапур для
                             p.c-main-menu__head--large-text Отдыха
                                         
@@ -104,8 +104,8 @@ mixin header(active)
                                         
                         +main-menu__item('Календарь',
                                         'Фестивали и островные вечеринки «на полную катушку»',
-                                        '/business-area.html',
-                                        '6',
+                                        'calendar-play.html',
+                                        'play_calendar',
                                         active)
 
         .l-grid__important.l-grid__popup.js-main-important

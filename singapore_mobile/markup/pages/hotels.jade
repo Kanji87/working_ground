@@ -19,7 +19,7 @@ html(class="no-js", lang="ru")
         |%=symbols=%
 
         section.l-grid
-            +header('hotel')
+            +header('hotel', 'play')
 
             article.l-article
                 +article_teaser('Гостиницы',
@@ -91,7 +91,7 @@ html(class="no-js", lang="ru")
                     .c-article-section__content-grid
                         .c-article-section__content
 
-                            +article_paragraph('<a href="http://www.quincy.com.sg/" target="_blank">Quincy, еще одна гостиница из коллекции корпорации Far East Hospitality, находится недалеко от главной торговой улицы Сингапура Orchard road, всего в нескольких минутах езды от набережной. Вероятно, именно поэтому из окон отеля открывается впечатляющий вид на город. Quincy располагает номерами-студиями, выполненными в минималистичном дизайне, с кроватями размера размера king-size. К услугам постояльцев круглосуточный фитнес-центр, сауна и стеклянный бассейн с видом на город. В ресторанах отеля Quincy представлена интернациональная кухня, легкие закуски и напитки.')
+                            +article_paragraph('<a href="http://www.quincy.com.sg/" target="_blank">Quincy</a>, еще одна гостиница из коллекции корпорации Far East Hospitality, находится недалеко от главной торговой улицы Сингапура Orchard road, всего в нескольких минутах езды от набережной. Вероятно, именно поэтому из окон отеля открывается впечатляющий вид на город. Quincy располагает номерами-студиями, выполненными в минималистичном дизайне, с кроватями размера размера king-size. К услугам постояльцев круглосуточный фитнес-центр, сауна и стеклянный бассейн с видом на город. В ресторанах отеля Quincy представлена интернациональная кухня, легкие закуски и напитки.')
 
                             +article_slider(
                                 '<img class="c-article-slider__img" src="%=static=%img/content/hotels-08.jpg">',
@@ -321,8 +321,8 @@ html(class="no-js", lang="ru")
                     'Календарь',
                     'Деловые события<br>в Сингапуре',
                     'calendar',
-                    'business_calendar',
-                    '#')
+                    'play_calendar',
+                    'calendar-play.html')
 
             +footer()
 
