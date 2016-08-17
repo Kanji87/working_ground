@@ -124,24 +124,44 @@
         position: absolute;
         z-index: 10;
         top: 30px;
+
+        @include respond-to(phone) {
+            top: 35px;
+        }
     }
 
     &__prev{
         left: 50px;
+
+        @include respond-to(phone) {
+            left: 30px;
+        }
     }
 
     &__next {
         right: 50px;
+
+        @include respond-to(phone) {
+            right: 30px;
+        }
     }
 
     .bx-next {
         display: block;
         @include bg($slide_arrow_right_active);
+
+        @include respond-to(phone) {
+            @include bg($slide_arrow_right_active_phone);
+        }
     }
 
     .bx-prev {
         display: block;
         @include bg($slide_arrow_left_active);
+
+        @include respond-to(phone) {
+            @include bg($slide_arrow_left_active_phone);
+        }
     }
 
     &__date-block {

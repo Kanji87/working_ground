@@ -4,6 +4,10 @@
 
 .c-article-slider {
     margin-top: 85px;
+
+    @include respond-to(fablet) {
+        margin-top: 50px;
+    }
     &__nav {
         position: relative;
 
@@ -11,6 +15,10 @@
 
         border-bottom: 1px solid #cfcfcf;
         background-color: $bg-light-grey;
+
+        @include respond-to(fablet) {
+            height: 59px;
+        }
     }
     &__prev,
     &__next {
@@ -19,6 +27,10 @@
         top: 29px;
 
         display: block;
+
+        @include respond-to(fablet) {
+            top: 19px;
+        }
     }
     &__prev {
         left: 35px;
@@ -38,6 +50,10 @@
         width: 100%;
 
         text-align: center;
+
+        @include respond-to(fablet) {
+            top: 20px;
+        }
     }
     &__current-count,
     &__total-count,

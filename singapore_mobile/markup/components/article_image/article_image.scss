@@ -1,6 +1,10 @@
 .c-article-figure {
     margin-top: 80px;
 
+    @include respond-to(fablet) {
+        margin-top: 50px;
+    }
+
     &__image {
         width: 100%;
         height: auto;

@@ -20,6 +20,11 @@
 
     //     background-color: rgba(0, 0, 0, .6);
     // }
+
+    @include respond-to(phone) {
+        height: 280px;
+    }
+
     &__content {
         position: relative;
         z-index: 10;
@@ -38,4 +43,8 @@
     padding: 0 30px;
 
     text-align: left;
+
+    @include respond-to(fablet) {
+        margin-top: 50px;
+    }
 }

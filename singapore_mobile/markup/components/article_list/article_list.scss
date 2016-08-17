@@ -3,11 +3,19 @@
     margin-top: 75px;
     padding: 0 30px;
 
+    @include respond-to(fablet) {
+        margin-top: 40px;
+    }
+
     &__item {
         position: relative;
         padding-left: 40px;
         &:not(:first-child) {
             margin-top: 40px;
+
+            @include respond-to(fablet) {
+                margin-top: 20px;
+            }
         }
 
         &:before {
@@ -45,7 +53,7 @@
             &:before {
                 content: counter(my-badass-counter)".";
                 counter-increment: my-badass-counter;
-                background-color: #fff;
+                background-color: $white;
                 font-size: 1.625rem;
                 top: 0;
             }

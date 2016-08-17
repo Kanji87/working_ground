@@ -8,4 +8,8 @@
         color: $red;
         text-decoration: underline;
     }
+
+    @include respond-to(fablet) {
+        margin-top: 30px;
+    }
 }

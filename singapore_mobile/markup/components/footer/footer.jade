@@ -1,14 +1,18 @@
 mixin footer(data)
     footer.footer
-        ul.footer__social-list
-            li.footer__social-item
-                a.footer__social-link.footer__social-link--vk(href="#")
-            li.footer__social-item
-                a.footer__social-link.footer__social-link--fb(href="#")
-            li.footer__social-item
-                a.footer__social-link.footer__social-link--in(href="#")
-            li.footer__social-item
-                a.footer__social-link.footer__social-link--tw(href="#")
+        .footer__social-list.social-likes
+            div(data-service="vkontakte" title="")
+            div(data-service="facebook" title="")
+            div(data-service="linkedin" title="")
+            div(data-service="twitter" title="")
+            //- li.footer__social-item
+            //-     a.footer__social-link.footer__social-link--vk(href="#")
+            //- li.footer__social-item
+            //-     a.footer__social-link.footer__social-link--fb(href="#")
+            //- li.footer__social-item
+            //-     a.footer__social-link.footer__social-link--in(href="#")
+            //- li.footer__social-item
+            //-     a.footer__social-link.footer__social-link--tw(href="#")
 
         .l-footer__about-grid
             .footer__about
@@ -38,3 +42,5 @@ mixin footer(data)
                 a.footer__logo-link(href="#")
                     img.footer__logo-img(src="%=static=%img/general/vedomosti_footer_logo.svg", alt="")
                     p.footer__logo-sign Информационный<br>партнёр
+
+        script(src="https://npmcdn.com/social-likes-next/dist/social-likes.min.js")

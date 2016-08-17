@@ -149,6 +149,10 @@
 .c-article-section {
     margin-top: 95px;
 
+    @include respond-to(fablet) {
+        margin-top: 50px;
+    }
+
     &__content {
         padding-bottom: 20px;
         &--opened {
@@ -196,6 +200,15 @@
             position: absolute;
             right: 35px;
             top: 29px;
+        }
+
+        @include respond-to(fablet) {
+            height: 55px;
+            line-height: 55px;
+
+            &:after {
+                top: 17px;
+            }
         }
     }
 }

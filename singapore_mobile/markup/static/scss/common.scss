@@ -45,6 +45,10 @@ strong {
     width: 100%;
     height: 100%;
     padding-top: 80px;
+
+    @include respond-to(fablet) {
+        padding-top: 60px;
+    }
 }
 
 .l-page {

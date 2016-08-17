@@ -9,6 +9,10 @@
 
     border-bottom: 1px solid #cfcfcf;
 
+    @include respond-to(fablet) {
+        height: 59px;
+    }
+
     &__bg {
         background-color: rgba($bg-light-grey, .95);
         position: absolute;
@@ -34,6 +38,10 @@
         height: 75%;
         position: relative;
         z-index: 900;
+
+        @include respond-to(fablet) {
+            margin-top: 8px;
+        }
     }
     &__menu-link,
     &__important-link {
@@ -48,13 +56,23 @@
         left: 30px;
 
         @include bg($icon_menu);
-        &:active {
-            @include bg($icon_menu_active);
-        }
+        // &:active {
+        //     @include bg($icon_menu_active);
+        // }
         &--active {
             @include bg($icon_close_menu);
-            &:active {
-                @include bg($icon_close_menu_active);
+            // &:active {
+            //     @include bg($icon_close_menu_active);
+            // }
+        }
+
+        @include respond-to(fablet) {
+            top: 19px;
+            left: 25px;
+            @include bg($icon_menu_phone);
+
+            &--active {
+                @include bg($icon_close_menu_phone);
             }
         }
     }
@@ -63,12 +81,22 @@
         right: 18px;
 
         @include bg($icon_important);
-        &:active {
-            @include bg($icon_important_active);
-        }
+        // &:active {
+        //     @include bg($icon_important_active);
+        // }
 
         &--active {
             @include bg($icon_important_close);
+        }
+
+        @include respond-to(fablet) {
+            top: 12px;
+            right: 20px;
+            @include bg($icon_important_phone);
+
+            &--active {
+                @include bg($icon_important_close_phone);
+            }
         }
     }
 }
@@ -84,6 +112,10 @@
     width: 100vw;
     height: calc(100% - 80px);
     z-index: 800;
+
+    @include respond-to(fablet) {
+        height: calc(100% - 60px);
+    }
 }
 
 .l-grid__main-menu {
@@ -91,6 +123,10 @@
     &--opened {
         // display: block;
         top: 80px;
+
+        @include respond-to(fablet) {
+            top: 60px;
+        }
     }
 }
 
@@ -102,6 +138,10 @@
     &--opened {
         // display: block;
         top: 80px;
+
+        @include respond-to(fablet) {
+            top: 60px;
+        }
     }
 
     .c-index-block {
@@ -115,7 +155,7 @@
             background-size: cover;
             background-repeat: no-repeat;
             width: 100%;
-            height: 50%;
+            height: 52%;
         }
 
         &__desc {
@@ -182,6 +222,9 @@
         .c-main-menu__head--active,
         .c-main-menu__item--active {
             background-color: $blue;
+        }
+        .c-main-menu__item {
+            border-right: 1px solid #454545;
         }
     }
     &__play-list {
