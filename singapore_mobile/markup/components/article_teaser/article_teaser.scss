@@ -21,8 +21,12 @@
     //     background-color: rgba(0, 0, 0, .6);
     // }
 
+    @include respond-to(fablet) {
+        height: 290px;
+    }
+
     @include respond-to(phone) {
-        height: 280px;
+        height: 250px;
     }
 
     &__content {
@@ -46,5 +50,9 @@
 
     @include respond-to(fablet) {
         margin-top: 50px;
+    }
+
+    @include respond-to(phone320) {
+        margin-top: 30px;
     }
 }

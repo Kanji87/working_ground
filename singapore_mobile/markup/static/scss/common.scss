@@ -18,6 +18,9 @@ body {
     @include respond-to(phone) {
         font-size: $mobile-font-size;
     }
+    @include respond-to(phone320) {
+        font-size: $phone320-font-size;
+    }
 }
 
 a {
@@ -48,6 +51,10 @@ strong {
 
     @include respond-to(fablet) {
         padding-top: 60px;
+    }
+
+    @include respond-to(phone320) {
+        padding-top: 40px;
     }
 }
 

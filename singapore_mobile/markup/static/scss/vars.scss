@@ -1,8 +1,9 @@
 // File for scss-vars.
 // For example: main colors, paddings and so on.
 
-$phone: 380px;
-$fablet: 580px;
+$phone: 340px;
+$fablet: 400px;
+$tablet: 768px;
 
 // Colors
 
@@ -23,6 +24,7 @@ $font-grey: #999;
 
 // Font size
 
+$phone320-font-size: 8px;
 $mobile-font-size: 10px;
 $fablet-font-size: 12px;
 $basic-font-size: 16px;

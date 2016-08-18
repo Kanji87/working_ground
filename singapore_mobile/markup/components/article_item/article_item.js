@@ -4,7 +4,7 @@ $(function () {
             $('.c-article-section__content-grid').css('max-height', '105px');
             console.log('340px');
         } else if ( window.matchMedia('(max-width: 580px)').matches ) {
-            $('.c-article-section__content-grid').css('max-height', '125px');
+            $('.c-article-section__content-grid').css('max-height', '118px');
             console.log('580px');
         } else if ( window.matchMedia('(max-width: 768px)').matches ) {
             $('.c-article-section__content-grid').css('max-height', '145px');

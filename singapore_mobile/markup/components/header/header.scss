@@ -13,6 +13,10 @@
         height: 59px;
     }
 
+    @include respond-to(phone320) {
+        height: 39px;
+    }
+
     &__bg {
         background-color: rgba($bg-light-grey, .95);
         position: absolute;
@@ -40,7 +44,7 @@
         z-index: 900;
 
         @include respond-to(fablet) {
-            margin-top: 8px;
+            margin-top: 5px;
         }
     }
     &__menu-link,
@@ -75,6 +79,16 @@
                 @include bg($icon_close_menu_phone);
             }
         }
+
+        @include respond-to(phone320) {
+            top: 11px;
+            left: 20px;
+            @include bg($icon_menu_phone_320);
+
+            &--active {
+                @include bg($icon_close_menu_phone_320);
+            }
+        }
     }
     &__important-link {
         top: 16px;
@@ -98,6 +112,15 @@
                 @include bg($icon_important_close_phone);
             }
         }
+
+        @include respond-to(phone320) {
+            top: 7px;
+            @include bg($icon_important_phone_320);
+
+            &--active {
+                @include bg($icon_important_close_phone_320);
+            }
+        }
     }
 }
 
@@ -116,6 +139,10 @@
     @include respond-to(fablet) {
         height: calc(100% - 60px);
     }
+
+    @include respond-to(phone320) {
+        height: calc(100% - 40px);
+    }
 }
 
 .l-grid__main-menu {
@@ -126,6 +153,10 @@
 
         @include respond-to(fablet) {
             top: 60px;
+        }
+
+        @include respond-to(phone320) {
+            top: 40px;
         }
     }
 }
@@ -141,6 +172,10 @@
 
         @include respond-to(fablet) {
             top: 60px;
+        }
+
+        @include respond-to(phone320) {
+            top: 40px;
         }
     }
 
@@ -258,6 +293,9 @@
 
             text-transform: uppercase;
         }
+        @include respond-to(phone320) {
+            padding: 15px 0;
+        }
     }
     &__item {
         display: block;
@@ -275,6 +313,10 @@
         @include respond-to(phone) {
             height: 90px;
             padding: 10px;
+        }
+        @include respond-to(phone320) {
+            height: 70px;
+            padding: 15px;
         }
         &-title,
         &-desc {
@@ -320,6 +362,10 @@
 
     @include respond-to(fablet) {
         padding: 50px 20px;
+    }
+
+    @include respond-to(phone320) {
+        padding: 20px;
     }
 
     &__img {

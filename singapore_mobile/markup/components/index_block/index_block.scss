@@ -33,6 +33,9 @@
             padding: 30px 70px 120px;
         }
         @include respond-to(phone) {
+            padding: 30px 50px 100px;
+        }
+        @include respond-to(phone320) {
             padding: 20px 50px 90px;
         }
         &-text {

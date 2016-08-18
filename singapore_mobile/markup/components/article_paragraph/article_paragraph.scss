@@ -3,6 +3,7 @@
     font-size: 1.625rem;
     margin-top: 50px;
     padding: 0 30px;
+    line-height: 1.4;
 
     a {
         color: $red;
@@ -11,5 +12,9 @@
 
     @include respond-to(fablet) {
         margin-top: 30px;
+    }
+
+    @include respond-to(phone320) {
+        margin-top: 20px;
     }
 }
