@@ -9,6 +9,6 @@ mixin index_block(title, desc, buttonSign, blockType, link)
             p.c-index-block__desc-text= desc
 
             if buttonSign
-                a.c-index-block__more(href= link)
+                a.c-index-block__more.js-index-block-more(href='#')
                     i.icon.icon__down-bordered
                     p.c-icon-sign= buttonSign

@@ -4,6 +4,7 @@ html(class="no-js", lang="ru")
     include ../components/head/head
     include ../components/header/header
     include ../components/index_block/index_block
+    include ../components/article_catalog/article_catalog
     include ../components/footer/footer
 
     head
@@ -20,17 +21,26 @@ html(class="no-js", lang="ru")
                         a.c-index-block__prev(href="#")
                         a.c-index-block__next(href="#")
 
-                    +index_block('бизнеса',
-                                'Крупнейший деловой и торговый международный центр, один из главных портов Азии Сингапур уже стал лучшим городом для ведения и развития бизнеса, по мнению миллионов людей со всего мира.',
-                                'Подробнее',
-                                'work',
-                                'work.html')
+                    .c-index-slider__item
+                        +index_block('бизнеса',
+                                    'Крупнейший деловой и торговый международный центр, один из главных портов Азии Сингапур уже стал лучшим городом для ведения и развития бизнеса, по мнению миллионов людей со всего мира.',
+                                    'Подробнее',
+                                    'work',
+                                    'work.html')
 
-                    +index_block('отдыха',
-                                'Мегаполис с разнообразной культурой и религией ежегодно принимает миллионы туристов, и никто не уезжает из этого города разочарованным. Вас ждут новые открытия и впечатления!',
-                                'Подробнее',
-                                'play',
-                                'play.html')
+                        .l-index-list.js-index-list
+                            +article_catalog('work')
+
+                    .c-index-slider__item
+                        +index_block('отдыха',
+                                    'Мегаполис с разнообразной культурой и религией ежегодно принимает миллионы туристов, и никто не уезжает из этого города разочарованным. Вас ждут новые открытия и впечатления!',
+                                    'Подробнее',
+                                    'play',
+                                    'play.html')
+
+                        .l-index-list.js-index-list
+                            +article_catalog('play')
+
 
         script(src='%=static=%js/separate-js/svg4everybody.min.js')
         script svg4everybody();

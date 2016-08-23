@@ -1,12 +1,7 @@
 .c-index-block {
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    box-sizing: border-box;
+    position: relative;
     width: 100%;
     height: 100%;
-
     background-repeat: no-repeat;
     background-size: cover;
     &--work {
@@ -106,6 +101,8 @@
     padding-top: 56px;
 
     text-align: center;
+    position: absolute;
+    width: 100%;
 
     @include respond-to(iphone_five) {
         padding-top: 30px;
@@ -138,22 +135,53 @@
     }
 }
 
-.c-index-slider-grid {
-    position: relative;
-
+.c-index-slider {
     overflow: hidden;
+    width: 100%;
+    height: 100%;
+
+    &__item {
+        // overflow: hidden;
+        overflow-y: visible;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        box-sizing: border-box;
+        width: 100%;
+        height: 100%;
+    }
+
+    &-grid {
+        position: relative;
+
+        overflow: hidden;
+    }
+
+    &__pager {
+        position: absolute;
+        z-index: 10;
+        bottom: 30%;
+        left: 0;
+
+        width: 100%;
+        height: 37px;
+
+        @include respond-to(phone) {
+            bottom: 23%;
+        }
+    }
 }
 
-.c-index-slider__pager {
-    position: absolute;
-    z-index: 10;
-    bottom: 30%;
-    left: 0;
+.l-index-list {
+    // margin-top: calc(100vh - 79px);
+    display: none;
 
-    width: 100%;
-    height: 37px;
+    // @include respond-to(fablet) {
+        // margin-top: calc(100vh - 59px);
+    // }
 
-    @include respond-to(phone) {
-        bottom: 23%;
-    }
+    // @include respond-to(phone320) {
+        // margin-top: calc(100vh - 39px);
+    // }
 }
