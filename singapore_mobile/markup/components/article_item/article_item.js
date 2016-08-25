@@ -1,10 +1,13 @@
 $(function () {
     if ( $('.c-article-section').length ) {
-        if ( window.matchMedia('(max-width: 340px)').matches ) {
-            $('.c-article-section__content-grid').css('max-height', '105px');
+        if ( window.matchMedia('(max-width: 330px)').matches ) {
+            $('.c-article-section__content-grid').css('max-height', '56px');
+            console.log('340px');
+        } else if ( window.matchMedia('(max-width: 380px)').matches ) {
+            $('.c-article-section__content-grid').css('max-height', '78px');
             console.log('340px');
         } else if ( window.matchMedia('(max-width: 580px)').matches ) {
-            $('.c-article-section__content-grid').css('max-height', '118px');
+            $('.c-article-section__content-grid').css('max-height', '82px');
             console.log('580px');
         } else if ( window.matchMedia('(max-width: 768px)').matches ) {
             $('.c-article-section__content-grid').css('max-height', '145px');

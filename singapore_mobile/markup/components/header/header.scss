@@ -350,11 +350,11 @@
 }
 
 .c-important-item {
-    @include cf();
+    // @include cf();
     padding: 50px 35px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+    // display: flex;
+    // flex-direction: row;
+    // align-items: center;
 
     &:not(:first-child) {
         border-top: 1px solid #cfcfcf;
@@ -369,11 +369,20 @@
     }
 
     &__img {
+        display: inline-block;
+        vertical-align: top;
         width: 33%;
+        margin-top: 5px;
+
+        @include respond-to(phone320) {
+            margin-top: 0;
+        }
     }
 
     &__content {
-        margin-left: 7%;
+        display: inline-block;
+        vertical-align: top;
+        margin-left: 6%;
         width: 60%;
     }
 
