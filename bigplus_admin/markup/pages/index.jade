@@ -1,0 +1,115 @@
+doctype html
+html(class="no-js", lang="ru")
+
+    include ../components/head/head
+    include ../components/header/header
+    include ../components/sidebar_select/sidebar_select
+
+    head
+        +head(head.defaults)
+    body
+        |%=symbols=%
+
+        +header('users')
+
+        .l-grid.l-grid--max-height
+            section.c-sidebar
+                h3.c-sidebar__title список пользователей
+
+                p.c-sidebar__text фильтровать по:
+
+                +sidebar_select(
+                    'Клинике',
+                    'Клиника штош штолле лолшто',
+                    'Лечебно-диагностический центр «ПАТЕРО КЛИНИК»')
+
+                +sidebar_select(
+                    'Городу',
+                    'Москва',
+                    'Сантк-Петербург')
+
+                +sidebar_select(
+                    'Препарату',
+                    'Клайра',
+                    'Джес Плюс')
+
+                a.c-link.c-link--sidebar(href="#") Применить
+
+            section.l-grid-content
+                .l-content
+                    table.c-table
+                        thead
+                            tr
+                                th.c-table__col-id
+                                    .c-table__sort
+                                        a.c-table__sort-top(href="#")
+                                        a.c-table__sort-bottom(href="#")
+                                    p.c-table__title ID
+                                th.c-table__col-name
+                                    .c-table__sort
+                                        a.c-table__sort-top(href="#")
+                                        a.c-table__sort-bottom(href="#")
+                                    p.c-table__title ИМЯ
+                                th.c-table__col-city
+                                    .c-table__sort
+                                        a.c-table__sort-top(href="#")
+                                        a.c-table__sort-bottom(href="#")
+                                    p.c-table__title ГОРОД
+                                th.c-table__col-date
+                                    .c-table__sort
+                                        a.c-table__sort-top(href="#")
+                                        a.c-table__sort-bottom(href="#")
+                                    p.c-table__title ДАТА
+                                th.c-table__col-phone
+                                    p.c-table__title ТЕЛЕФОН
+                                th.c-table__col-email
+                                    p.c-table__title E-MAIL
+                                th.c-table__col-edit
+                                    p.c-table__title РЕДАКТИРОВАНИЕ
+                        tbody
+                            tr
+                                td.c-table__col-id 23489
+                                td.c-table__col-name
+                                    a.c-link(href="#") Андриянова Маргарита Александровна
+                                td.c-table__col-city Самарская область
+                                td.c-table__col-date 2016-08-26 14:27:15
+                                td.c-table__col-phone 79639173981
+                                td.c-table__col-email mar6572@ya.ru
+                                td.c-table__col-edit
+                                    a.c-link(href="#") удалить
+                            tr
+                                td.c-table__col-id 23482
+                                td.c-table__col-name
+                                    a.c-link(href="#") Башмакова Екатерина Андреевна
+                                td.c-table__col-city Екатеринбург
+                                td.c-table__col-date 2016-08-26 10:36:46
+                                td.c-table__col-phone 79126652305
+                                td.c-table__col-email bashbashbash11@gmail.com
+                                td.c-table__col-edit
+                                    a.c-link(href="#") удалить
+                            tr
+                                td.c-table__col-id 23482
+                                td.c-table__col-name
+                                    a.c-link(href="#") Башмакова Екатерина Андреевна
+                                td.c-table__col-city Екатеринбург
+                                td.c-table__col-date 2016-08-26 10:36:46
+                                td.c-table__col-phone 79126652305
+                                td.c-table__col-email bashbashbash11@gmail.com
+                                td.c-table__col-edit
+                                    a.c-link(href="#") удалить
+                            tr
+                                td.c-table__col-id 23482
+                                td.c-table__col-name
+                                    a.c-link(href="#") Башмакова Екатерина Андреевна
+                                td.c-table__col-city Екатеринбург
+                                td.c-table__col-date 2016-08-26 10:36:46
+                                td.c-table__col-phone 79126652305
+                                td.c-table__col-email bashbashbash11@gmail.com
+                                td.c-table__col-edit
+                                    a.c-link(href="#") удалить
+
+        script(src='%=static=%js/separate-js/svg4everybody.min.js')
+        script svg4everybody();
+
+        //- Main scripts. You can replace it, but I recommend you to leave it here
+        script(src='%=static=%js/main%=hash=%%=min=%.js')

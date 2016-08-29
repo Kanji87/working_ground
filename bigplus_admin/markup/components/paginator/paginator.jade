@@ -1,0 +1,12 @@
+mixin paginator()
+    .l-paginator
+        ul.c-paginator
+            li.c-paginator__item
+                a.c-link.c-paginator__item-link(href="#") &larr;
+
+            each val in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+                li.c-paginator__item
+                    a.c-link.c-paginator__item-link(href="#")= val
+
+            li.c-paginator__item
+                a.c-link.c-paginator__item-link(href="#") &rarr;

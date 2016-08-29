@@ -1,0 +1,48 @@
+mixin nav_item(title, href, current, active)
+        li.c-header__nav-item
+            a(href= href class='c-header__nav-link' + (current == active ? ' c-header__nav-link--active' : ''))= title
+
+mixin header(active)
+    .l-grid-header
+        header.l-grid.c-header
+            h1.c-header__title.c-header__item big plus
+
+            nav.c-header__nav.c-header__item
+                ul.c-header__nav-list
+                    +nav_item(
+                        'пользователи',
+                        'index.html',
+                        'users',
+                        active)
+                    +nav_item(
+                        'клиники',
+                        'clinics.html',
+                        'clinics',
+                        active)
+                    +nav_item(
+                        'библиотека',
+                        'library.html',
+                        'library',
+                        active)
+                    +nav_item(
+                        'faq',
+                        'faq.html',
+                        'faq',
+                        active)
+                    +nav_item(
+                        'отчет',
+                        'report.html',
+                        'report',
+                        active)
+                    +nav_item(
+                        'импорт',
+                        'import.html',
+                        'import',
+                        active)
+                    +nav_item(
+                        'рассылки',
+                        'mailing.html',
+                        'mailing',
+                        active)
+
+            a.c-header__logout.c-header__item(href="#") Выход

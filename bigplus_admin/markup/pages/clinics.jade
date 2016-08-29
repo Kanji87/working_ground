@@ -1,0 +1,110 @@
+doctype html
+html(class="no-js", lang="ru")
+
+    include ../components/head/head
+    include ../components/header/header
+    include ../components/sidebar_select/sidebar_select
+    include ../components/paginator/paginator
+
+    head
+        +head(head.defaults)
+    body
+        |%=symbols=%
+
+        +header('clinics')
+
+        .l-grid.l-grid--max-height
+            section.c-sidebar
+                h3.c-sidebar__title клиники
+
+                a.c-link.c-link--sidebar(href="#") Добавить клинику
+
+                p.c-sidebar__text показывать по:
+
+                +sidebar_select(
+                    '',
+                    '10',
+                    '25',
+                    '50')
+
+                p.c-sidebar__text фильтровать по:
+
+                +sidebar_select(
+                    'Городу',
+                    'Москва',
+                    'Сантк-Петербург')
+
+                a.c-link.c-link--sidebar(href="#") Применить
+
+            section.l-grid-content
+                .l-content
+                    table.c-table
+                        thead
+                            tr
+                                th.c-table__col-id
+                                    .c-table__sort
+                                        a.c-table__sort-top(href="#")
+                                        a.c-table__sort-bottom(href="#")
+                                    p.c-table__title ID
+                                th.c-table__col-name
+                                    .c-table__sort
+                                        a.c-table__sort-top(href="#")
+                                        a.c-table__sort-bottom(href="#")
+                                    p.c-table__title название
+                                th.c-table__col-city
+                                    .c-table__sort
+                                        a.c-table__sort-top(href="#")
+                                        a.c-table__sort-bottom(href="#")
+                                    p.c-table__title ГОРОД
+                                th.c-table__col-date
+                                    .c-table__sort
+                                        a.c-table__sort-top(href="#")
+                                        a.c-table__sort-bottom(href="#")
+                                    p.c-table__title ДАТА
+                                th.c-table__col-edit
+                                    p.c-table__title РЕДАКТИРОВАНИЕ
+                        tbody
+                            tr
+                                td.c-table__col-id 23489
+                                td.c-table__col-name
+                                    a.c-link(href="#") Медико-диагностический комплекс репродукции и планирования семьи Медика «Институт Здоровья»
+                                td.c-table__col-city Самарская область
+                                td.c-table__col-date 2016-08-26 14:27:15
+                                td.c-table__col-edit
+                                    a.c-link(href="#") редактировать
+                                    a.c-link(href="#") удалить
+                            tr
+                                td.c-table__col-id 23482
+                                td.c-table__col-name
+                                    a.c-link(href="#") Центр репродукции и планирования семьи Медика
+                                td.c-table__col-city Екатеринбург
+                                td.c-table__col-date 2016-08-26 10:36:46
+                                td.c-table__col-edit
+                                    a.c-link(href="#") редактировать
+                                    a.c-link(href="#") удалить
+                            tr
+                                td.c-table__col-id 23482
+                                td.c-table__col-name
+                                    a.c-link(href="#") Академия здоровья «Звезда» на улице Чистопольской
+                                td.c-table__col-city Екатеринбург
+                                td.c-table__col-date 2016-08-26 10:36:46
+                                td.c-table__col-edit
+                                    a.c-link(href="#") редактировать
+                                    a.c-link(href="#") удалить
+                            tr
+                                td.c-table__col-id 23482
+                                td.c-table__col-name
+                                    a.c-link(href="#") Академия здоровья «Звезда» на улице Космонавтов
+                                td.c-table__col-city Екатеринбург
+                                td.c-table__col-date 2016-08-26 10:36:46
+                                td.c-table__col-edit
+                                    a.c-link(href="#") редактировать
+                                    a.c-link(href="#") удалить
+
+                    +paginator()
+
+        script(src='%=static=%js/separate-js/svg4everybody.min.js')
+        script svg4everybody();
+
+        //- Main scripts. You can replace it, but I recommend you to leave it here
+        script(src='%=static=%js/main%=hash=%%=min=%.js')

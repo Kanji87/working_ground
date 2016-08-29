@@ -1,0 +1,73 @@
+.l-grid-header {
+    height: $header-height;
+    background-color: $dark-gray;
+}
+
+.c-header {
+    height: 100%;
+    background-color: $black;
+
+    &__item {
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    &__title {
+        color: $white;
+        text-transform: uppercase;
+        background-color: $green;
+        font-size: 3.2rem;
+        line-height: 5rem;
+        padding: 0 20px;
+        width: 240px;
+        box-sizing: border-box;
+    }
+
+    &__nav {
+        margin-left: 20px;
+
+        &-list {
+            @include nl();
+            @include cf();
+        }
+
+        &-item {
+            float: left;
+        }
+
+        &-link {
+            color: $white;
+            font-size: 1.8rem;
+            line-height: 5rem;
+            text-transform: uppercase;
+            padding: 10px 20px;
+            transition: all ease .3s;
+            border-bottom: 3px solid $black;
+
+            &:hover {
+                color: $white;
+                background-color: $blue;
+                border-bottom: 3px solid $blue;
+            }
+
+            &--active {
+                color: $blue;
+                border-bottom: 3px solid $blue;
+            }
+        }
+    }
+
+    &__logout {
+        float: right;
+        line-height: 5rem;
+        font-size: 1.8rem;
+        color: $light-gray;
+        text-decoration: none;
+        font-weight: 300;
+        margin-right: 40px;
+
+        &:hover {
+            color: $orange;
+        }
+    }
+}

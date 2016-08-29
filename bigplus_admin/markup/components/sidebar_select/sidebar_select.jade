@@ -1,0 +1,7 @@
+mixin sidebar_select(title, ...options)
+    .c-sidebar-select
+        p.c-sidebar-select__title= title
+        .c-sidebar-select__block
+            select
+                each option in options
+                    option(value='')= option
