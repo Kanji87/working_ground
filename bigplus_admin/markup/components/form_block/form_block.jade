@@ -1,0 +1,43 @@
+mixin form_block(blockType, title, subtitle1, type1, subtitle2, type2, ...options)
+    if blockType == 'input_text_double'
+        .l-content__form-block
+            if title
+                p.c-form-title= title
+            p.c-form-subtitle= subtitle1
+            input.c-input__text(type= type1)
+            p.c-form-subtitle= subtitle2
+            input.c-input__text(type= type2)
+
+    if blockType == 'input_text'
+        .l-content__form-block
+            if title
+                p.c-form-title= title
+            input.c-input__text(type= type1)
+
+    if blockType == 'select'
+        .l-content__form-block
+            if title
+                p.c-form-title= title
+            .c-select
+                select(name="")
+                    each option in options
+                        option(value="")= option
+
+    if blockType == 'textarea'
+        .l-content__form-block
+            if title
+                p.c-form-title= title
+            textarea.c-input__textarea
+
+    if blockType == 'file'
+        .l-content__form-block
+            if title
+                p.c-form-title= title
+            input(type= type1)
+
+    if blockType == 'image'
+        .l-content__form-block
+            if title
+                p.c-form-title= title
+            img.c-form-image(src='%=static=%img/general/clinic_dummy.jpg')
+            input(type= type1)

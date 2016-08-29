@@ -55,6 +55,29 @@ a {
     box-sizing: border-box;
     padding: 40px;
     // overflow-y: visible;
+
+    &-row {
+        @include cf();
+
+        padding: 40px 0 20px;
+    }
+
+    &-col {
+        float: left;
+    }
+
+    &-col-2 {
+        width: 50%;
+        box-sizing: border-box;    
+    }
+
+    &__form-block {
+        padding: 0 40px;
+
+        &:not(:first-child) {
+            margin-top: 60px;
+        }
+    }
 }
 
 .c-sidebar {
@@ -176,3 +199,4 @@ a {
         display: block;
     }
 }
+

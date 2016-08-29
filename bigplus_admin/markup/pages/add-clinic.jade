@@ -1,0 +1,129 @@
+doctype html
+html(class="no-js", lang="ru")
+
+    include ../components/head/head
+    include ../components/header/header
+    include ../components/sidebar_select/sidebar_select
+    include ../components/paginator/paginator
+    include ../components/form_block/form_block
+
+    head
+        +head(head.add_clinic)
+    body
+        |%=symbols=%
+
+        +header('clinics')
+
+        .l-grid.l-grid--max-height
+            section.c-sidebar
+                h3.c-sidebar__title редактирование клиник
+
+                a.c-link.c-link--sidebar(href="#") Добавить клинику
+
+                a.c-link.c-link--sidebar(href="#") Редактирование сетей клиник
+
+            section.l-grid-content
+                form(action="#")
+                    .l-content-row
+                        .l-content-col.l-content-col-2
+                            +form_block(
+                                'input_text_double',
+                                'Вход для бухгалтерии',
+                                'Логин',
+                                'text',
+                                'Пароль',
+                                'text')
+
+                            +form_block(
+                                'select',
+                                'Тип заведения',
+                                '','','','',
+                                'Клиника',
+                                'Фитнес-центр')
+
+                            +form_block(
+                                'input_text',
+                                'Название',
+                                '',
+                                'text','','')
+
+                            +form_block(
+                                'input_text',
+                                'Телефон',
+                                '',
+                                'tel','','')
+
+                            +form_block(
+                                'select',
+                                'Город',
+                                '','','','',
+                                'Выберите город из списка',
+                                'Москва',
+                                'Санкт-Петербург',
+                                'Ярославль')
+
+                        .l-content-col.l-content-col-2
+                            +form_block(
+                                'input_text_double',
+                                'Вход для рецепшена',
+                                'Логин',
+                                'text',
+                                'Пароль',
+                                'text')
+
+                            +form_block(
+                                'select',
+                                'Тип заведения',
+                                '','','','',
+                                'Не задано',
+                                'ООО «ВДЦ-медицинский центр» сеть',
+                                'Клиники профессора Пасман')
+
+                            +form_block(
+                                'input_text',
+                                'E-mail',
+                                '',
+                                'email','','','')
+
+                            +form_block(
+                                'input_text',
+                                'Номинал ваучера (число)',
+                                '',
+                                'number','','','')
+
+                            +form_block(
+                                'input_text',
+                                'Адрес',
+                                '',
+                                'text','','','')
+
+                    .l-content-row
+                        +form_block(
+                        'textarea',
+                        'Анонс',
+                        '','','','')
+
+                    .l-content-row
+                        +form_block(
+                        'textarea',
+                        'Инфо',
+                        '','','','')
+
+                    .l-content-row
+                        .l-content-col.l-content-col-2
+                            +form_block(
+                            'image',
+                            'Фото большое',
+                            '','file','','')
+
+                        .l-content-col.l-content-col-2
+                            +form_block(
+                            'image',
+                            'Фото маленькое',
+                            '','file','','')
+
+        script(src='%=static=%js/separate-js/svg4everybody.min.js')
+        script svg4everybody();
+
+        //- Main scripts. You can replace it, but I recommend you to leave it here
+        script(src='%=static=%js/main%=hash=%%=min=%.js')

@@ -7,7 +7,7 @@ html(class="no-js", lang="ru")
     include ../components/paginator/paginator
 
     head
-        +head(head.defaults)
+        +head(head.clinic)
     body
         |%=symbols=%
 
@@ -17,7 +17,7 @@ html(class="no-js", lang="ru")
             section.c-sidebar
                 h3.c-sidebar__title клиники
 
-                a.c-link.c-link--sidebar(href="#") Добавить клинику
+                a.c-link.c-link--sidebar(href="add-clinic.html") Добавить клинику
 
                 p.c-sidebar__text показывать по:
 
