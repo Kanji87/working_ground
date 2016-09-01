@@ -1,0 +1,79 @@
+doctype html
+html(class="no-js", lang="ru")
+
+    include ../components/head/head
+    include ../components/header/header
+    include ../components/sidebar_select/sidebar_select
+    include ../components/paginator/paginator
+
+    head
+        +head(head.faq)
+    body
+        |%=symbols=%
+
+        +header('faq')
+
+        .l-grid.l-grid--max-height
+            section.c-sidebar
+                h3.c-sidebar__title FAQ
+
+                //- a.c-link.c-link--sidebar(href="edit-faq.html") Добавить библиотеку
+
+                p.c-sidebar__text показывать по:
+
+                +sidebar_select(
+                    '',
+                    '10',
+                    '25',
+                    '50')
+
+                a.c-link.c-link--sidebar(href="#") Применить
+
+            section.l-grid-content
+                .l-content
+                    table.c-table
+                        thead
+                            tr
+                                th.c-table__col-id
+                                    p.c-table__title ID
+                                th.c-table__col-name
+                                    p.c-table__title название
+                                th.c-table__col-edit
+                                    p.c-table__title РЕДАКТИРОВАНИЕ
+                        tbody
+                            tr
+                                td.c-table__col-id 1
+                                td.c-table__col-name
+                                    | Как мне получить свои бонусы?
+                                td.c-table__col-edit
+                                    a.c-link(href="edit-faq.html") редактировать
+                                    a.c-link(href="#") удалить
+                            tr
+                                td.c-table__col-id 2
+                                td.c-table__col-name
+                                    | Как распечатать ваучер?
+                                td.c-table__col-edit
+                                    a.c-link(href="edit-faq.html") редактировать
+                                    a.c-link(href="#") удалить
+                            tr
+                                td.c-table__col-id 3
+                                td.c-table__col-name
+                                    | А что, если я записалась, а потом передумала?
+                                td.c-table__col-edit
+                                    a.c-link(href="edit-faq.html") редактировать
+                                    a.c-link(href="#") удалить
+                            tr
+                                td.c-table__col-id 4
+                                td.c-table__col-name
+                                    | Как и когда я смогу получить следующий бонус? редактировать
+                                td.c-table__col-edit
+                                    a.c-link(href="edit-faq.html") редактировать
+                                    a.c-link(href="#") удалить
+
+                    +paginator()
+
+        script(src='%=static=%js/separate-js/svg4everybody.min.js')
+        script svg4everybody();
+
+        //- Main scripts. You can replace it, but I recommend you to leave it here
+        script(src='%=static=%js/main%=hash=%%=min=%.js')

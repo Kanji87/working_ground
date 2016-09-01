@@ -1,0 +1,88 @@
+doctype html
+html(class="no-js", lang="ru")
+
+    include ../components/head/head
+    include ../components/header/header
+    include ../components/sidebar_select/sidebar_select
+    include ../components/paginator/paginator
+    include ../components/form_block/form_block
+
+    head
+        +head(head.mailing)
+    body
+        |%=symbols=%
+
+        +header('mailing')
+
+        .l-grid.l-grid--max-height
+            section.c-sidebar
+                h3.c-sidebar__title рассылка
+
+                p.c-sidebar__text Всем пользователям
+                
+                p.c-sidebar__text Новая
+
+                a.c-link.c-link--sidebar(href="mailing.html") Вернуться к списку рассылок
+
+            section.l-grid-content
+                form(action="#")
+
+                    .l-content-row
+                        +form_block(
+                        'textarea',
+                        'Текст',
+                        '','','','')
+
+                    .l-content-row
+                        .l-content-col.l-content-col-2
+                            .l-content__form-block
+                                p.c-form-title Рассылка по городам
+                                .c-select
+                                    select(multiple)
+                                        option Волгоград
+                                        option Екатеринбург
+                                        option Новосибирск
+
+                    .l-content-row
+                        .l-content-col.l-content-col-2
+                            .l-content__form-block
+                                p.c-form-title Запланировано
+                                p.c-form-subtitle 1809 сообщений
+
+                            .l-content__form-block
+                                p.c-form-title Отправлено по факту
+                                p.c-form-subtitle 0 сообщений
+
+                            .l-content__form-block
+                                p.c-form-title Доставлено по факту
+                                p.c-form-subtitle 0 сообщений
+
+                        .l-content-col.l-content-col-2
+                            .l-content__form-block
+                                p.c-form-title Старт рассылки
+                                p.c-form-subtitle Еще не запущена!
+
+                            .l-content__form-block
+                                p.c-form-title Конец рассылки
+                                p.c-form-subtitle Еще не закончена!
+
+                    .l-content-row
+                        .l-content__form-block
+                            p.c-form-title Комментарий
+                            textarea.c-input__textarea
+                            p.c-form-subtitle этот комментарий увидят только администраторы, он не предназначен для получателей рассылки!
+
+                    .l-content-row
+                        .l-content__form-block
+                            p.c-form-title Действия
+                            p.c-form-subtitle Рассылка Новая, введите текст сообщения и выберите регионы, куда рассылка будет отправлена. Затем сохраните рассылку как черновик. 
+
+                    .l-content-row
+                        .l-content__form-block
+                            input.c-input__button.c-input__button--submit(type="submit" value='Сохранить')
+
+        script(src='%=static=%js/separate-js/svg4everybody.min.js')
+        script svg4everybody();
+
+        //- Main scripts. You can replace it, but I recommend you to leave it here
+        script(src='%=static=%js/main%=hash=%%=min=%.js')

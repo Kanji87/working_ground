@@ -1,0 +1,154 @@
+doctype html
+html(class="no-js", lang="ru")
+
+    include ../components/head/head
+    include ../components/header/header
+    include ../components/sidebar_select/sidebar_select
+    include ../components/paginator/paginator
+    include ../components/form_block/form_block
+
+    head
+        +head(head.edit_user)
+    body
+        |%=symbols=%
+
+        +header('users')
+
+        .l-grid.l-grid--max-height
+            section.c-sidebar
+                h3.c-sidebar__title редактирование пользователя
+
+                a.c-link.c-link--sidebar(href="index.html") Вернуться к списку пользователей
+
+            section.l-grid-content
+                form(action="#")
+                    .l-content-row
+                        .l-content__form-block
+                            p.c-form-title Данные профиля
+
+                    .l-content-row
+                        .l-content-col.l-content-col-2
+                            .l-content__form-block
+                                img.c-profile__image(src='%=static=%img/general/user_icon.png')
+                                p.c-form-subtitle Кравченко Дина Александровна
+                                p.c-form-subtitle 28 лет
+
+                        .l-content-col.l-content-col-2
+                            .l-content__form-block
+                                p.c-form-title Ваучеры
+
+                                .l-content__form-block--green
+                                    p.c-form-subtitle Ваучер № 190021
+                                    p.c-form-subtitle Дата создания: 2016-08-31 10:43:11
+                                    p.c-form-subtitle Дата печати:
+                                    p.c-form-subtitle Дата погашения:
+                                    p.c-form-subtitle Статус: не погашен
+                                    p.c-form-subtitle Клиника: -
+
+                                .l-content__form-block--green
+                                    p.c-form-subtitle Ваучер № 637670
+                                    p.c-form-subtitle Дата создания: 2016-08-31 00:11:30
+                                    p.c-form-subtitle Дата печати:
+                                    p.c-form-subtitle Дата погашения:
+                                    p.c-form-subtitle Статус: не погашен
+                                    p.c-form-subtitle Клиника: Медицинский центр «XXI ВЕК» на ул. Марата
+
+                    .l-content-row
+                        .l-content-col.l-content-col-2
+                            +form_block(
+                                'input_text',
+                                'ФИО',
+                                '',
+                                'text','','')
+
+                            .l-content__form-block
+                                p.c-form-title Дата рождения
+                                .c-select.c-select--day
+                                    select(name="")
+                                            option(value="") 31
+                                            option(value="") 22
+                                            option(value="") 13
+                                .c-select.c-select--month
+                                    select(name="")
+                                            option(value="") 10
+                                            option(value="") 11
+                                            option(value="") 12
+                                .c-select.c-select--year
+                                    select(name="")
+                                            option(value="") 1990
+                                            option(value="") 1991
+                                            option(value="") 1992
+                            +form_block(
+                                'input_text',
+                                'Телефон',
+                                '',
+                                'tel','','')
+
+                            +form_block(
+                                'input_text',
+                                'Первый день цикла',
+                                '',
+                                'date','','')
+
+                            +form_block(
+                                'input_text',
+                                'E-mail',
+                                '',
+                                'email','','','')
+
+                            +form_block(
+                                'checkbox',
+                                'Заблокирован',
+                                '','checkbox','','')
+
+                        .l-content-col.l-content-col-2
+                            +form_block(
+                                'select',
+                                'Город',
+                                '','','','',
+                                'Москва',
+                                'Санкт-Петербург',
+                                'Ярославль')
+
+                            +form_block(
+                                'select',
+                                'Препарат',
+                                '','','','',
+                                'Выбрать из списка',
+                                'Джес плюс',
+                                'Клайра')
+
+                            +form_block(
+                                'input_text',
+                                'Стаж приема',
+                                '',
+                                'text','','','')
+
+                            +form_block(
+                                'input_text',
+                                'Адрес',
+                                '',
+                                'text','','','')
+
+                            +form_block(
+                                'input_text',
+                                'Новый пароль',
+                                '',
+                                'text','','','')
+
+                            +form_block(
+                                'input_text',
+                                'Подтверждение нового пароля',
+                                '',
+                                'text','','','')
+
+                    .l-content-row
+                        .l-content-col.l-content-col-2
+                            .l-content__form-block
+                                input.c-input__button.c-input__button--submit(type="submit" value='Сохранить')
+
+        script(src='%=static=%js/separate-js/svg4everybody.min.js')
+        script svg4everybody();
+
+        //- Main scripts. You can replace it, but I recommend you to leave it here
+        script(src='%=static=%js/main%=hash=%%=min=%.js')

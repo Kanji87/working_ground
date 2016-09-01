@@ -14,6 +14,12 @@ mixin form_block(blockType, title, subtitle1, type1, subtitle2, type2, ...option
                 p.c-form-title= title
             input.c-input__text(type= type1)
 
+    if blockType == 'checkbox'
+        .l-content__form-block
+            if title
+                p.c-form-title= title
+            input.c-input__checkbox(type= type1)
+
     if blockType == 'select'
         .l-content__form-block
             if title
@@ -33,11 +39,11 @@ mixin form_block(blockType, title, subtitle1, type1, subtitle2, type2, ...option
         .l-content__form-block
             if title
                 p.c-form-title= title
-            input(type= type1)
+            input(type= type1).c-input__file
 
     if blockType == 'image'
         .l-content__form-block
             if title
                 p.c-form-title= title
             img.c-form-image(src='%=static=%img/general/clinic_dummy.jpg')
-            input(type= type1)
+            input(type= type1).c-input__file

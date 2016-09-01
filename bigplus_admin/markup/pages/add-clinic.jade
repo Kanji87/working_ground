@@ -18,9 +18,11 @@ html(class="no-js", lang="ru")
             section.c-sidebar
                 h3.c-sidebar__title редактирование клиник
 
-                a.c-link.c-link--sidebar(href="#") Добавить клинику
+                a.c-link.c-link--sidebar(href="add-clinic.html") Добавить клинику
 
-                a.c-link.c-link--sidebar(href="#") Редактирование сетей клиник
+                a.c-link.c-link--sidebar(href="add-clinic-net.html") Добавить сеть клиник
+
+                a.c-link.c-link--sidebar(href="edit-clinic-net.html") Редактирование сетей клиник
 
             section.l-grid-content
                 form(action="#")
@@ -121,6 +123,25 @@ html(class="no-js", lang="ru")
                             'image',
                             'Фото маленькое',
                             '','file','','')
+
+                    .l-content-row
+                        .l-content-col.l-content-col-2
+                            +form_block(
+                            'input_text',
+                            'Сайт',
+                            '','text','','')
+
+                    .l-content-row
+                        .l-content-col.l-content-col-2
+                            +form_block(
+                            'checkbox',
+                            'Скрывать',
+                            '','checkbox','','')
+
+                    .l-content-row
+                        .l-content-col.l-content-col-2
+                            .l-content__form-block
+                                input.c-input__button.c-input__button--submit(type="submit" value='Сохранить')
 
         script(src='%=static=%js/separate-js/svg4everybody.min.js')
         script svg4everybody();

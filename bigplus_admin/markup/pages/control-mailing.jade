@@ -1,0 +1,82 @@
+doctype html
+html(class="no-js", lang="ru")
+
+    include ../components/head/head
+    include ../components/header/header
+    include ../components/sidebar_select/sidebar_select
+    include ../components/paginator/paginator
+    include ../components/form_block/form_block
+
+    head
+        +head(head.mailing)
+    body
+        |%=symbols=%
+
+        +header('mailing')
+
+        .l-grid.l-grid--max-height
+            section.c-sidebar
+                h3.c-sidebar__title рассылка
+
+                p.c-sidebar__text Доступны ваучеры
+                
+                p.c-sidebar__text Закончена
+
+                a.c-link.c-link--sidebar(href="mailing.html") Вернуться к списку рассылок
+
+            section.l-grid-content
+                form(action="#")
+
+                    .l-content-row
+                        +form_block(
+                        'textarea',
+                        'Текст',
+                        '','','','')
+
+                    .l-content-row
+                        .l-content-col.l-content-col-2
+                            .l-content__form-block
+                                p.c-form-title Рассылка по городам
+                                .c-select
+                                    select(multiple)
+                                        option Волгоград
+                                        option Екатеринбург
+                                        option Новосибирск
+
+                    .l-content-row
+                        .l-content-col.l-content-col-2
+                            .l-content__form-block
+                                p.c-form-title Запланировано
+                                p.c-form-subtitle 4544 сообщений
+
+                            .l-content__form-block
+                                p.c-form-title Отправлено по факту
+                                p.c-form-subtitle 4541 сообщений
+
+                            .l-content__form-block
+                                p.c-form-title Доставлено по факту
+                                p.c-form-subtitle 3972 сообщений
+
+                        .l-content-col.l-content-col-2
+                            .l-content__form-block
+                                p.c-form-title Старт рассылки
+                                p.c-form-subtitle 01 Oct 2014 в 14:50:32
+
+                            .l-content__form-block
+                                p.c-form-title Конец рассылки
+                                p.c-form-subtitle 02 Oct 2014 в 20:13:15
+
+                    .l-content-row
+                        .l-content__form-block
+                            p.c-form-title Действия
+                            p.c-form-subtitle
+                                | Рассылка Закончена, Вы можете 
+                                a.c-link(href='report.html') Пересчитать статистику 
+                                | или 
+                                a.c-link(href='report.html') Загрузить подробный отчет
+
+        script(src='%=static=%js/separate-js/svg4everybody.min.js')
+        script svg4everybody();
+
+        //- Main scripts. You can replace it, but I recommend you to leave it here
+        script(src='%=static=%js/main%=hash=%%=min=%.js')

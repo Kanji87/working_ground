@@ -7,17 +7,17 @@ html(class="no-js", lang="ru")
     include ../components/paginator/paginator
 
     head
-        +head(head.clinic)
+        +head(head.library)
     body
         |%=symbols=%
 
-        +header('clinics')
+        +header('library')
 
         .l-grid.l-grid--max-height
             section.c-sidebar
-                h3.c-sidebar__title клиники
+                h3.c-sidebar__title библиотека
 
-                a.c-link.c-link--sidebar(href="add-clinic.html") Добавить клинику
+                a.c-link.c-link--sidebar(href="add-library.html") Добавить библиотеку
 
                 p.c-sidebar__text показывать по:
 
@@ -26,13 +26,6 @@ html(class="no-js", lang="ru")
                     '10',
                     '25',
                     '50')
-
-                p.c-sidebar__text фильтровать по:
-
-                +sidebar_select(
-                    'Городу',
-                    'Москва',
-                    'Сантк-Петербург')
 
                 a.c-link.c-link--sidebar(href="#") Применить
 
@@ -51,54 +44,42 @@ html(class="no-js", lang="ru")
                                         a.c-table__sort-top(href="#")
                                         a.c-table__sort-bottom(href="#")
                                     p.c-table__title название
-                                th.c-table__col-city
-                                    .c-table__sort
-                                        a.c-table__sort-top(href="#")
-                                        a.c-table__sort-bottom(href="#")
-                                    p.c-table__title ГОРОД
                                 th.c-table__col-date
-                                    .c-table__sort
-                                        a.c-table__sort-top(href="#")
-                                        a.c-table__sort-bottom(href="#")
                                     p.c-table__title ДАТА
                                 th.c-table__col-edit
                                     p.c-table__title РЕДАКТИРОВАНИЕ
                         tbody
                             tr
-                                td.c-table__col-id 23489
+                                td.c-table__col-id 1
                                 td.c-table__col-name
-                                    | Медико-диагностический комплекс репродукции и планирования семьи Медика «Институт Здоровья»
-                                td.c-table__col-city Самарская область
+                                    | Женская формула счастья
                                 td.c-table__col-date 2016-08-26 14:27:15
                                 td.c-table__col-edit
-                                    a.c-link(href="add-clinic.html") редактировать
+                                    a.c-link(href="add-library.html") редактировать
                                     a.c-link(href="#") удалить
                             tr
-                                td.c-table__col-id 23482
+                                td.c-table__col-id 2
                                 td.c-table__col-name
-                                    | Центр репродукции и планирования семьи Медика
-                                td.c-table__col-city Екатеринбург
+                                    | Жизнь в удовольствие, или Почему вы все время улыбаетесь?
                                 td.c-table__col-date 2016-08-26 10:36:46
                                 td.c-table__col-edit
-                                    a.c-link(href="add-clinic.html") редактировать
+                                    a.c-link(href="add-library.html") редактировать
                                     a.c-link(href="#") удалить
                             tr
-                                td.c-table__col-id 23482
+                                td.c-table__col-id 3
                                 td.c-table__col-name
-                                    | Академия здоровья «Звезда» на улице Чистопольской
-                                td.c-table__col-city Екатеринбург
+                                    | О праве быть собой
                                 td.c-table__col-date 2016-08-26 10:36:46
                                 td.c-table__col-edit
-                                    a.c-link(href="add-clinic.html") редактировать
+                                    a.c-link(href="add-library.html") редактировать
                                     a.c-link(href="#") удалить
                             tr
-                                td.c-table__col-id 23482
+                                td.c-table__col-id 4
                                 td.c-table__col-name
-                                    | Академия здоровья «Звезда» на улице Космонавтов
-                                td.c-table__col-city Екатеринбург
+                                    | Обыкновенное чудо
                                 td.c-table__col-date 2016-08-26 10:36:46
                                 td.c-table__col-edit
-                                    a.c-link(href="add-clinic.html") редактировать
+                                    a.c-link(href="add-library.html") редактировать
                                     a.c-link(href="#") удалить
 
                     +paginator()

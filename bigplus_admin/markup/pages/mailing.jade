@@ -1,0 +1,117 @@
+doctype html
+html(class="no-js", lang="ru")
+
+    include ../components/head/head
+    include ../components/header/header
+    include ../components/sidebar_select/sidebar_select
+
+    head
+        +head(head.mailing)
+    body
+        |%=symbols=%
+
+        +header('mailing')
+
+        .l-grid.l-grid--max-height
+            section.c-sidebar
+                h3.c-sidebar__title УПРАВЛЕНИЕ РАССЫЛКАМИ
+
+                p.c-sidebar__text Данные об отправленных и доставленных СМС и Email сообщениях представлены на текущий момент!
+
+                p.c-sidebar__text Обновите страницу, чтобы получить более актуальные сведения!
+
+            section.l-grid-content
+                .l-content
+                    p.c-page-subtitle СМС-рассылки:
+                    table.c-table
+                        thead
+                            tr
+                                th.c-table__col-id
+                                    p.c-table__title КОД
+                                th.c-table__col-type
+                                    p.c-table__title ТИП
+                                th.c-table__col-author
+                                    p.c-table__title АВТОР
+                                th.c-table__col-status
+                                    p.c-table__title СТАТУС
+                                th.c-table__col-date
+                                    p.c-table__title ДАТА
+                                th.c-table__col-plan
+                                    p.c-table__title ПЛАН
+                                th.c-table__col-sent
+                                    p.c-table__title ОТПРАВЛЕНО
+                                th.c-table__col-delivered
+                                    p.c-table__title ДОСТАВЛЕНО
+                                th.c-table__col-control
+                                    p.c-table__title управление
+                        tbody
+                            tr
+                                td.c-table__col-id N/A
+                                td.c-table__col-type
+                                    .c-select
+                                        select
+                                            option Всем пользователям
+                                            option Доступны ваучеры
+                                td.c-table__col-author 
+                                    a.c-link(href="edit-user.html") Админ2
+                                td.c-table__col-status Новая
+                                td.c-table__col-date 31 Aug 2016 16:06
+                                td.c-table__col-plan 0
+                                td.c-table__col-sent 0
+                                td.c-table__col-delivered 0
+                                td.c-table__col-control
+                                    a.c-link(href="add-mailing.html") создать
+                            tr
+                                td.c-table__col-id 5
+                                td.c-table__col-type Доступны ваучеры
+                                td.c-table__col-author 
+                                    a.c-link(href="edit-user.html") Админ2
+                                td.c-table__col-status Закончена
+                                td.c-table__col-date 01 Oct 2014 14:50
+                                td.c-table__col-plan 4544
+                                td.c-table__col-sent 4541
+                                td.c-table__col-delivered 3972
+                                td.c-table__col-control
+                                    a.c-link(href="control-mailing.html") управление
+
+                    p.c-page-subtitle Email-рассылки:
+                    table.c-table
+                        thead
+                            tr
+                                th.c-table__col-id
+                                    p.c-table__title КОД
+                                th.c-table__col-type
+                                    p.c-table__title ТИП
+                                th.c-table__col-author
+                                    p.c-table__title АВТОР
+                                th.c-table__col-status
+                                    p.c-table__title СТАТУС
+                                th.c-table__col-date
+                                    p.c-table__title ДАТА
+                                th.c-table__col-plan
+                                    p.c-table__title ПЛАН
+                                th.c-table__col-sent
+                                    p.c-table__title ОТПРАВЛЕНО
+                                th.c-table__col-delivered
+                                    p.c-table__title ДОСТАВЛЕНО
+                                th.c-table__col-control
+                                    p.c-table__title управление
+                        tbody
+                            tr
+                                td.c-table__col-id 5
+                                td.c-table__col-type Доступны ваучеры
+                                td.c-table__col-author 
+                                    a.c-link(href="edit-user.html") Админ2
+                                td.c-table__col-status Закончена
+                                td.c-table__col-date 01 Oct 2014 14:50
+                                td.c-table__col-plan 4544
+                                td.c-table__col-sent 4541
+                                td.c-table__col-delivered 3972
+                                td.c-table__col-control
+                                    a.c-link(href="control-mailing.html") управление
+
+        script(src='%=static=%js/separate-js/svg4everybody.min.js')
+        script svg4everybody();
+
+        //- Main scripts. You can replace it, but I recommend you to leave it here
+        script(src='%=static=%js/main%=hash=%%=min=%.js')

@@ -22,6 +22,13 @@
     outline: none;
 }
 
+.c-input__checkbox {
+    display: block;
+    box-sizing: border-box;
+    margin-top: 10px;
+    outline: none;
+}
+
 .c-input__textarea {
     width: 100%;
     display: block;
@@ -37,11 +44,13 @@
 
 .c-input__button {
     display: block;
-    width: 320px;
     height: 50px;
     line-height: 50px;
-    font-size: 16rem;
-    margin-top: 40px;
+    font-size: 1.8rem;
+    font-weight: normal;
+    padding: 0 40px;
+    border: 0;
+    text-align: center;
 
     &--submit {
         color: $white;
@@ -59,7 +68,7 @@
     &:after {
         content: '';
         position: absolute;
-        top: 18px;
+        top: 16px;
         right: 15px;
         width: 0;
         height: 0;
@@ -82,4 +91,37 @@
         outline: none;
         background-color: $white;
     }
+
+    &--day {
+        float: left;
+        width: 20%;
+        text-align: center;
+    }
+
+    &--month {
+        float: left;
+        width: 20%;
+        margin-left: 40px;
+        text-align: center;
+    }
+
+    &--year {
+        float: left;
+        width: 43%;
+        margin-left: 40px;
+    }
+}
+
+.c-form-image {
+    margin-top: 10px;
+    display: block;
+}
+
+.c-input__file {
+    margin-top: 20px;
+}
+
+.c-input__radio {
+    margin-top: 20px;
+    margin-right: 20px;
 }

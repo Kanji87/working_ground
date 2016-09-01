@@ -1,0 +1,62 @@
+doctype html
+html(class="no-js", lang="ru")
+
+    include ../components/head/head
+    include ../components/header/header
+    include ../components/sidebar_select/sidebar_select
+    include ../components/paginator/paginator
+    include ../components/form_block/form_block
+
+    head
+        +head(head.add_clinic)
+    body
+        |%=symbols=%
+
+        +header('library')
+
+        .l-grid.l-grid--max-height
+            section.c-sidebar
+                h3.c-sidebar__title редактирование библиотеки
+
+                a.c-link.c-link--sidebar(href="add-library.html") Добавить библиотеку
+
+                a.c-link.c-link--sidebar(href="library.html") Вернуться к списку библиотек
+
+            section.l-grid-content
+                form(action="#")
+                    .l-content-row
+                        .l-content-col.l-content-col-2
+                            +form_block(
+                                'input_text',
+                                'Название',
+                                '',
+                                'text','','')
+
+                            +form_block(
+                                'input_text',
+                                'Картинка для анонса',
+                                '',
+                                'text','','')
+
+                    .l-content-row
+                        +form_block(
+                        'textarea',
+                        'Анонс',
+                        '','','','')
+
+                    .l-content-row
+                        +form_block(
+                        'textarea',
+                        'Текст',
+                        '','','','')
+
+                    .l-content-row
+                        .l-content-col.l-content-col-2
+                            .l-content__form-block
+                                input.c-input__button.c-input__button--submit(type="submit" value='Сохранить')
+
+        script(src='%=static=%js/separate-js/svg4everybody.min.js')
+        script svg4everybody();
+
+        //- Main scripts. You can replace it, but I recommend you to leave it here
+        script(src='%=static=%js/main%=hash=%%=min=%.js')
