@@ -1,0 +1,83 @@
+// Common styles of the project
+
+html {
+    font-size: $basic-font-size;
+}
+
+body {
+    font-family: $futura;
+    width: 100%;
+    min-height: 100%;
+    color: $white;
+    padding-top: 165px;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: $black;
+    position: relative;
+
+    @include respond-to(tablet) {
+        padding-top: 75px;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+}
+
+strong {
+    font-weight: bold;
+}
+
+.l-page {
+    width: 100%;
+    min-height: 100%;
+    box-sizing: border-box;
+    padding-bottom: 300px;
+    position: relative;
+
+    @include respond-to(fablet) {
+        padding-bottom: 350px;
+    }
+}
+
+.l-grid {
+    width: 900px;
+    position: relative;
+    margin: 0 auto;
+
+    &--content {
+        margin-top: 60px;
+
+        @include respond-to(fablet) {
+            margin-top: 40px;
+        }
+    }
+
+    @include respond-to(tablet) {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0 40px;
+    }
+
+    @include respond-to(fablet) {
+        padding: 0 20px;
+    }
+}
+
+.c-block-title {
+    font-weight: bold;
+    font-size: 2.2rem;
+}

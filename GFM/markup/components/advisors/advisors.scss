@@ -1,0 +1,360 @@
+.l-weekly {
+    width: 100%;
+    background-color: $content-gray;
+    padding: 15px 20px;
+    box-sizing: border-box;
+    position: relative;
+
+    &__row {
+        @include cf();
+
+        &:not(:first-child) {
+            margin-top: 20px;
+        }
+    }
+
+    &__col {
+        float: left;
+        width: 33%;
+        padding-right: 40px;
+        box-sizing: border-box;
+
+        @include respond-to(fablet) {
+            float: none;
+            width: 100%;
+            padding-right: 0;
+
+            &:not(:first-child) {
+                margin-top: 40px;
+            }
+        }
+    }
+}
+
+.c-weekly {
+    margin-top: 40px;
+
+    &__item {
+        margin-top: 20px;
+    }
+
+    &__title {
+        color: $yellow;
+        font-size: 1.6rem;
+    }
+
+    &__item-title {
+        color: $yellow;
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+    }
+
+    &__item-text {
+        color: $white;
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+        display: none;
+    }
+}
+
+.c-toggle-info {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    display: block;
+
+    @include respond-to(fablet) {
+        position: relative;
+        top: 0;
+        right: 0;
+        margin-top: 10px;
+    }
+
+    &__text {
+        color: $white;
+        text-decoration: none;
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+        background-image: url('%=static=%general/dashed_border.jpg');
+        background-repeat: repeat-x;
+        background-position: left bottom;
+        display: inline-block;
+
+        &:before {
+            content: 'Показать описания';
+            display: inline-block;
+        }
+
+        &:after {
+            content: 'Скрыть описания';
+            display: none;
+        }
+    }
+
+    &__icon {
+        display: inline-block;
+        position: relative;
+        top: 5px;
+        margin-left: 5px;
+    }
+
+    &--checked {
+        .c-toggle-info__text:before {
+            display: none;
+        }
+
+        .c-toggle-info__text:after {
+            display: inline-block;
+        }
+
+        .c-toggle-info__icon {
+            opacity: .2;
+        }
+    }
+}
+
+.l-character {
+    @include cf();
+
+    margin-top: 40px;
+    width: calc(100% + 40px);
+    margin-left: -20px;
+
+    @include respond-to(tablet) {
+        margin-top: 20px;
+        margin-left: -10px;
+        width: calc(100% + 20px);
+    }
+
+    @include respond-to(fablet) {
+        margin-top: 20px;
+        margin-left: 0;
+        width: 100%;
+    }
+
+    &__col {
+        float: left;
+        width: 33.3%;
+        box-sizing: border-box;
+        padding: 0 20px;
+
+        @include respond-to(tablet) {
+            padding: 0 10px;
+        }
+
+        @include respond-to(fablet) {
+            float: none;
+            width: 100%;
+            padding: 0;
+        }
+    }
+}
+
+.c-character {
+    background-color: $content-gray;
+    padding: 20px;
+
+    &__title {
+        @include cf();
+    }
+
+    &__img {
+        display: inline-block;
+        float: left;
+        width: 22px;
+        height: 22px;
+    }
+
+    &__class {
+        font-size: 2.2rem;
+        line-height: 1;
+        color: $white;
+        font-weight: bold;
+        display: inline-block;
+        float: left;
+        margin-left: 10px;
+    }
+
+    &__light {
+        float: right;
+        display: inline-block;
+        padding: 4px 0;
+
+        &-icon {
+            display: inline-block;
+            vertical-align: middle;
+            width: 12px;
+            height: 12px;
+        }
+
+        &-lvl {
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 1.5rem;
+            color: $yellow;
+            line-height: 1.6rem;
+            margin-left: 2px;
+        }
+    }
+
+    &__content {
+        margin-top: 40px;
+
+        @include respond-to(fablet) {
+            margin-top: 20px;
+        }
+    }
+
+    &__item {
+        &:not(:first-child) {
+            margin-top: 35px;
+
+            @include respond-to(fablet) {
+                margin-top: 20px;
+            }
+        }
+    }
+
+    &__item-title {
+        font-size: 2rem;
+        line-height: 2.6rem;
+        color: $white;
+
+        &--checked {
+            color: $yellow;
+        }
+    }
+
+    &__item-row {
+        @include cf();
+    }
+
+    &__item-col {
+        float: left;
+        width: 50%;
+
+        &:last-child {
+            padding-left: 15px;
+            box-sizing: border-box;
+        }
+    }
+
+    &__subtitle {
+        font-size: 1.6rem;
+        color: $white;
+        float: left;
+
+        &--elders {
+            @extend .c-character__subtitle;
+            float: none;
+            display: block;
+        }
+
+        &--checked {
+            color: $yellow;
+        }
+    }
+
+    &__progress {
+        @include nl();
+        @include cf();
+
+        float: left;
+        margin-left: 10px;
+        padding-top: 8px;
+
+        @include respond-to(tablet) {
+            margin-left: 6px;
+            padding-top: 10px;
+        }
+
+        @include respond-to(fablet) {
+            margin-left: 10px;
+            padding-top: 8px;
+        }
+
+        &-item {
+            float: left;
+            width: 7px;
+            height: 7px;
+            border-radius: 100%;
+            background-color: #4E4E4E;
+
+            @include respond-to(tablet) {
+                width: 4px;
+                height: 4px;
+            }
+
+            @include respond-to(fablet) {
+                width: 8px;
+                height: 8px;
+            }
+
+            &--checked {
+                background-color: $yellow;
+            }
+
+            &:not(:first-child) {
+                margin-left: 4px;
+
+                @include respond-to(tablet) {
+                    margin-left: 3px;
+                }
+
+                @include respond-to(fablet) {
+                    margin-left: 4px;
+                }
+            }
+        }
+    }
+}
+
+.l-progressbar {
+    margin-top: 40px;
+
+    @include respond-to(tablet) {
+        margin-top: 20px;
+    }
+}
+
+.c-progressbar {
+    position: relative;
+    width: 100%;
+    height: 44px;
+
+    &:not(:first-child) {
+        margin-top: 10px;
+    }
+
+    &__title {
+        font-size: 2rem;
+        color: #4E4E4E;
+        line-height: 44px;
+        position: relative;
+        z-index: 15;
+        padding-left: 20px;
+
+        // &--active {
+        //     color: $black;
+        // }
+    }
+
+    &__inactive,
+    &__active {
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    &__inactive {
+        width: 100%;
+        background-color: $content-gray;
+        z-index: 5;
+    }
+
+    &__active {
+        background-color: $yellow;
+        z-index: 10;
+    }
+}

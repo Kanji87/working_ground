@@ -1,0 +1,99 @@
+.footer {
+    @include cf();
+
+    width: 100%;
+    padding-top: 40px;
+    padding-bottom: 50px;
+    border-top: 1px solid #313131;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+
+    @include respond-to(fablet) {
+        text-align: left;
+    }
+
+    a:hover {
+        border-bottom: 1px solid $white;
+    }
+
+    &__logo {
+        font-size: 1.8rem;
+        color: $white;
+        float: left;
+        font-weight: bold;
+
+        @include respond-to(fablet) {
+            float: none;
+        }
+    }
+
+    &__mail {
+        display: inline-block;
+
+        a {
+            color: $white;
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        @include respond-to(fablet) {
+            display: block;
+            margin-top: 40px;
+        }
+    }
+
+    &__social-list {
+        @include nl();
+
+        float: right;
+
+        @include respond-to(fablet) {
+            float: none;
+            margin-top: 40px;
+        }
+    }
+
+    &__social-item {
+        text-align: left;
+    }
+
+    &__social-title {
+        color: $white;
+        font-size: 1.8rem;
+        font-weight: bold;
+    }
+
+    &__social-link {
+        font-size: 1.8rem;
+        line-height: 2.3rem;
+        color: $white;
+    }
+}
+
+.c-scroll-top {
+    position: fixed;
+    bottom: -50px;
+    right: 40px;
+    width: 37px;
+    height: 37px;
+    background-image: url('%=static=%general/icon_up.svg');
+    transition: all ease .3s;
+    z-index: 500;
+
+    @include respond-to(tablet) {
+        right: 23px;
+    }
+
+    &--active {
+        bottom: 50px;
+
+        @include respond-to(tablet) {
+            bottom: 20px;
+        }
+    }
+
+    &:hover {
+        filter: contrast(85%);
+    }
+}

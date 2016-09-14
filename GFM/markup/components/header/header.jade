@@ -1,0 +1,63 @@
+mixin nav_item(title, link, current, active)
+    li.header__nav-item
+        a(href= link class='header__nav-link' + (current == active ? ' header__nav-link--active' : ''))= title
+
+mixin header(active)
+    header.header
+        .l-grid
+            a.header__logo(href="/")
+                != jadeHelpers.Icon.call(locals, {iconName: 'gfm_logo', className: 'header__logo-img'})
+                != jadeHelpers.Icon.call(locals, {iconName: 'gfm_logo_scroll', className: 'header__logo-img--scroll'})
+
+            a.header__toggle-menu.js-toggle-menu(href="#")
+
+            nav.header__nav
+                ul.header__nav-list
+                    +nav_item(
+                        'Новости',
+                        '/index.html',
+                        'news',
+                        active)
+                    +nav_item(
+                        'Advisors',
+                        '/advisors.html',
+                        'advisors',
+                        active)
+                    +nav_item(
+                        'Статьи',
+                        '#',
+                        'articles',
+                        active)
+                    +nav_item(
+                        'Подкаст',
+                        '#',
+                        'podcast',
+                        active)
+                    li.header__nav-item--refresh
+                        a.header__nav-link.header__nav-link--refresh.js-refresh(href="#")
+                            != jadeHelpers.Icon.call(locals, {iconName: 'icon_refresh', className: 'header__refresh-icon'})
+
+                a.header__close-menu.js-close-menu(href="#")
+
+            a.header__login.js-open-login-popup(href="#") Войти
+            .header__popup
+                .header__popup-shadow.js-close-login-popup
+                .l-grid
+                    .header__popup-content
+                        p.header__popup-text.
+                            Войдите через наше <a href="#">расширение на Chrome</a>,
+                            чтобы воспользоваться разделом <a href="/advisors.html">advisors</a>.
+                        p.header__popup-text.
+                            Мы не храним ваши авторизационные данные.
+                            Мы не публикуем информацию от вашего имени.
+
+                        form.header__form(action="#")
+                            input(type="hidden" name="csrfmiddlewaretoken" value="G85txCas8oDYRaxaWEFByMnFrHgSmsFY")
+
+                            .header__form-button.header__form-button--ps
+                                label.header__form-label(for="platform_member_type_2") %username%
+                                input.header__form-input.js-login-input(type="button" id="platform_member_type_2" value="2")
+                            .header__form-button.header__form-button--xbox
+                                label.header__form-label(for="platform_member_type_1") %username%
+                                input.header__form-input.js-login-input(type="button" id="platform_member_type_1" value="2")
+

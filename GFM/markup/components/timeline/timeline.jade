@@ -1,0 +1,142 @@
+//- timeline mixins
+
+mixin filter_item(title, active)
+    li.c-filter__item
+        a(href='#' class='c-filter__link' + (active ? ' c-filter__link--active' : ''))= title
+
+mixin timeline_date(time, date)
+    .c-timeline__date-time
+        p.c-timeline__time= time
+        p.c-timeline__date= date
+
+mixin timeline_title(img, name, account)
+    .c-timeline__title
+        img.c-timeline__title-image(src="%=static=%img/content/" + img alt="")
+        .c-timeline__title-name= name
+        if account
+            .c-timeline__title-account= account
+
+mixin timeline_action(share_active)
+    .c-timeline__action
+        a.js-timeline-like(href="#" class="c-timeline__action-col" + (share_active ? ' c-timeline__action--active' : ''))
+            i.c-timeline__action-icon
+                != jadeHelpers.Icon.call(locals, {iconName: 'icon_like', className: 'like-icon'})
+                != jadeHelpers.Icon.call(locals, {iconName: 'icon_like_active', className: 'like-icon-active'})
+            p.c-timeline__action-text Like 69
+
+        a.c-timeline__action-col.js-timeline-share(href="#")
+            i.c-timeline__action-icon
+                != jadeHelpers.Icon.call(locals, {iconName: 'icon_share', className: 'share-icon'})
+            p.c-timeline__action-text Поделиться 130
+
+
+//- timeline template
+
+mixin timeline()
+    .c-filter
+        ul.c-filter__list
+            +filter_item('все', 'active')
+            +filter_item('twitter')
+            +filter_item('vk')
+            +filter_item('youtube')
+
+    .c-timeline
+        .c-timeline__grid
+            .c-timeline__item
+                +timeline_date('14:00', '12.09.16')
+                .c-timeline__content.c-timeline__content--tw.c-timeline__content--tw-official
+                    +timeline_title(
+                        'avatar1.png',
+                        'Oryx',
+                        '@cgbarret'
+                    )
+                    p.c-timeline__text.
+                        Trespasser dropping early? Yup. Trespasser is dropping early. Have fun, Guardians!
+                    +timeline_action()
+                    
+            .c-timeline__item
+                +timeline_date('14:00', '12.09.16')
+                .c-timeline__content.c-timeline__content--tw.c-timeline__content--tw-important
+                    +timeline_title(
+                        'avatar_help.png',
+                        'Bungie Help',
+                        '@bungiehelp'
+                    )
+                    p.c-timeline__text.
+                        Update 2.4.0 also has changes that impact Shoulder Charge and MK44 Stand Asides. More details here: <a href="https://www.bungie.net/en/Forums/Post/212706586" target="_blank">https://www.bungie.net/en/Forums/Post/212706586</a>
+                    +timeline_action('share_active')
+
+            .c-timeline__item
+                +timeline_date('14:00', '12.09.16')
+                .c-timeline__content.c-timeline__content--tw
+                    +timeline_title(
+                        'avatar1.png',
+                        'Oryx',
+                        '@cgbarret'
+                    )
+                    p.c-timeline__text.
+                        Trespasser dropping early? Yup. Trespasser is dropping early. Have fun, Guardians!
+                    +timeline_action()
+
+            .c-timeline__item
+                +timeline_date('12:00', '13.10.16')
+                .c-timeline__content.c-timeline__content--vk
+                    +timeline_title(
+                        'avatar2.png',
+                        'Guardian.fm'
+                    )
+                    p.c-timeline__text.
+                        Гардианы, как вы знаете, разработчики решили познакомить нас с Железными лордами в новом дополнении Rise Of Iron. Происходить это будет через множество квестов и роликов по ходу <a href="#">прохождения</a> прохождения игры. Но что если подойти к этому вопросу немного иначе? Если рассказать историю каждого из героических воинов не через PVE, а через PVP?
+                    p.c-timeline__text.
+                        Представляем вашему вниманию концепцию Iron Banner, который посвящен одному из Железных лордов и его легенде!
+                    p.c-timeline__text.
+                        P.S.: просьба смотреть ссылку с компьютера, с включенным звуком для правильной атмосферы :) страница весит достаточно много, поэтому подождите полной загрузки не теребя прокрутку
+                    p.c-timeline__text.
+                        Milkpack
+                    p.c-timeline__text
+                        a(href="http://perun-destiny.ru/2/" target="_blank") http://perun-destiny.ru/2/
+                    //- img.c-timeline__img(src="%=static=%img/content/perun.jpg" alt="")
+                    ul.c-timeline__slider
+                        li.c-timeline__slider-item
+                            img.c-timeline__slider-img(src='%=static=%img/content/perun.jpg' alt='')
+
+                    +timeline_action()
+
+            .c-timeline__item
+                +timeline_date('12:00', '13.10.16')
+                .c-timeline__content.c-timeline__content--vk
+                    +timeline_title(
+                        'avatar2.png',
+                        'Guardian.fm'
+                    )
+                    p.c-timeline__text.
+                        Господи, спасибо за орнаментацию.
+                    ul.c-timeline__slider
+                        li.c-timeline__slider-item
+                            img.c-timeline__slider-img(src='%=static=%img/content/ornament1.jpg' alt='')
+                        li.c-timeline__slider-item
+                            img.c-timeline__slider-img(src='%=static=%img/content/ornament2.jpg' alt='')
+                        li.c-timeline__slider-item
+                            img.c-timeline__slider-img(src='%=static=%img/content/ornament3.jpg' alt='')
+                        li.c-timeline__slider-item
+                            img.c-timeline__slider-img(src='%=static=%img/content/ornament4.jpg' alt='')
+                        li.c-timeline__slider-item
+                            img.c-timeline__slider-img(src='%=static=%img/content/ornament5.jpg' alt='')
+                        li.c-timeline__slider-item
+                            img.c-timeline__slider-img(src='%=static=%img/content/ornament6.jpg' alt='')
+                    +timeline_action('like_active')
+
+            .c-timeline__item
+                +timeline_date('12:00', '13.10.16')
+                .c-timeline__content.c-timeline__content--yt
+                    +timeline_title(
+                        'avatar2.png',
+                        'Planet Destiny'
+                    )
+                    p.c-timeline__text.
+                        Господи, спасибо за орнаментацию.
+                    .c-timeline__video
+                        iframe(src="https://www.youtube.com/embed/8gkzFfKDw6I" frameborder="0" allowfullscreen)
+                    +timeline_action()
+
+        a.c-timeline__show-more(href="#") Еще крутых новостей

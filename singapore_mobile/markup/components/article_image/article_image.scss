@@ -1,5 +1,14 @@
 .c-article-figure {
     margin-top: 80px;
+    height: 500px;
+
+    @include respond-to(fablet) {
+        height: 320px;
+    }
+
+    @include respond-to(phone320) {
+        height: 290px;
+    }
 
     @include respond-to(fablet) {
         margin-top: 50px;
@@ -10,8 +19,8 @@
     }
 
     &__image {
-        width: 100%;
-        height: auto;
+        width: auto;
+        height: 100%;
     }
 
     &__caption {

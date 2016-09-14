@@ -1,0 +1,250 @@
+//- MIXINS
+
+mixin character(className, progress1, progress2, nightfall, progress3)
+    .c-character
+        // пройденные активности имеют второй класс с модификатором --checked
+        .c-character__title
+            if className == 'hunter'
+                img.c-character__img(src="%=static=%img/content/hunter.jpg" alt="")
+            if className == 'warlock'
+                img.c-character__img(src="%=static=%img/content/warlock.jpg" alt="")
+            if className == 'titan'
+                img.c-character__img(src="%=static=%img/content/titan.jpg" alt="")
+
+            if className == 'hunter'
+                p.c-character__class Hunter
+            if className == 'warlock'
+                p.c-character__class Warlock
+            if className == 'titan'
+                p.c-character__class Titan
+
+            .c-character__light
+                i.c-character__light-icon
+                    != jadeHelpers.Icon.call(locals, {iconName: 'icon_light', className: 'light-icon'})
+                p.c-character__light-lvl 335
+        .c-character__content
+            .c-character__item
+                if progress1 == 'half'
+                    p.c-character__item-title Wrath of the machine
+                    .c-character__item-row
+                        .c-character__item-col
+                            p.c-character__subtitle Normal
+                            ul.c-character__progress
+                                li.c-character__progress-item.c-character__progress-item--checked
+                                li.c-character__progress-item.c-character__progress-item--checked
+                                li.c-character__progress-item.c-character__progress-item--checked
+                                li.c-character__progress-item
+                                    
+                        .c-character__item-col
+                            p.c-character__subtitle Hard
+                            ul.c-character__progress
+                                li.c-character__progress-item.c-character__progress-item--checked
+                                li.c-character__progress-item.c-character__progress-item--checked
+                                li.c-character__progress-item.c-character__progress-item--checked
+                                li.c-character__progress-item
+
+                if progress1 == 'full'
+                    p.c-character__item-title.c-character__item-title--checked Wrath of the machine
+                    .c-character__item-row
+                        .c-character__item-col
+                            p.c-character__subtitle.c-character__subtitle--checked Normal
+                            ul.c-character__progress
+                                li.c-character__progress-item.c-character__progress-item--checked
+                                li.c-character__progress-item.c-character__progress-item--checked
+                                li.c-character__progress-item.c-character__progress-item--checked
+                                li.c-character__progress-item.c-character__progress-item--checked
+                                    
+                        .c-character__item-col
+                            p.c-character__subtitle.c-character__subtitle--checked Hard
+                            ul.c-character__progress
+                                li.c-character__progress-item.c-character__progress-item--checked
+                                li.c-character__progress-item.c-character__progress-item--checked
+                                li.c-character__progress-item.c-character__progress-item--checked
+                                li.c-character__progress-item.c-character__progress-item--checked
+
+            .c-character__item
+                if progress2 == 'half'
+                    p.c-character__item-title King’s fall
+                    .c-character__item-row
+                        .c-character__item-col
+                            p.c-character__subtitle Normal
+                            ul.c-character__progress
+                                li.c-character__progress-item.c-character__progress-item--checked
+                                li.c-character__progress-item.c-character__progress-item--checked
+                                li.c-character__progress-item.c-character__progress-item--checked
+                                li.c-character__progress-item
+                                li.c-character__progress-item
+
+                        .c-character__item-col
+                            p.c-character__subtitle.c-character__subtitle--checked Hard
+                            ul.c-character__progress
+                                li.c-character__progress-item.c-character__progress-item--checked
+                                li.c-character__progress-item.c-character__progress-item--checked
+                                li.c-character__progress-item.c-character__progress-item--checked
+                                li.c-character__progress-item.c-character__progress-item--checked
+                                li.c-character__progress-item.c-character__progress-item--checked
+
+                if progress2 == 'full'
+                    p.c-character__item-title.c-character__item-title--checked King’s fall
+                    .c-character__item-row
+                        .c-character__item-col
+                            p.c-character__subtitle.c-character__subtitle--checked Normal
+                            ul.c-character__progress
+                                li.c-character__progress-item.c-character__progress-item--checked
+                                li.c-character__progress-item.c-character__progress-item--checked
+                                li.c-character__progress-item.c-character__progress-item--checked
+                                li.c-character__progress-item.c-character__progress-item--checked
+                                li.c-character__progress-item.c-character__progress-item--checked
+
+                        .c-character__item-col
+                            p.c-character__subtitle.c-character__subtitle--checked Hard
+                            ul.c-character__progress
+                                li.c-character__progress-item.c-character__progress-item--checked
+                                li.c-character__progress-item.c-character__progress-item--checked
+                                li.c-character__progress-item.c-character__progress-item--checked
+                                li.c-character__progress-item.c-character__progress-item--checked
+                                li.c-character__progress-item.c-character__progress-item--checked
+            
+            .c-character__item
+                if nightfall == 'nightfall'
+                    p.c-character__item-title.c-character__item-title--checked  Nightfall
+                else
+                    p.c-character__item-title  Nightfall
+                                
+            .c-character__item
+                if progress2 == 'half'
+                    p.c-character__item-title.c-character__item-title--checked Challenge of Elders
+                    .c-character__item-row
+                        p.c-character__subtitle--elders.c-character__subtitle--checked 16340/30000
+                        p.c-character__subtitle--elders 16340/90000
+
+                if progress2 == 'full'
+                    p.c-character__item-title.c-character__item-title--checked Challenge of Elders
+                    .c-character__item-row
+                        p.c-character__subtitle--elders.c-character__subtitle--checked 16340/30000
+                        p.c-character__subtitle--elders.c-character__subtitle--checked 16340/90000
+
+mixin progress(title, progress)
+    .c-progressbar
+        // прогресс изменяется путем изменения ширины (которая указана в %) элемента с классом .c-progressbar__active
+        //- if progress == '0%'
+        .c-progressbar__title= title
+        //- else
+        //-     .c-progressbar__title.c-progressbar__title--active= title
+        .c-progressbar__active(style='width:' + progress)
+        .c-progressbar__inactive
+
+//- TEMPLATE
+
+mixin advisors()
+    .l-weekly
+        p.c-block-title Weekly Reset 03.10.16
+        a.c-toggle-info.js-toggle-info(href="#")
+            p.c-toggle-info__text
+            i.c-toggle-info__icon
+                != jadeHelpers.Icon.call(locals, {iconName: 'icon_comments', className: 'comments-icon'})
+
+        .c-weekly
+            .l-weekly__row
+                .l-weekly__col
+                    p.c-weekly__title Nightfall: <strong>Winter’s Run</strong>
+
+                    .c-weekly__item
+                        p.c-weekly__item-title Epic
+                        p.c-weekly__item-text Heavily shielded and highly aggressive enemies appear in great numbers.
+
+                    .c-weekly__item
+                        p.c-weekly__item-title Berserk
+                        p.c-weekly__item-text Minions of the Darkness won't flinch, even after massive damage.
+
+                    .c-weekly__item
+                        p.c-weekly__item-title Small Arms
+                        p.c-weekly__item-text Primary Weapon damage is favored.
+
+                    .c-weekly__item
+                        p.c-weekly__item-title Chaff
+                        p.c-weekly__item-text Player radar is disabled.
+
+                    .c-weekly__item
+                        p.c-weekly__item-title Trickle
+                        p.c-weekly__item-text Recharge of abilities is significantly reduced.
+
+                .l-weekly__col
+                    p.c-weekly__title SIVA Crisis Playlist
+
+                    .c-weekly__item
+                        p.c-weekly__item-title Heroic
+                        p.c-weekly__item-text Enemies appear in greater numbers and are more aggressive.
+
+                    .c-weekly__item
+                        p.c-weekly__item-title Chaff
+                        p.c-weekly__item-text Player radar is disabled.
+
+                    .c-weekly__item
+                        p.c-weekly__item-title Airborne
+                        p.c-weekly__item-text Primary Weapon damage is favored.
+
+                    .c-weekly__item
+                        p.c-weekly__item-title Catapult
+                        p.c-weekly__item-text Grenade recharge rate is greatly increased.
+
+                .l-weekly__col
+                    p.c-weekly__title Challenge of Elders
+
+                    .c-weekly__item
+                        p.c-weekly__item-title Super Kill Bonus
+
+                    .c-weekly__item
+                        p.c-weekly__item-title Catapult
+                        p.c-weekly__item-text Grenade recharge rate is greatly increased.
+
+                    .c-weekly__item
+                        p.c-weekly__item-title Exposure
+                        p.c-weekly__item-text Guardian shields are increased but do not replenish.
+
+                    .c-weekly__item
+                        p.c-weekly__item-title Chaff
+                        p.c-weekly__item-text Player radar is disabled.
+
+                    .c-weekly__item
+                        p.c-weekly__item-text Round 1: Taken Vex
+                        p.c-weekly__item-text Round 2: Hive
+                        p.c-weekly__item-text Round 3: Cabal
+
+            .l-weekly__row
+                .l-weekly__col
+                    p.c-weekly__title Court of Oryx: <strong>Thalnok</strong>
+
+                .l-weekly__col
+                    p.c-weekly__title King’s Fall Challenge: <strong>Oryx</strong>
+
+    .l-character
+        .l-character__col
+            +character(
+            'hunter',
+            'half',
+            'half',
+            'nightfall',
+            'half')
+
+        .l-character__col
+            +character(
+            'warlock',
+            'full',
+            'half',
+            '',
+            'half')
+
+        .l-character__col
+            +character(
+            'titan',
+            'full',
+            'full',
+            'nightfall',
+            'full')
+
+    .l-progressbar
+        +progress('SIVA Crisis 2/3', '60%')
+        +progress('Weekly pvp 1/3', '30%')
+        +progress('Daily pvp', '100%')
+        +progress('Daily pve', '0%')
