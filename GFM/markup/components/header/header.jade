@@ -1,17 +1,21 @@
-mixin nav_item(title, link, current, active)
-    li.header__nav-item
+mixin nav_item(title, link, current, active, update)
+    li(class="header__nav-item" + (update ? ' header__nav-item--update' : ''))
         a(href= link class='header__nav-link' + (current == active ? ' header__nav-link--active' : ''))= title
 
 mixin header(active)
     header.header
         .l-grid
             a.header__logo(href="/")
-                != jadeHelpers.Icon.call(locals, {iconName: 'gfm_logo', className: 'header__logo-img'})
-                != jadeHelpers.Icon.call(locals, {iconName: 'gfm_logo_scroll', className: 'header__logo-img--scroll'})
+                img.header__logo-img(src="%=static=%img/general/gfm_logo.svg" alt="")
+                img.header__logo-img--scroll(src="%=static=%img/general/gfm_logo_scroll.svg" alt="")
+                //- != jadeHelpers.Icon.call(locals, {iconName: 'gfm_logo', className: 'header__logo-img'})
+                //- != jadeHelpers.Icon.call(locals, {iconName: 'gfm_logo_scroll', className: 'header__logo-img--scroll'})
 
             a.header__toggle-menu.js-toggle-menu(href="#")
 
             nav.header__nav
+                //если в каком-либо меню появилось обновление, то к классу пунтак меню (header__nav-item) добавляется класс с модификатором (header__nav-item--update)
+
                 ul.header__nav-list
                     +nav_item(
                         'Новости',
@@ -22,7 +26,8 @@ mixin header(active)
                         'Advisors',
                         '/advisors.html',
                         'advisors',
-                        active)
+                        active,
+                        'update')
                     +nav_item(
                         'Статьи',
                         '#',

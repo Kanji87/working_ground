@@ -11,7 +11,8 @@ mixin timeline_date(time, date)
 
 mixin timeline_title(img, name, account)
     .c-timeline__title
-        img.c-timeline__title-image(src="%=static=%img/content/" + img alt="")
+        .c-timeline__title-image
+            img(src="%=static=%img/content/" + img alt="")
         .c-timeline__title-name= name
         if account
             .c-timeline__title-account= account

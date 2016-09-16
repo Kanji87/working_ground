@@ -118,7 +118,7 @@
                 display: block;
                 background-repeat: no-repeat;
                 background-size: contain;
-                opacity: .1;
+                opacity: .2;
                 position: absolute;
                 top: -15px;
                 right: 30px;
@@ -143,6 +143,13 @@
         border: 1px solid $white;
         display: inline-block;
         vertical-align: middle;
+        width: 22px;
+        height: 22px;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
     }
 
     &__title-name {
@@ -185,7 +192,7 @@
 
     &__action {
         @include cf();
-        margin-top: 40px;
+        margin-top: 20px;
 
         .like-icon {
             display: block;

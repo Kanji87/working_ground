@@ -5,11 +5,14 @@ mixin character(className, progress1, progress2, nightfall, progress3)
         // пройденные активности имеют второй класс с модификатором --checked
         .c-character__title
             if className == 'hunter'
-                img.c-character__img(src="%=static=%img/content/hunter.jpg" alt="")
+                .c-character__img
+                    img(src="%=static=%img/content/hunter.jpg" alt="")
             if className == 'warlock'
-                img.c-character__img(src="%=static=%img/content/warlock.jpg" alt="")
+                .c-character__img
+                    img(src="%=static=%img/content/warlock.jpg" alt="")
             if className == 'titan'
-                img.c-character__img(src="%=static=%img/content/titan.jpg" alt="")
+                .c-character__img
+                    img(src="%=static=%img/content/titan.jpg" alt="")
 
             if className == 'hunter'
                 p.c-character__class Hunter
@@ -149,67 +152,57 @@ mixin advisors()
                 .l-weekly__col
                     p.c-weekly__title Nightfall: <strong>Winter’s Run</strong>
 
-                    .c-weekly__item
+                    .c-weekly__item.c-weekly__item-modifier
                         p.c-weekly__item-title Epic
                         p.c-weekly__item-text Heavily shielded and highly aggressive enemies appear in great numbers.
 
-                    .c-weekly__item
                         p.c-weekly__item-title Berserk
                         p.c-weekly__item-text Minions of the Darkness won't flinch, even after massive damage.
 
-                    .c-weekly__item
                         p.c-weekly__item-title Small Arms
                         p.c-weekly__item-text Primary Weapon damage is favored.
 
-                    .c-weekly__item
                         p.c-weekly__item-title Chaff
                         p.c-weekly__item-text Player radar is disabled.
 
-                    .c-weekly__item
                         p.c-weekly__item-title Trickle
                         p.c-weekly__item-text Recharge of abilities is significantly reduced.
 
                 .l-weekly__col
                     p.c-weekly__title SIVA Crisis Playlist
 
-                    .c-weekly__item
+                    .c-weekly__item.c-weekly__item-modifier
                         p.c-weekly__item-title Heroic
                         p.c-weekly__item-text Enemies appear in greater numbers and are more aggressive.
 
-                    .c-weekly__item
                         p.c-weekly__item-title Chaff
                         p.c-weekly__item-text Player radar is disabled.
 
-                    .c-weekly__item
                         p.c-weekly__item-title Airborne
                         p.c-weekly__item-text Primary Weapon damage is favored.
 
-                    .c-weekly__item
                         p.c-weekly__item-title Catapult
                         p.c-weekly__item-text Grenade recharge rate is greatly increased.
 
                 .l-weekly__col
                     p.c-weekly__title Challenge of Elders
 
-                    .c-weekly__item
+                    .c-weekly__item.c-weekly__item-modifier
                         p.c-weekly__item-title Super Kill Bonus
 
-                    .c-weekly__item
                         p.c-weekly__item-title Catapult
                         p.c-weekly__item-text Grenade recharge rate is greatly increased.
 
-                    .c-weekly__item
                         p.c-weekly__item-title Exposure
                         p.c-weekly__item-text Guardian shields are increased but do not replenish.
 
-                    .c-weekly__item
                         p.c-weekly__item-title Chaff
                         p.c-weekly__item-text Player radar is disabled.
 
                     .c-weekly__item
-                        p.c-weekly__item-text Round 1: Taken Vex
-                        p.c-weekly__item-text Round 2: Hive
-                        p.c-weekly__item-text Round 3: Cabal
+                        p.c-weekly__item-title Round 1: Taken Vex
+                        p.c-weekly__item-title Round 2: Hive
+                        p.c-weekly__item-title Round 3: Cabal
 
             .l-weekly__row
                 .l-weekly__col
