@@ -47,7 +47,7 @@
         background-color: $white;
 
         @include respond-to(tablet) {
-            left: 135px;
+            left: 130px;
         }
 
         @include respond-to(fablet) {
@@ -63,7 +63,7 @@
     &__date-time {
         float: left;
         text-align: right;
-        font-size: 1.4rem;
+        font-size: 1.6rem;
         line-height: 1.8rem;
         font-weight: bold;
 
@@ -97,7 +97,7 @@
         overflow: hidden;
 
         @include respond-to(tablet) {
-            margin-left: 110px;
+            margin-left: 90px;
         }
 
         @include respond-to(fablet) {
@@ -118,11 +118,12 @@
                 display: block;
                 background-repeat: no-repeat;
                 background-size: contain;
-                opacity: .2;
+                opacity: .6;
                 position: absolute;
                 top: -15px;
                 right: 30px;
                 pointer-events: none;
+                z-index: 5;
             }
 
             &-important {
@@ -145,6 +146,8 @@
         vertical-align: middle;
         width: 22px;
         height: 22px;
+        position: relative;
+        z-index: 10;
 
         img {
             width: 100%;
@@ -159,6 +162,8 @@
         font-size: 1.5rem;
         margin-left: 5px;
         font-weight: bold;
+        position: relative;
+        z-index: 10;
     }
 
     &__title-account {
@@ -167,12 +172,16 @@
         vertical-align: middle;
         font-size: 1.5rem;
         font-weight: bold;
+        position: relative;
+        z-index: 10;
     }
 
     &__text {
         margin-top: 10px;
-        font-size: 1.4rem;
+        font-size: 1.6rem;
         line-height: 1.8rem;
+        position: relative;
+        z-index: 10;
 
         a {
             color: $white;
@@ -193,6 +202,8 @@
     &__action {
         @include cf();
         margin-top: 20px;
+        position: relative;
+        z-index: 10;
 
         .like-icon {
             display: block;
@@ -237,7 +248,7 @@
 
     &__action-text {
         color: $white;
-        font-size: 1.4rem;
+        font-size: 1.6rem;
         font-weight: bold;
         line-height: 1;
         margin-left: 5px;
@@ -246,7 +257,7 @@
     &__show-more {
         width: 525px;
         background-color: $content-gray;
-        margin-left: 186px;
+        margin-left: 193px;
         color: #828282;
         font-size: 1.5rem;
         font-weight: bold;
@@ -255,7 +266,7 @@
         box-sizing: border-box;
 
         @include respond-to(tablet) {
-            margin-left: 161px;
+            margin-left: 148px;
         }
 
         @include respond-to(fablet) {

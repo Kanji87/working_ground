@@ -17,7 +17,11 @@ body {
     position: relative;
 
     @include respond-to(tablet) {
-        padding-top: 75px;
+        padding-top: 100px;
+    }
+
+    @include respond-to(fablet) {
+        padding-top: 55px;
     }
 }
 

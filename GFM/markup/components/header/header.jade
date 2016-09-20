@@ -2,7 +2,7 @@ mixin nav_item(title, link, current, active, update)
     li(class="header__nav-item" + (update ? ' header__nav-item--update' : ''))
         a(href= link class='header__nav-link' + (current == active ? ' header__nav-link--active' : ''))= title
 
-mixin header(active)
+mixin header(active, login)
     header.header
         .l-grid
             a.header__logo(href="/")
@@ -17,6 +17,8 @@ mixin header(active)
                 //если в каком-либо меню появилось обновление, то к классу пунтак меню (header__nav-item) добавляется класс с модификатором (header__nav-item--update)
 
                 ul.header__nav-list
+                    li.header__nav-item.header__nav-logo
+                        img.header__nav-logo-img(src="%=static=%img/general/gfm_logo.svg" alt="")
                     +nav_item(
                         'Новости',
                         '/index.html',
@@ -43,8 +45,12 @@ mixin header(active)
                             != jadeHelpers.Icon.call(locals, {iconName: 'icon_refresh', className: 'header__refresh-icon'})
 
                 a.header__close-menu.js-close-menu(href="#")
+            
+            if login
+                a.header__login.header__login--logged.js-open-login-popup(href="#") FeelFreeToHateOnMe
+            else
+                a.header__login.js-open-login-popup(href="#") Войти
 
-            a.header__login.js-open-login-popup(href="#") Войти
             .header__popup
                 .header__popup-shadow.js-close-login-popup
                 .l-grid
