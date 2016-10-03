@@ -3,6 +3,8 @@ html(class="no-js", lang="ru")
 
     include ../components/head/head
     include ../components/header/header
+    include ../components/activity/activity
+    include ../components/filter/filter
     include ../components/timeline/timeline
     include ../components/footer/footer
 
@@ -15,13 +17,38 @@ html(class="no-js", lang="ru")
 
             +header('news')
 
+            +activity(
+                '',
+                'icon_xur.png',
+                'XUR',
+                'agent of the nine',
+                'Брать или не брать?',
+                'xur'
+            )
+
+            +activity(
+                'banner',
+                'icon_ib.svg',
+                'Iron Banner',
+                'Clash',
+                'Гайд по Iron Banner?',
+                ''
+            )
+
+            +activity(
+                'osiris',
+                'icon_osiris.svg',
+                'Trials of Osiris',
+                'icarus',
+                'Гайд по Trials',
+                ''
+            )
+
             section.l-grid.l-grid--content
+                +filter('timeline')
                 +timeline()
 
             +footer()
 
         script(src='%=static=%js/separate-js/svg4everybody.min.js')
         script svg4everybody();
-
-        //- Main scripts. You can replace it, but I recommend you to leave it here
-        script(src='%=static=%js/main%=hash=%%=min=%.js')

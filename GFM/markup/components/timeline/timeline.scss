@@ -1,38 +1,3 @@
-.c-filter {
-    text-align: center;
-
-    &__list {
-        @include cf();
-        @include nl();
-
-        display: inline-block;
-    }
-
-    &__item {
-        float: left;
-        text-align: left;
-
-        &:not(:first-child) {
-            margin-left: 35px;
-        }
-    }
-
-    &__link {
-        color: $white;
-        text-decoration: none;
-        font-size: 1.8rem;
-        font-weight: bold;
-
-        &--active {
-            color: $yellow;
-        }
-
-        &:hover {
-            border-bottom: 1px solid $white;
-        }
-    }
-}
-
 .c-timeline {
     margin-top: 40px;
     position: relative;
@@ -189,6 +154,12 @@
             border-bottom: 1px solid $white;
             padding-bottom: 1px;
             word-wrap: break-word;
+
+            @include respond-to(fablet) {
+                padding-bottom: 0;
+                border-bottom: 0;
+                text-decoration: underline;
+            }
         }
     }
 
@@ -275,56 +246,13 @@
         }
     }
 
-    &__slider {
-        @include nl();
-    }
-
-    &__slider-img {
-        width: 100%;
-        height: auto;
-    }
-
     .bx-wrapper {
-        position: relative;
         margin-top: 20px;
     }
 
-    .bx-prev,
-    .bx-next {
-        color: $white;
-        width: 38px;
-        height: 38px;
-        display: block;
-        position: absolute;
-        top: 50%;
-        margin-top: -19px;
-        overflow: hidden;
-        text-indent: -999px;
-        background-image: url('%=static=%general/icon_up.svg');
-        background-repeat: no-repeat;
-        background-size: contain;
-        opacity: 1;
-        transition: all ease .3s;
-
-        &:hover {
-            filter: contrast(85%);
-        }
-
-        &.disabled {
-            opacity: 0;
-            pointer-events: none;
-        }
-    }
-
-    .bx-prev {
-        left: 20px;
-        transform: rotate(-90deg);
-    }
-
-    .bx-next {
-        right: 20px;
-        transform: rotate(90deg);
-    }
+    // .bx-pager {
+    //     display: none;
+    // }
 
     &__video {
         margin-top: 20px;

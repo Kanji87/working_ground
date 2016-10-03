@@ -1,0 +1,26 @@
+mixin filter_item(link, title, active)
+    li.c-filter__item
+        a(href=link class='c-filter__link' + (active ? ' c-filter__link--active' : ''))= title
+
+mixin filter(type)
+    if ( type == 'timeline' )
+        .c-filter
+            ul.c-filter__list
+                +filter_item('#', 'все', 'active')
+                +filter_item('#', 'twitter')
+                +filter_item('#', 'vk')
+                +filter_item('#', 'youtube')
+
+    if ( type == 'guide_list' )
+        .c-filter
+            ul.c-filter__list
+                +filter_item('guide-list.html', 'статьи')
+                +filter_item('guide-list.html', 'гайды', 'active')
+                +filter_item('article-list.html', 'книга скорби')
+
+    if ( type == 'article_list' )
+        .c-filter
+            ul.c-filter__list
+                +filter_item('guide-list.html', 'статьи')
+                +filter_item('guide-list.html', 'гайды')
+                +filter_item('article-list.html', 'книга скорби', 'active')

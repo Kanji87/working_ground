@@ -1,0 +1,8 @@
+mixin article_list_item(img, title, date, status)
+    a(href="article.html" class="c-article-list__item" + (status == 'inactive' ? ' c-article-list__item--inactive' : ''))
+        if img
+            .c-article-list__img
+                img(src='%=static=%img/content/' + img alt=title)
+        .c-article-list__content
+            h3.c-article-list__title= title
+            p.c-article-list__date= date

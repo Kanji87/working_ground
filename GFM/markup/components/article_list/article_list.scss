@@ -1,0 +1,11 @@
+.c-article-list {
+    display: flex;
+    flex-flow: row wrap;
+    align-content: flex-start;
+    justify-content: space-between;
+    margin-top: 35px;
+
+    @include respond-to(fablet) {
+        display: block;
+    }
+}

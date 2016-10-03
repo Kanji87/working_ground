@@ -60,4 +60,30 @@ $(function () {
             $('.header__nav').css('display', 'inline-block');
         }
     });
+
+
+    if ( $('.js-slider').length ) {
+        if ( $('.js-slider').closest('.c-timeline').length ) {
+            $('.js-slider').bxSlider({
+                adaptiveHeight: true,
+                pager: false,
+                nextText: '>',
+                prevText: '<',
+                hideControlOnEnd: true,
+                infiniteLoop: false
+                // nextSelector: 'c-slider__next',
+                // prevSelector: 'c-slider__prev'
+            });
+        } else if ( $('.js-slider').closest('.c-article').length ) {
+            $('.js-slider').bxSlider({
+                adaptiveHeight: true,
+                nextText: '>',
+                prevText: '<',
+                hideControlOnEnd: true,
+                infiniteLoop: true,
+                pager: true,
+                pagerType: 'short'
+            });
+        }
+    }
 });

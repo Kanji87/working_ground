@@ -1,0 +1,22 @@
+mixin activity(className, img, title, subtitle, link_text, xur)
+    div(class='l-activity' + (className == 'banner' ? ' l-activity--iron-banner' : className == 'osiris' ? ' l-activity--osiris' : ' l-activity--xur'))
+        .l-grid
+            .c-activity
+                img.c-activity__icon(src="%=static=%img/general/" + img alt="")
+                .c-activity__info
+                    p.c-activity__title= title
+                    p.c-activity__subtitle= subtitle
+                if xur
+                    ul.c-activity__list
+                        li.c-activity__item
+                            img.c-activity__item-img(src="%=static=%img/general/icon_xur_item.png" alt="")
+                        li.c-activity__item
+                            img.c-activity__item-img(src="%=static=%img/general/icon_xur_item.png" alt="")
+                        li.c-activity__item
+                            img.c-activity__item-img(src="%=static=%img/general/icon_xur_item.png" alt="")
+                        li.c-activity__item
+                            img.c-activity__item-img(src="%=static=%img/general/icon_xur_item.png" alt="")
+                .c-activity__guide
+                    if xur
+                        p.c-activity__timer.js-activity-timer 46:21:37
+                    a.c-activity__link(href="#")= link_text

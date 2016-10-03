@@ -1,0 +1,81 @@
+//- article post mixins
+mixin article_text(text)
+    p.c-article__text= text
+
+mixin article_subtitle(text)
+    h3.c-article__subtitle= text
+
+mixin article_quote(text, author)
+    .c-article__quote
+        p.c-article__quote-text!= text
+        p.c-article__quote-author= author
+
+mixin article_img(img)
+    img.c-article__img(src= img alt="")
+
+
+//- article post template
+mixin article_post()
+    article.c-article
+        h2.c-article__title Глава 1:0 — Фундамент (draft)
+        p.c-article__date 14:00 12.09.16
+
+        .c-article__content
+            +article_text('Хищники и угрозы —')
+
+            +article_text('Высечено для будущих поколений кси ро — ')
+
+            +article_text('Третьей выжившей дочерью последнего королевского выводка престола из осмия — Штормджой (досл. Англ. Stormjoy — “радость бури”). Штормджой представляет собой живое, разумное облако. Величественно проплывая над нашим континентом, оно опускает свои щупальца, что рыщут внизу в поисках пропитания. На конце каждого такого щупальца расположена яркая звезда-приманка. И пускай даже её слепящий свет манит к себе, приманку следует обходить стороной. В противном случае, ты будешь съеден.')
+
+            +article_img("http://simhost.org/uploads/posts/2016-08/1470213449_1470172149-cover-spread.jpg")
+            
+            +article_text('Для наших стариков нет участи почётнее и лучше, нежели попасться в щупальца штормджоя на закате жизни. Кроме того, достойнейшие рыцари способны отрубить сияющие приманки-звёзды. У меня уже есть целых шесть штук!')
+            
+            +article_text('Падение. Если ты оступишься и упадёшь с края континента, тебя ждёт верная смерть в океане. Особую опасность таят те дни, когда наш отец, осмиевый король, включает движители.')
+            
+            +article_text('Пожиратели гелия. Океанические течения фундамента влекут наш дом к другим континентам. Владения гелия (досл. Англ. Helium court — “гелиумный двор”) нынче расположены рядом с нами. Обитатели этих владений того же вида, что и мы, но они — наши заклятые враги. Их воины совершают набеги на наши земли изо дня в день. ')
+            
+            +article_text('Пожиратели гелия похожи на нас — у них по две руки, две ноги и по три глаза, совсем как у нашей расы, но они светлые, а значит злые. Я хочу стать рыцарем и сражаться с ними!')
+
+            ul.c-slider.js-slider.c-article__slider
+                li.c-slider__item
+                    img.c-slider__img(src='%=static=%img/content/ornament1.jpg' alt='')
+                li.c-slider__item
+                    img.c-slider__img(src='%=static=%img/content/ornament2.jpg' alt='')
+                li.c-slider__item
+                    img.c-slider__img(src='%=static=%img/content/ornament3.jpg' alt='')
+                li.c-slider__item
+                    img.c-slider__img(src='%=static=%img/content/ornament4.jpg' alt='')
+                li.c-slider__item
+                    img.c-slider__img(src='%=static=%img/content/ornament5.jpg' alt='')
+                li.c-slider__item
+                    img.c-slider__img(src='%=static=%img/content/ornament6.jpg' alt='')
+
+            +article_subtitle('Ну и что с того?')
+
+            +article_text('Бури. Местные дожди, как правило, очень ядовиты. Порой влага разъедает плоть. А когда  разряд молнии бьёт в землю, а не в громоотводы грозовой фермы (досл. Англ. Lightning farm — “ферма молний”), то он может испепелить кого-нибудь.')
+
+            +article_text('Весь этот мир смертельно опасен для нас…')
+
+            +article_quote(
+                '&laquo;В целом нам вообще глубоко насрать на ваши проблемы&raquo;',
+                'DeeJ'
+            )
+
+            +article_text('Тайны. Фундамент огромен и мы — самые крошечные его обитатели. Если ты чего-то не понимаешь, это “что-то” наверняка тебя убьёт. Моя наставница таокс говорит, что именно в этом кроется секрет недолговечности наших жизней. И потому мы способны быстро приспосабливаться и размножаться.')
+
+            +article_text('Приливные волны (досл. Англ. Moon waves — “лунные волны”). Моя сестра аураш страх как боится приливных волн. Я обязательно спрошу у неё почему, когда она вернётся из своей экспедиции к вольфрамовым монолитам.')
+
+            .c-article__pager
+                a.c-article__pager-prev(href="#")
+                    i.c-article__prev-icon
+                        svg(width='13px', height='21px', viewbox='178 3471 13 21', version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
+                            defs
+                            polyline#Path-2-Copy(stroke='#FFFFFF', stroke-width='2', fill='none', transform='translate(184.714486, 3481.418087) scale(-1, 1) rotate(90.000000) translate(-184.714486, -3481.418087) ', points='175.296399 3486.13257 184.725371 3476.7036 194.132573 3486.1108')
+                    span.c-article__pager-text Глава 1:0 — Фундамент
+                a.c-article__pager-next(href="#")
+                    span.c-article__pager-text Глава 1:1 — Хищник
+                    i.c-article__next-icon
+                        svg(width='12px', height='21px', viewbox='1068 3471 12 21', version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
+                            defs
+                            polyline#Path-2(stroke='#FFFFFF', stroke-width='2', fill='none', transform='translate(1073.714486, 3481.418087) rotate(90.000000) translate(-1073.714486, -3481.418087) ', points='1064.2964 3486.13257 1073.72537 3476.7036 1083.13257 3486.1108')

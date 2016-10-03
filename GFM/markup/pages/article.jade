@@ -3,7 +3,7 @@ html(class="no-js", lang="ru")
 
     include ../components/head/head
     include ../components/header/header
-    include ../components/advisors/advisors
+    include ../components/article_post/article_post
     include ../components/footer/footer
 
     head
@@ -13,10 +13,10 @@ html(class="no-js", lang="ru")
 
         .l-page
 
-            +header('advisors')
+            +header('articles')
 
-            section.l-grid.l-grid--content
-                +advisors()
+            section.l-grid--content
+                +article_post()
 
             +footer()
 

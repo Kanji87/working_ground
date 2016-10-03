@@ -17,7 +17,7 @@ body {
     position: relative;
 
     @include respond-to(tablet) {
-        padding-top: 100px;
+        padding-top: 125px;
     }
 
     @include respond-to(fablet) {
@@ -84,4 +84,70 @@ strong {
 .c-block-title {
     font-weight: bold;
     font-size: 2.2rem;
+}
+
+.c-more-button {
+    display: block;
+    font-size: 1.5rem;
+    line-height: 3.5rem;
+    height: 35px;
+    background-color: $content-gray;
+    color: $white;
+    text-align: center;
+    font-weight: bold;
+    transition: background-color ease .3s;
+
+    &:hover {
+        background-color: $content-gray-hover;
+    }
+}
+
+.c-slider {
+    @include nl();
+
+    &__img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.bx-wrapper {
+    position: relative;
+
+    .bx-prev,
+    .bx-next {
+        color: $white;
+        width: 38px;
+        height: 38px;
+        display: block;
+        position: absolute;
+        top: 50%;
+        margin-top: -19px;
+        overflow: hidden;
+        text-indent: -999px;
+        background-image: url('%=static=%general/icon_up.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        opacity: 1;
+        transition: all ease .3s;
+
+        &:hover {
+            filter: contrast(85%);
+        }
+
+        &.disabled {
+            opacity: 0;
+            pointer-events: none;
+        }
+    }
+
+    .bx-prev {
+        left: 20px;
+        transform: rotate(-90deg);
+    }
+
+    .bx-next {
+        right: 20px;
+        transform: rotate(90deg);
+    }
 }

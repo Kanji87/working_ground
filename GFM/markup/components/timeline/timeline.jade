@@ -1,9 +1,6 @@
+include ../filter/filter
+
 //- timeline mixins
-
-mixin filter_item(title, active)
-    li.c-filter__item
-        a(href='#' class='c-filter__link' + (active ? ' c-filter__link--active' : ''))= title
-
 mixin timeline_date(time, date)
     .c-timeline__date-time
         p.c-timeline__time= time
@@ -34,13 +31,6 @@ mixin timeline_action(share_active)
 //- timeline template
 
 mixin timeline()
-    .c-filter
-        ul.c-filter__list
-            +filter_item('все', 'active')
-            +filter_item('twitter')
-            +filter_item('vk')
-            +filter_item('youtube')
-
     .c-timeline
         .c-timeline__grid
             .c-timeline__item
@@ -97,9 +87,9 @@ mixin timeline()
                     p.c-timeline__text
                         a(href="http://perun-destiny.ru/2/" target="_blank") http://perun-destiny.ru/2/
                     //- img.c-timeline__img(src="%=static=%img/content/perun.jpg" alt="")
-                    ul.c-timeline__slider
-                        li.c-timeline__slider-item
-                            img.c-timeline__slider-img(src='%=static=%img/content/perun.jpg' alt='')
+                    ul.c-slider.c-timeline__slider.js-slider
+                        li.c-slider__item
+                            img.c-slider__img(src='%=static=%img/content/perun.jpg' alt='')
 
                     +timeline_action()
 
@@ -112,19 +102,19 @@ mixin timeline()
                     )
                     p.c-timeline__text.
                         Господи, спасибо за орнаментацию.
-                    ul.c-timeline__slider
-                        li.c-timeline__slider-item
-                            img.c-timeline__slider-img(src='%=static=%img/content/ornament1.jpg' alt='')
-                        li.c-timeline__slider-item
-                            img.c-timeline__slider-img(src='%=static=%img/content/ornament2.jpg' alt='')
-                        li.c-timeline__slider-item
-                            img.c-timeline__slider-img(src='%=static=%img/content/ornament3.jpg' alt='')
-                        li.c-timeline__slider-item
-                            img.c-timeline__slider-img(src='%=static=%img/content/ornament4.jpg' alt='')
-                        li.c-timeline__slider-item
-                            img.c-timeline__slider-img(src='%=static=%img/content/ornament5.jpg' alt='')
-                        li.c-timeline__slider-item
-                            img.c-timeline__slider-img(src='%=static=%img/content/ornament6.jpg' alt='')
+                    ul.c-slider.c-timeline__slider.js-slider
+                        li.c-slider__item
+                            img.c-slider__img(src='%=static=%img/content/ornament1.jpg' alt='')
+                        li.c-slider__item
+                            img.c-slider__img(src='%=static=%img/content/ornament2.jpg' alt='')
+                        li.c-slider__item
+                            img.c-slider__img(src='%=static=%img/content/ornament3.jpg' alt='')
+                        li.c-slider__item
+                            img.c-slider__img(src='%=static=%img/content/ornament4.jpg' alt='')
+                        li.c-slider__item
+                            img.c-slider__img(src='%=static=%img/content/ornament5.jpg' alt='')
+                        li.c-slider__item
+                            img.c-slider__img(src='%=static=%img/content/ornament6.jpg' alt='')
                     +timeline_action('like_active')
 
             .c-timeline__item

@@ -1,0 +1,205 @@
+.l-activity {
+    height: 100px;
+    padding: 15px 0;
+    border-bottom: 1px solid #383838;
+
+    @include respond-to(tablet) {
+        height: auto;
+    }
+
+    .l-grid {
+        height: 100%;
+    }
+
+    &--iron-banner {
+        background-color: #363B38;
+    }
+
+    &--osiris {
+        position: relative;
+
+        &:after {
+            content: '';
+            background-image: url('%=static=%general/osiris_bg.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            opacity: .61;
+            z-index: -1;
+        }
+    }
+
+    &--xur {
+
+        @include respond-to(tablet) {
+            .c-activity {
+                display: block;
+            }
+
+            .c-activity__icon {
+                // float: left;
+                display: inline-block;
+                vertical-align: middle;
+            }
+
+            .c-activity__info {
+                // float: left;
+                display: inline-block;
+                vertical-align: middle;
+                margin-left: 25px;
+            }
+
+            .c-activity__guide {
+                top: 35px;
+            }
+
+            .c-activity__timer {
+                margin-bottom: 0;
+            }
+
+            .c-activity__list {
+                margin-left: 0;
+                margin-top: 20px;
+                text-align: center;
+            }
+
+            .c-activity__item {
+                float: none;
+                display: inline-block;
+            }
+        }
+
+        @include respond-to(fablet) {
+            .c-activity__info {
+                margin-left: 15px;   
+            }
+
+            .c-activity__guide {
+                top: 20px;
+            }
+        }
+    }
+}
+
+.c-activity {
+    @include cf();
+
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+
+    &__icon {
+        width: 70px;
+        height: auto;
+        // float: left;
+
+        @include respond-to(fablet) {
+            width: 40px;
+        }
+    }
+
+    &__info {
+        // float: left;
+        margin-left: 25px;
+
+        @include respond-to(fablet) {
+            margin-left: 15px;
+        }
+    }
+
+    &__title {
+        font-weight: bold;
+    }
+
+    &__title,
+    &__subtitle {
+        font-size: 1.8rem;
+        line-height: 2.3rem;
+
+        @include respond-to(fablet) {
+            font-size: 1.4rem;
+            line-height: 1.6rem;
+        }
+    }
+
+    &__list {
+        @include cf();
+        @include nl();
+
+        margin-left: 90px;
+        // float: left;
+
+        @include respond-to(tablet) {
+            margin-left: 30px;
+        }
+    }
+
+    &__item {
+        width: 48px;
+        height: 48px;
+        float: left;
+
+        &:not(:first-child) {
+            margin-left: 30px;
+
+            @include respond-to(tablet) {
+                margin-left: 20px;
+            }
+        }
+
+        &-img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            border: 1px solid #fff
+        }
+    }
+
+    &__guide {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    &__timer {
+        font-size: 1.8rem;
+        line-height: 2.3rem;
+        font-weight: bold;
+        margin-bottom: 10px;
+
+        @include respond-to(fablet) {
+            font-size: 1.4rem;
+            line-height: 1.6rem;
+            margin-bottom: 0;
+        }
+    }
+
+    &__link {
+        font-size: 1.8rem;
+        line-height: 2.3rem;
+        color: $white;
+        padding-bottom: 1px;
+        border-bottom: 1px solid $white;
+        transition: all ease .3s;
+
+        @include respond-to(fablet) {
+            font-size: 1.4rem;
+            line-height: 1.6rem;
+        }
+
+        &:active,
+        &:hover,
+        &:focus {
+            color: $yellow;
+            border-color: $yellow;
+        }
+    }
+}

@@ -6,6 +6,7 @@ mixin header(active, login)
     header.header
         .l-grid
             a.header__logo(href="/")
+                h1 GuardianFM
                 img.header__logo-img(src="%=static=%img/general/gfm_logo.svg" alt="")
                 img.header__logo-img--scroll(src="%=static=%img/general/gfm_logo_scroll.svg" alt="")
                 //- != jadeHelpers.Icon.call(locals, {iconName: 'gfm_logo', className: 'header__logo-img'})
@@ -21,18 +22,18 @@ mixin header(active, login)
                         img.header__nav-logo-img(src="%=static=%img/general/gfm_logo.svg" alt="")
                     +nav_item(
                         'Новости',
-                        '/index.html',
+                        'index.html',
                         'news',
                         active)
                     +nav_item(
                         'Advisors',
-                        '/advisors.html',
+                        'advisors.html',
                         'advisors',
                         active,
                         'update')
                     +nav_item(
                         'Статьи',
-                        '#',
+                        'guide-list.html',
                         'articles',
                         active)
                     +nav_item(

@@ -1,0 +1,34 @@
+.c-filter {
+    text-align: center;
+
+    &__list {
+        @include cf();
+        @include nl();
+
+        display: inline-block;
+    }
+
+    &__item {
+        float: left;
+        text-align: left;
+
+        &:not(:first-child) {
+            margin-left: 35px;
+        }
+    }
+
+    &__link {
+        color: $white;
+        text-decoration: none;
+        font-size: 1.8rem;
+        font-weight: bold;
+
+        &--active {
+            color: $yellow;
+        }
+
+        &:hover {
+            border-bottom: 1px solid $white;
+        }
+    }
+}
