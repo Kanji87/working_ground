@@ -1,0 +1,12 @@
+mixin nav_item(navName)
+    li.header__nav-item
+        a.header__nav-link(href="#")= navName
+
+mixin header()
+    header.header
+        a.header__logo-rbk(href="#")
+        a.header__nav-toggle(href="#")
+        nav.header__nav
+            ul.header__nav-list
+                +nav_item('123')
+        span.header__nav-sign 123

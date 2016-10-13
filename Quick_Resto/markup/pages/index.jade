@@ -1,0 +1,36 @@
+doctype html
+html(class="no-js", lang="ru")
+
+    include ../components/head/head
+    include ../components/header/header
+    include ../components/tile_1_1/tile_1_1
+    include ../components/tile_1_2/tile_1_2
+    include ../components/tile_2_2/tile_2_2
+    include ../components/tile_1_2_slider/tile_1_2_slider
+    include ../components/tile_3_2/tile_3_2
+    include ../components/footer/footer
+
+    head
+        +head(head.defaults)
+    body.page
+        |%=symbols=%
+
+        +header()
+
+        .l-grid.l-grid__tile
+            +tile_1_2()
+            +tile_3_2()
+            +tile_2_2()
+            +tile_1_2()
+            +tile_1_2()
+            .c-tile.c-tile__2-2
+                +tile_1_1()
+                +tile_1_1()
+                +tile_1_1()
+                +tile_1_1()
+            +tile_2_2()
+
+        +footer()
+
+        script(src='%=static=%js/separate-js/svg4everybody.min.js')
+        script svg4everybody();
