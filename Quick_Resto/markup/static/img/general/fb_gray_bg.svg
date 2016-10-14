@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="35px" height="34px" viewBox="0 0 35 34" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40.3 (33839) - http://www.bohemiancoding.com/sketch -->
+    <title>0.2-facebook</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="mobile" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="article-1" transform="translate(-30.000000, -538.000000)">
+            <g id="0.2-facebook" transform="translate(30.000000, 538.000000)">
+                <ellipse id="Oval" fill="#DEE0DF" cx="17.358871" cy="17" rx="17.358871" ry="17"></ellipse>
+                <g id="facebook" transform="translate(3.857527, 3.777778)" fill="#000000">
+                    <path d="M14.8302264,18.8992755 L14.8302264,13.3301659 L16.7613335,13.3301659 L17.0504894,11.1597851 L14.8302264,11.1597851 L14.8302264,9.77413403 C14.8302264,9.1457587 15.0104876,8.71754165 15.9413667,8.71754165 L17.1286583,8.71703944 L17.1286583,6.77583341 C16.9233207,6.74938373 16.2185321,6.69029044 15.3985653,6.69029044 C13.6867462,6.69029044 12.5147886,7.7017398 12.5147886,9.55918849 L12.5147886,11.1597851 L10.5787239,11.1597851 L10.5787239,13.3301659 L12.5147886,13.3301659 L12.5147886,18.8992755 L14.8302264,18.8992755 L14.8302264,18.8992755 Z" id="f"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

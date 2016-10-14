@@ -1,6 +1,6 @@
-mixin tile_1_2(img, title, desc)
-    .c-tile.c-tile__1-2
-        img.c-tile__title-img(src=img alt="")
+mixin tile_1_2(bgColor, img, title, desc)
+    .c-tile.c-tile__1-2(class='c-tile--' + bgColor)
+        img.c-tile__title-img(src='%=static=%img/general/' + img alt="")
         h3.c-tile__title.text-white= title
         p.c-title__desc.text-white= desc
         a.c-tile__arrow-link(href="#")

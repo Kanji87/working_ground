@@ -1,3 +1,106 @@
-mixin example(data)
-    h1
-        | Hello, World!
+.header {
+    height: 36px;
+    width: 100%;
+    box-sizing: border-box;
+    padding-right: 15px;
+    background-color: $black;
+    overflow: hidden;
+    position: relative;
+
+    &__logo-rbk {
+        width: 64px;
+        height: 36px;
+        padding-left: 15px;
+        padding-right: 17px;
+        float: left;
+        // background-size: 64px 18px;
+        // background-repeat: no-repeat;
+        // background-position: left center;
+        // background-image: url('%=static=%general/logo_rbk.svg');
+        border-right: solid 1px #5C5C5C;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+    }
+
+    &__nav {
+        float: left;
+        margin-left: 14px;
+        transition: margin-top ease .5s;
+
+        &--active {
+            margin-top: -36px;
+
+            .header__nav-sign {
+                top: -36px;
+            }
+
+            .header__search-link {
+                top: 0;
+            }
+        }
+    }
+
+    &__nav-toggle {
+        padding: 0 10px;
+        display: flex;
+        align-items: center;
+        width: 16px;
+        height: 36px;
+        cursor: pointer;
+    }
+
+    &__nav-list {
+        @include nl();
+        @include cf();
+
+        padding-left: 10px;
+    }
+
+    &__nav-item {
+        float: left;
+        height: 100%;
+
+        &:not(:first-child) {
+            margin-left: 35px;
+        }
+    }
+
+    &__nav-link {
+        color: $white;
+        font-family: $als;
+        font-weight: bold;
+        letter-spacing: .2px;
+        text-transform: uppercase;
+        font-size: 1.2rem;
+        line-height: 3.6rem;
+
+        &:hover {
+            color: $white;
+        }
+    }
+
+    &__search-link {
+        position: absolute;
+        top: 40px;
+        display: block;
+        width: 40px;
+        height: 36px;
+        right: 0;
+        background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAVCAMAAACeyVWkAAAAV1BMVEX///99fX2wsLCxsbG6urq7u7u+vr6/v7/AwMDExMTFxcXGxsbIyMjJycnU1NTV1dXW1tbY2Nja2trb29vc3Nzd3d3e3t7f39/g4ODh4eHi4uLj4+Pk5OR7XTC/AAAAAnRSTlMAM8lDrC4AAABpSURBVBgZxcFBDsIgAEXBp9RaUUELfKH2/uc0DQtQtybO8ENTWuPIh7KWnJcHb8rzBExFdA7LyOYoQ3NPVNHTZFHNonGiCo5mr4GNlaHZRQ2AVaBzSVFhDgp0XLpivLyhY+ONb/7MP70AzIYEn05sraQAAAAASUVORK5CYII=") 50% 60% no-repeat;
+        transition: top ease .5s;
+    }
+
+    &__nav-sign {
+        font-family: $als;
+        font-weight: bold;
+        font-size: 1.1rem;
+        color: #E6E5E5;
+        line-height: 3.6rem;
+        letter-spacing: -0.18px;
+        position: absolute;
+        top: 0;
+        right: 15px;
+        transition: top ease .5s;
+    }
+}

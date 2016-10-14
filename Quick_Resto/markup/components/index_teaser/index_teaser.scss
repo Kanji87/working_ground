@@ -1,3 +1,45 @@
-mixin example(data)
-    h1
-        | Hello, World!
+.c-main-teaser {
+    width: 100%;
+    height: 640px;
+    background-image: url('%=static=%general/main_teaser_bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    padding-top: 111px;
+    padding-bottom: 173px;
+    box-sizing: border-box;
+
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: block;
+        background-color: #000;
+        opacity: .4;
+        z-index: 5;
+    }
+
+    &__content {
+        position: relative;
+        z-index: 10;
+        width: 1090px;
+        margin: 0 auto;
+    }
+
+    &__logo {
+        width: 80px;
+        height: 80px;
+        background-image: url('%=static=%general/logo_qr.svg');
+    }
+
+    &__title {
+        color: $white;
+        font-weight: bold;
+        font-size: 4.4em;
+        width: 834px;
+        margin-top: 54px;
+    }
+}

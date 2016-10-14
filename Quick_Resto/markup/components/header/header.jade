@@ -5,8 +5,39 @@ mixin nav_item(navName)
 mixin header()
     header.header
         a.header__logo-rbk(href="#")
-        a.header__nav-toggle(href="#")
+            img.header__rbk-img(src="%=static=%img/general/logo_rbk.svg" alt="")
         nav.header__nav
+            a.header__nav-toggle.js-nav-toggle(href="#")
+                img.header__menu-icon(src="%=static=%img/general/icon_menu.svg" alt="")
+
+            span.header__nav-sign совместный проект
+            
             ul.header__nav-list
-                +nav_item('123')
-        span.header__nav-sign 123
+                li.header__nav-item
+                  a.header__nav-link(href='http://rbctv.rbc.ru/') Телеканал
+                li.header__nav-item
+                  a.header__nav-link(href='http://www.rbcdaily.ru/') Газета
+                li.header__nav-item
+                  a.header__nav-link.header__nav-link--border(href='http://www.rbcdaily.ru/magazine') Журнал
+                li.header__nav-item
+                  a.header__nav-link(href='http://quote.rbc.ru/') Quote
+                li.header__nav-item
+                  a.header__nav-link(href='http://www.autonews.ru/') Авто
+                li.header__nav-item
+                  a.header__nav-link(href='http://sport.rbc.ru/') Спорт
+                li.header__nav-item
+                  a.header__nav-link(href='http://realty.rbc.ru/') Недвижимость
+                li.header__nav-item
+                  a.header__nav-link(href='http://style.rbc.ru/') Стиль
+                li.header__nav-item
+                  a.header__nav-link.header__nav-link_cnews(href='http://www.cnews.ru/')
+                    span C
+                    span.header__nav-link_cnews__dot •
+                    span News
+                li.header__nav-item
+                  a.header__nav-link(href='http://marketing.rbc.ru/') Исследования
+                li.header__nav-item
+                  a.header__nav-link(href='http://bc.rbc.ru/') Конференции
+                li.header__nav-item
+                  a.header__nav-link.header__search-link(href='http://top.rbc.ru/search/')
+                    i.icon-search
