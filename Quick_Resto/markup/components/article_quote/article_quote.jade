@@ -1,3 +1,4 @@
-mixin article_quote(quote)
+mixin article_quote(...items)
     .c-article__quote
-        p.c-article__quote-text= quote
+        each item in items
+            p.c-article__quote-text= item

@@ -1,6 +1,13 @@
-mixin tile_1_2(bgColor, img, title, desc)
+mixin tile_1_2(bgColor, img, title, desc, button)
     .c-tile.c-tile__1-2(class='c-tile--' + bgColor)
-        img.c-tile__title-img(src='%=static=%img/general/' + img alt="")
+        img.c-tile__title-img(src="%=static=%img/general/" + img alt="")
         h3.c-tile__title.text-white= title
-        p.c-title__desc.text-white= desc
-        a.c-tile__arrow-link(href="#")
+        p.c-tile__desc.text-white= desc
+        if button == 'blueButton'
+            .c-tile__arrow-link
+                a(href="#")
+                    img(src="%=static=%img/general/arrow_blue.svg" alt="")
+        if button == 'greenButton'
+            .c-tile__arrow-link
+                a(href="#")
+                    img(src="%=static=%img/general/arrow_green.svg" alt="")

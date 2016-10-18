@@ -1,0 +1,40 @@
+.footer {
+    background-color: $gray;
+
+    &__row {
+        @include cf();
+
+        width: 1140px;
+        padding: 40px 0;
+    }
+
+    &__logo-quick {
+        float: left;
+    }
+
+    &__social-list {
+        @include nl();
+        @include cf();
+        float: left;
+        margin-left: 260px;
+    }
+
+    &__social-item {
+        float: left;
+
+        &:not(:first-child) {
+            margin-left: 20px;
+        }
+    }
+
+    &__credit-list {
+        @include nl();
+        float: right;
+    }
+
+    &__credit-item {
+        color: #000;
+        font-size: 1.2rem;
+        line-height: 2rem;
+    }
+}

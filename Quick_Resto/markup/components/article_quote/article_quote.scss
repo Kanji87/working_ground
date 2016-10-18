@@ -1,0 +1,21 @@
+.c-article {
+    &__quote {
+        padding: 40px 64px 40px 40px;
+        margin: 50px 0;
+        background-color: #F3F4F6;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &-text {
+            font-size: 1.6rem;
+            font-weight: bold;
+            line-height: 2.6rem;
+
+            &:not(:first-child) {
+                margin-top: 30px;
+            }
+        }
+    }
+}

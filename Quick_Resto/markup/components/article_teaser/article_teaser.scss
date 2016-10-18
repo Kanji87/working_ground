@@ -1,0 +1,58 @@
+.c-article {
+    &__teaser {
+        padding-bottom: 40px;
+        padding-right: 300px;
+        border-bottom: 2px solid #DFE1E0;
+
+        &-title {
+            color: #000;
+            font-size: 4.8rem;
+            line-height: 4.8rem;
+        }
+
+        &-desc {
+            font-size: 2.2rem;
+            line-height: 2.8rem;
+            margin-top: 30px;
+        }
+
+        &-social {
+            @include cf();
+            
+            margin-top: 60px;
+
+            .social-likes__widget {
+                width: 45px;
+                height: 45px;
+                float: left;
+                background-size: contain;
+                background-repeat: no-repeat;
+                cursor: pointer;
+
+                &:not(:first-child) {
+                    margin-left: 20px;
+                }
+            }
+
+            .social-likes__widget svg {
+                display: none;
+            }
+
+            .social-likes__widget_facebook {
+                background-image: url('%=static=%general/fb_gray_bg.svg');
+            }
+
+            .social-likes__widget_vkontakte {
+                background-image: url('%=static=%general/vk_gray_bg.svg');
+            }
+
+            .social-likes__widget_twitter {
+                background-image: url('%=static=%general/tw_gray_bg.svg');
+            }
+
+            .social-likes__widget_plusone {
+                background-image: url('%=static=%general/gplus_gray_bg.svg');
+            }
+        }
+    }
+}

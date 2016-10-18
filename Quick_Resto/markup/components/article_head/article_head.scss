@@ -1,0 +1,30 @@
+.c-article {
+    &__head {
+        background-color: $white;
+    }
+    
+    &__head-link {
+        color: #000;
+
+        &--qr {
+            margin-left: 275px;
+
+            img {
+                width: 137px;
+                height: 35px;
+            }
+        }
+    }
+
+    &__head-icon {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    &__head-text {
+        font-size: 1.4rem;
+        margin-left: 10px;
+        display: inline-block;
+        vertical-align: middle;
+    }
+}

@@ -1,7 +1,8 @@
 mixin tile_2_2(bgColor, img, title, hash, desc, buttonColor, linkText)
     .c-tile.c-tile__2-2(class='c-tile--' + bgColor)
-        img.c-tile__title-img.c-tile__title-img--2-2(src='%=static=%img/general/' + img alt="")
-        h3.c-tile__title.text-black= title
-        p.c-title__hash= hash
-        p.c-title__desc.text-black= desc
-        a.c-tile__read-link(class="c-tile__read-link--" + buttonColor href="#")= linkText
+        .c-tile__content
+            img.c-tile__title-img.c-tile__title-img--2-2(src='%=static=%img/general/' + img alt="")
+            h3.c-tile__title.text-black= title
+            p.c-tile__hash= hash
+            p.c-tile__desc.text-black= desc
+            a.c-tile__read-link(class="c-tile__read-link--" + buttonColor href="#")= linkText

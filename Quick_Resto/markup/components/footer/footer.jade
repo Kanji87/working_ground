@@ -1,24 +1,29 @@
 mixin footer()
     footer.footer
-        .footer__row.footer__row--big
+        .footer__row.l-grid
             a.footer__logo-quick(href="#")
-                img(src="" alt="")
+                img(src="%=static=%img/general/logo_qr_hor.svg" alt="")
             ul.footer__social-list
                 li.footer__social-item
                     a.footer__social-link(href="#")
+                        img(src="%=static=%img/general/fb.svg" alt="")
                 li.footer__social-item
                     a.footer__social-link(href="#")
+                        img(src="%=static=%img/general/vk.svg" alt="")
                 li.footer__social-item
                     a.footer__social-link(href="#")
+                        img(src="%=static=%img/general/tw.svg" alt="")
                 li.footer__social-item
                     a.footer__social-link(href="#")
+                        img(src="%=static=%img/general/gplus.svg" alt="")
             ul.footer__credit-list
-                li.footer__credit-item 1
-                li.footer__credit-item 2
-                li.footer__credit-item 3
+                li.footer__credit-item Директор спецпроектов: Полина Абдуллина
+                li.footer__credit-item Менеджер проекта: Юлия Чеботарь
+                li.footer__credit-item © 1995–2016 РосБизнесКонсалтинг
 
-        .footer__row
-            .footer__copyright
-            a.footer__logo-rbk(href="#")
+
+        //- .footer__row
+        //-     .footer__copyright
+        //-     a.footer__logo-rbk(href="#")
 
     script(src='%=static=%js/main%=hash=%%=min=%.js')
