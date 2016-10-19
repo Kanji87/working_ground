@@ -1,14 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="45px" height="45px" viewBox="0 0 45 45" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 40.3 (33839) - http://www.bohemiancoding.com/sketch -->
-    <title>0.4-facebook</title>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="10px" height="18px" viewBox="0 0 10 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40 (33762) - http://www.bohemiancoding.com/sketch -->
+    <title>f</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
-    <g id="main.v3" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="main" transform="translate(-840.000000, -2500.000000)">
-            <g id="0.4-facebook" transform="translate(840.000000, 2500.000000)">
-                <circle id="Oval" fill="#FFFFFF" cx="22.5" cy="22.5" r="22.5"></circle>
-                <g id="facebook" transform="translate(5.000000, 5.000000)" fill="#000000">
+    <g id="main" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-858.000000, -2513.000000)" id="0.4-facebook" fill="#000000">
+            <g transform="translate(840.000000, 2500.000000)">
+                <g id="facebook" transform="translate(5.000000, 5.000000)">
                     <path d="M19.2224537,25.013747 L19.2224537,17.6428666 L21.7254915,17.6428666 L22.1002859,14.7703038 L19.2224537,14.7703038 L19.2224537,12.9363539 C19.2224537,12.1046806 19.4561024,11.5379228 20.6626774,11.5379228 L22.2016059,11.5372581 L22.2016059,8.96801481 C21.9354541,8.93300788 21.0219301,8.85479618 19.959116,8.85479618 C17.7403122,8.85479618 16.2212592,10.1934792 16.2212592,12.6518671 L16.2212592,14.7703038 L13.7117955,14.7703038 L13.7117955,17.6428666 L16.2212592,17.6428666 L16.2212592,25.013747 L19.2224537,25.013747 L19.2224537,25.013747 Z" id="f"></path>
                 </g>
             </g>

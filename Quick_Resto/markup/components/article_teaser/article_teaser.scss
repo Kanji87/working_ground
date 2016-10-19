@@ -1,8 +1,10 @@
 .c-article {
     &__teaser {
+        padding-top: 60px;
         padding-bottom: 40px;
         padding-right: 300px;
         border-bottom: 2px solid #DFE1E0;
+        position: relative;
 
         &-title {
             color: #000;
@@ -53,6 +55,36 @@
             .social-likes__widget_plusone {
                 background-image: url('%=static=%general/gplus_gray_bg.svg');
             }
+        }
+    }
+
+    &__teaser-img {
+        width: 288px;
+        top: 90px;
+        right: 0;
+        height: auto;
+        position: absolute;
+    }
+
+    &2 {
+        .c-article__teaser-img {
+            width: 332px;
+            top: 22px;
+            right: -60px;
+        }
+    }
+
+    &1 {
+        .c-article__teaser-img {
+            width: 247px;
+        }
+    }
+
+    &3 {
+        .c-article__teaser-img {
+            width: 234px;
+            top: 14px;
+            right: -60px;
         }
     }
 }

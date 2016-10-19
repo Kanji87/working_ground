@@ -18,11 +18,12 @@ html(class="no-js", lang="ru")
         
         +article_head()
 
-        .l-grid.l-grid--article
+        .l-grid.l-grid--article.c-article1
             +article_teaser(
                 'Франчайзинг: автоматизация минимизирует риски',
                 '',
-                ''
+                'Несмотря на экономические трудности в стране, 34% россиян готовы открыть свой бизнес. Но сейчас организовать стабильное предприятие с минимальными рисками и высоким доходом не так просто.',
+                'illustration_4.svg'
             )
             .l-article__content
                 +article_p('В поисках наиболее доступной и востребованной отрасли многие начинающие предприниматели обращаются к ресторанному бизнесу, оборот которого, по данным Росстата, в 2015 году составил 1,293 трлн руб. Быстро выйти на рынок и запустить ресторан с минимальными затратами помогает франчайзинг.')
@@ -78,12 +79,15 @@ html(class="no-js", lang="ru")
                 ul.c-article__footer-tile-list
                     li.c-article__footer-tile-item
                         a.c-article__footer-tile-link(href="article2.html")
+                            img.c-article__footer-img(src="%=static=%img/general/article_footer_1.svg" alt="")
                             h4.c-article__footer-tile-title Как открыть собственную точку питания
                     li.c-article__footer-tile-item
                         a.c-article__footer-tile-link(href="article3.html")
+                            img.c-article__footer-img(src="%=static=%img/general/article_footer_2.svg" alt="")
                             h4.c-article__footer-tile-title Особенности <span>нового</span> законодательства
                     li.c-article__footer-tile-item
                         a.c-article__footer-tile-link(href="article.html")
+                            img.c-article__footer-img(src="%=static=%img/general/article_footer_4.svg" alt="")
                             h4.c-article__footer-tile-title Новые форматы — драйверы роста
 
 

@@ -18,11 +18,12 @@ html(class="no-js", lang="ru")
         
         +article_head()
 
-        .l-grid.l-grid--article
+        .l-grid.l-grid--article.c-article
             +article_teaser(
                 'Новые форматы — драйверы роста',
                 '',
-                'Трафик заведений быстрого питания растет, несмотря на макроэкономические трудности: будущее за гибкими, мобильными и современными форматами'
+                'Трафик заведений быстрого питания растет, несмотря на макроэкономические трудности: будущее за гибкими, мобильными и современными форматами',
+                'illustration_1.svg'
             )
             .l-article__content
                 +article_p('В целом рынок общепита, как сообщает Росстат, за 2015 год потерял 76 млрд руб., а совокупные продажи российских ресторанов, баров и кафе упали на 6% до 1,293 трлн руб. Только в Москве в период с ноября 2014 года по январь 2015 года закрылись 46 ресторанов. Но отказавшись от посещения ресторанов и кафе с высокой стоимостью чека, россияне переключились на более демократичные заведения. Одновременно отечественные предприниматели стали активно искать новые способы организации бизнеса для повышения его рентабельности. Всего несколько лет назад классификация заведений общественного питания состояла целиком из традиционных понятий: кафе, ресторан, бистро, кулинария, столовая. Но сегодня автобуфеты, тонары, мобильные кофейни, фудфесты, фудмаркеты и другие новые форматы набирают всё большую популярность.')
@@ -76,12 +77,15 @@ html(class="no-js", lang="ru")
                 ul.c-article__footer-tile-list
                     li.c-article__footer-tile-item
                         a.c-article__footer-tile-link(href="article2.html")
+                            img.c-article__footer-img(src="%=static=%img/general/article_footer_1.svg" alt="")
                             h4.c-article__footer-tile-title Как открыть собственную точку питания
                     li.c-article__footer-tile-item
                         a.c-article__footer-tile-link(href="article3.html")
+                            img.c-article__footer-img(src="%=static=%img/general/article_footer_2.svg" alt="")
                             h4.c-article__footer-tile-title Особенности <span>нового</span> законодательства
                     li.c-article__footer-tile-item
                         a.c-article__footer-tile-link(href="article1.html")
+                            img.c-article__footer-img(src="%=static=%img/general/article_footer_3.svg" alt="")
                             h4.c-article__footer-tile-title Франчайзинг: автоматизация минимизирует риски
 
 

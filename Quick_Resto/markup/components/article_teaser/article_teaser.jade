@@ -1,5 +1,6 @@
-mixin article_teaser(title, hash, desc)
+mixin article_teaser(title, hash, desc, img)
     .c-article__teaser
+        img.c-article__teaser-img(src='%=static=%img/general/' + img)
         h1.c-article__teaser-title= title
         if hash
             p.c-article__teaser-hash= hash

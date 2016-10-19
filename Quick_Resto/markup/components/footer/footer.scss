@@ -27,6 +27,36 @@
         }
     }
 
+    &__social-link {
+        width: 45px;
+        height: 45px;
+        display: block;
+        background-color: $white;
+        position: relative;
+        border-radius: 100%;
+        transition: background-color ease .3s;
+
+        &:hover {
+            background-color: $blue;
+
+            svg path {
+                fill: $white;
+            }
+        }
+    }
+
+    &__social-icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: block;
+
+        svg path {
+            transition: fill ease .3s;
+        }
+    }
+
     &__credit-list {
         @include nl();
         float: right;

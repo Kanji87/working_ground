@@ -18,11 +18,12 @@ html(class="no-js", lang="ru")
         
         +article_head()
 
-        .l-grid.l-grid--article
+        .l-grid.l-grid--article.c-article2
             +article_teaser(
                 'Как открыть собственную точку питания',
                 '',
-                'Концепция общественного питания за последние несколько лет изменилась кардинально. Если раньше точки быстрого питания предлагали очень ограниченный и скудный выбор, то сейчас появилось множество новых форматов. Соответственно, меняются и схемы запуска бизнеса'
+                'Концепция общественного питания за последние несколько лет изменилась кардинально. Если раньше точки быстрого питания предлагали очень ограниченный и скудный выбор, то сейчас появилось множество новых форматов. Соответственно, меняются и схемы запуска бизнеса',
+                'illustration_2_article.svg'
             )
             .l-article__content
                 +article_p('Какой бы формат общепита вы ни выбрали, компанию в любом случае обязательно надо оформить по всем правилам действующего законодательства. Для того чтобы открыть собственную точку питания в первую очередь необходимо зарегистрировать в налоговом органе юридическое лицо — общество с ограниченной ответственностью или индивидуального предпринимателя. Обычно выбор нужного юридического «формата» напрямую зависит от планируемого объема реализации и от количества занятых в работе сотрудников.')
@@ -60,12 +61,15 @@ html(class="no-js", lang="ru")
                 ul.c-article__footer-tile-list
                     li.c-article__footer-tile-item
                         a.c-article__footer-tile-link(href="article.html")
+                            img.c-article__footer-img(src="%=static=%img/general/article_footer_4.svg" alt="")
                             h4.c-article__footer-tile-title Новые форматы — драйверы роста
                     li.c-article__footer-tile-item
                         a.c-article__footer-tile-link(href="article3.html")
+                            img.c-article__footer-img(src="%=static=%img/general/article_footer_2.svg" alt="")
                             h4.c-article__footer-tile-title Особенности <span>нового</span> законодательства
                     li.c-article__footer-tile-item
                         a.c-article__footer-tile-link(href="article1.html")
+                            img.c-article__footer-img(src="%=static=%img/general/article_footer_3.svg" alt="")
                             h4.c-article__footer-tile-title Франчайзинг: автоматизация минимизирует риски
 
 

@@ -51,9 +51,9 @@
     .c-tile__2-2 .c-tile__content {
         width: 100%;
         position: relative;
-        top: auto;
+        // top: auto;
         left: auto;
-        transform: none;
+        // transform: none;
     }
 
     .c-tile__1-1 {
@@ -67,28 +67,84 @@
         .c-tile__title {
             font-size: 1.6rem;
             line-height: 2.2rem;
-            padding-left: 90px;
+            padding-left: 70px;
             float: left;
+            margin-top: 29px;
         }
 
         .c-tile__title-icon {
             position: absolute;
             left: 25px;
+            top: 44px;
+            margin: 0;
         }
     }
     .c-tile__1-2,
     .c-tile__1-2,
-    .c-tile__2-2,
-    .c-tile__3-2 {
+    .c-tile__2-2 {
         width: 288px;
         height: 288px;
         margin: 20px auto 0;
         padding: 0 25px;
     }
 
+    .c-tile__2-2 {
+        overflow: hidden;
+    }
+
+    .c-tile__3-2 {
+        width: 288px;
+        height: 288px;
+        margin: 20px auto 0;
+        padding: 64px 25px 0;
+
+        .c-tile__title-img {
+            z-index: 5;
+        }
+    }
+
+    .c-tile__title-img--2-2_1 {
+        width: 157px;
+        height: auto;
+    }
+
+    .c-tile__title-img--2-2_2 {
+        width: 262px;
+        bottom: -23px;
+    }
+
+    .c-tile__1-2 {
+        &.c-tile--mobile {
+            .c-tile__title-img {
+                width: 113px;
+            }
+        }
+
+        .c-tile__title-img {
+            width: 125px;
+            height: auto;
+            margin-top: 13px;
+            margin-bottom: 10px;
+        }
+
+        .c-tile__arrow-link {
+            margin-top: 20px;
+        }
+    }
+
     .c-tile__title {
         font-size: 2rem;
         line-height: 2.4rem;
+        position: relative;
+        z-index: 10;
+
+        span {
+            display: block;
+        }
+    }
+
+    .c-tile__desc--2-2_2 {
+        width: 118px;
     }
 
     .c-tile__hash {
@@ -98,6 +154,14 @@
 
     .c-tile__desc {
         display: none;
+    }
+
+    .c-tile__title-img--desktop {
+        display: none;
+    }
+
+    .c-tile__title-img--mobile {
+        display: block;
     }
 
     .c-tile__2-2:last-of-type {
@@ -290,5 +354,9 @@
         width: 260px;
         height: 288px;
         margin: 20px auto 0;
+    }
+
+    .c-article__teaser-img {
+        position: relative;
     }
 }
