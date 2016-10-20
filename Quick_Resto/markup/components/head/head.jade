@@ -3,7 +3,7 @@ mixin head(data)
     meta(name="viewport")
     meta(http-equiv="x-ua-compatible", content="ie=edge")
     title #{data.title}
-    meta(content="", name="description")
+    meta(content="#{data.desc}", name="description")
     meta(content="", name="keywords")
     meta(content="telephone=no", name="format-detection")
     //- This make sence for mobile browsers. It means, that content has been optimized for mobile browsers
@@ -33,18 +33,18 @@ mixin head(data)
 
     link(rel="icon" type="image/x-icon" href="favicon.png")
 
-    link(rel='apple-touch-icon' sizes='57x57' href='favicon@2x.png')
-    link(rel='apple-touch-icon' sizes='114x114' href='favicon@2x.png')
-    link(rel='apple-touch-icon' sizes='72x72' href='favicon@2x.png')
-    link(rel='apple-touch-icon' sizes='144x144' href='favicon@2x.png')
-    link(rel='apple-touch-icon' sizes='60x60' href='favicon@2x.png')
-    link(rel='apple-touch-icon' sizes='120x120' href='favicon@2x.png')
-    link(rel='apple-touch-icon' sizes='76x76' href='favicon@2x.png')
-    link(rel='apple-touch-icon' sizes='152x152' href='favicon@2x.png')
+    link(rel='apple-touch-icon' sizes='57x57' href='favicon2x.png')
+    link(rel='apple-touch-icon' sizes='114x114' href='favicon2x.png')
+    link(rel='apple-touch-icon' sizes='72x72' href='favicon2x.png')
+    link(rel='apple-touch-icon' sizes='144x144' href='favicon2x.png')
+    link(rel='apple-touch-icon' sizes='60x60' href='favicon2x.png')
+    link(rel='apple-touch-icon' sizes='120x120' href='favicon2x.png')
+    link(rel='apple-touch-icon' sizes='76x76' href='favicon2x.png')
+    link(rel='apple-touch-icon' sizes='152x152' href='favicon2x.png')
     link(rel='icon' type='image/png' href='favicon.png"' sizes='16x16')
-    link(rel='icon' type='image/png' href='favicon@2x.png' sizes='32x32')
-    link(rel='icon' type='image/png' href='favicon@2x.png' sizes='96x96')
-    meta(name='msapplication-TileImage' content='favicon@2x.png')
+    link(rel='icon' type='image/png' href='favicon2x.png' sizes='32x32')
+    link(rel='icon' type='image/png' href='favicon2x.png' sizes='96x96')
+    meta(name='msapplication-TileImage' content='favicon2x.png')
 
 
     script.

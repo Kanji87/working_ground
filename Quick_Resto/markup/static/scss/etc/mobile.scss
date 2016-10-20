@@ -24,6 +24,7 @@
         margin: 20px auto 25px;
         padding: 0 20px 30px;
         box-sizing: border-box;
+        overflow: hidden;
     }
 
     .c-tile__1-1,
@@ -358,5 +359,41 @@
 
     .c-article__teaser-img {
         position: relative;
+    }
+
+    .c-article .c-article__teaser-img {
+        width: 144px;
+        margin: 0 auto 25px;
+        display: block;
+        top: auto;
+        right: auto;
+    }
+
+    .c-article1 .c-article__teaser-img {
+        width: 136px;
+        margin: 0 auto 25px;
+        display: block;
+        top: auto;
+        right: auto;
+    }
+
+    .c-article2 .c-article__teaser-img {
+        width: 201px;
+        margin-top: -21px;
+        margin-left: 83px;
+        margin-bottom: 20px;
+        display: block;
+        top: auto;
+        right: auto;
+    }
+
+    .c-article3 .c-article__teaser-img {
+        width: 159px;
+        margin-left: 122px;
+        margin-top: -21px;
+        margin-bottom: 20px;
+        display: block;
+        top: auto;
+        right: auto;
     }
 }
