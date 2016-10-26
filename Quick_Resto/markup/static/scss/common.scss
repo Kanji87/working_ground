@@ -131,10 +131,13 @@ strong {
     &-tile-title {
         position: absolute;
         top: 168px;
-        padding: 40px 65px 40px 40px;
+        padding: 30px 35px 30px 30px;
         position: absolute;
         color: #000;
         transition: color ease .3s;
+        font-size: 1.8rem;
+        line-height: 2.4rem;
+        letter-spacing: .2px;
     }
 }
 
@@ -142,6 +145,20 @@ strong {
     margin-top: 20px;
     border-radius: 4px;
     box-sizing: border-box;
+
+    &:hover {
+        .c-tile__read-link--blue {
+            // background-color: lighten($blue, 20%);
+            // box-shadow: lighten(#327497, 20%) 0px 2px 0px 0px;
+            background-color: #269ddf;
+        }
+
+        .c-tile__read-link--red {
+            // background-color: lighten($red, 20%);
+            // box-shadow: lighten(#AC342E, 20%) 0px 2px 0px 0px;
+            background-color: #ea2219;
+        }
+    }
 
     &--desktop {
         display: block;
@@ -162,12 +179,16 @@ strong {
     &__1-1 {
         width: 270px;
         height: 270px;
-        padding: 0 90px 0 25px;
+        padding: 0 25px;
 
         .c-tile__title {
             font-size: 1.8rem;
             font-weight: normal;
             line-height: 2.4rem;
+
+            span {
+                display: block;
+            }
         }
     }
 
@@ -187,7 +208,7 @@ strong {
             width: 10px;
             height: 10px;
             border: 0;
-            margin-left: 11px !important;
+            margin-right: 11px !important;
         }
 
         .fotorama__active .fotorama__dot {
@@ -217,6 +238,10 @@ strong {
             transform: translateY(-50%);
             left: 50px;
         }
+
+        .c-tile__desc {
+            width: 235px;
+        }
     }
 
     &__3-2 {
@@ -228,6 +253,18 @@ strong {
 
     &__slider {
         padding: 0 25px;
+        cursor: pointer;
+
+        .c-tile__title,
+        .c-tile__desc {
+            text-align: center;
+        }
+
+        .c-tile__desc {
+            margin-left: auto;
+            margin-right: auto;
+            width: 200px;
+        }
     }
 
     &--white {
@@ -277,6 +314,7 @@ strong {
         display: inline-block;
         clear: both;
         margin-top: 40px;
+        transition: background-color ease .3s;
 
         &--red {
             background-color: $red;
@@ -346,4 +384,8 @@ strong {
         margin-bottom: 105px;
         display: block;
     }
+}
+
+.tns-counter {
+    display: none;
 }

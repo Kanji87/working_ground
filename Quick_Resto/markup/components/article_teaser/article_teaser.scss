@@ -2,7 +2,7 @@
     &__teaser {
         padding-top: 60px;
         padding-bottom: 40px;
-        padding-right: 300px;
+        padding-right: 249px;
         border-bottom: 2px solid #DFE1E0;
         position: relative;
 
@@ -30,30 +30,42 @@
                 background-size: contain;
                 background-repeat: no-repeat;
                 cursor: pointer;
+                position: relative;
+                background-color: #DEE0DF;
+                border-radius: 100%;
+                transition: background-color ease .3s;
 
                 &:not(:first-child) {
                     margin-left: 20px;
                 }
+
+                &:hover {
+                    background-color: #4296C4;
+
+                    svg path {
+                        fill: $white;
+                    }
+                }
             }
 
-            .social-likes__widget svg {
+            .social-likes__widget > svg {
                 display: none;
             }
 
             .social-likes__widget_facebook {
-                background-image: url('%=static=%general/fb_gray_bg.svg');
+                // background-image: url('%=static=%general/fb_gray_bg.svg');
             }
 
             .social-likes__widget_vkontakte {
-                background-image: url('%=static=%general/vk_gray_bg.svg');
+                // background-image: url('%=static=%general/vk_gray_bg.svg');
             }
 
             .social-likes__widget_twitter {
-                background-image: url('%=static=%general/tw_gray_bg.svg');
+                // background-image: url('%=static=%general/tw_gray_bg.svg');
             }
 
             .social-likes__widget_plusone {
-                background-image: url('%=static=%general/gplus_gray_bg.svg');
+                // background-image: url('%=static=%general/gplus_gray_bg.svg');
             }
         }
     }
@@ -64,13 +76,13 @@
         right: 0;
         height: auto;
         position: absolute;
-    }
 
-    &2 {
-        .c-article__teaser-img {
-            width: 332px;
-            top: 22px;
-            right: -60px;
+        &--desktop {
+            display: block;
+        }
+
+        &--mobile {
+            display: none;
         }
     }
 
@@ -80,11 +92,23 @@
         }
     }
 
+    &2 {
+        .c-article__teaser-img {
+            width: 332px;
+            top: 21px;
+            right: -60px;
+        }
+    }
+
     &3 {
         .c-article__teaser-img {
-            width: 234px;
+            width: 225px;
             top: 14px;
             right: -60px;
+        }
+
+        .c-article__teaser-desc {
+            padding-right: 100px;
         }
     }
 }
