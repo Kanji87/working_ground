@@ -2,17 +2,28 @@
 
 $(function () {
     // if ( window.matchMedia('(min-width: 1280px)').matches ) {
+    // if ( screen.width < 749 ) {
+    //     $('head').prepend('<meta name="viewport" content="width=320, minimal-ui">');
+    //     $('body').addClass('mobile');
+    //     alert('mobile: ' + screen.width);
+    // } else if ( screen.width < 1023 && screen.width > 750 ) {
+    //     $('head').prepend('<meta name="viewport" content="width=device-width">');
+    //     alert('tablet ' + screen.width);
+    // } else {
+    //     $('head').prepend('<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">');
+    //     alert('desktop ' + screen.width);
+    // }
+
+
     if ( !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
         $('head').prepend('<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">');
-        console.log('desktop');
     } else {
-        if ( window.matchMedia('(min-width: 750px').matches ) {
+        if ( screen.width > 750 ) {
             $('head').prepend('<meta name="viewport" content="width=device-width">');
-            console.log('tablet');
+            $('body').removeClass('mobile');
         } else {
             $('head').prepend('<meta name="viewport" content="width=320, minimal-ui">');
             $('body').addClass('mobile');
-            console.log('mobile');
         }
     }
 

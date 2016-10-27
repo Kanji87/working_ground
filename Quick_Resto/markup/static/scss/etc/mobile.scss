@@ -292,8 +292,14 @@
         margin-left: 22px;
     }
 
+    .footer__social-item {
+        float: none;
+        display: inline-block;
+    }
+
     .footer__social-list {
         margin-top: 37px;
+        text-align: center;
     }
 
     .footer__credit-list {
