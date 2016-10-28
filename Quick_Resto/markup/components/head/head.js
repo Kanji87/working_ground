@@ -66,5 +66,49 @@ $(function () {
             stopautoplayontouch: false
         });
     }
+
+    jQuery.scrollDepth({
+        userTiming: false,
+    });
+
+    setTimeout(function () {
+        ga("send", "event", "page", "spent_on_page_15_sec");
+    }, 15000);
+
+    $('.js-head-logo').on('click', function () {
+        var href = $(this).attr('href').toString();
+        ga("send", "event", "brand button", "clicked header", href);
+        // console.log(href);
+    });
+
+    $('.js-footer-logo').on('click', function () {
+        var href = $(this).attr('href').toString();
+        ga("send", "event", "brand button", "clicked footer", href);
+        // console.log(href);
+    });
+
+    $('.js-reg').on('click', function () {
+        var href = $(this).attr('href').toString();
+        ga("send", "event", "brand button", "clicked go to reg", href);
+        // console.log(href);
+    });
+
+    $('.js-social-share').on('click', function () {
+        var socialService = $(this).data('service').toString();
+        ga("send", "event", "share", "clicked share button", socialService);
+        // console.log(socialService);
+    });
+
+    $('.js-social-group').on('click', function () {
+        var socialService = $(this).data('service').toString();
+        ga("send", "event", "social group", "clicked social group button", socialService);
+        console.log(socialService);
+    });
+
+    $('.js-tile').on('click', function () {
+        var title = $(this).find('.c-tile__title').text().toString();
+        ga("send", "event", "brand button", "clicked color block", title);
+        // console.log(title);
+    });
 });
 
